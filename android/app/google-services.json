@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "804783502146",
+    "project_id": "kubair-app",
+    "storage_bucket": "kubair-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804783502146:android:c72382008f961a2b554edb",
+        "android_client_info": {
+          "package_name": "com.dummypro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9Z7H4TrglaxpDGjv7uHc44axPAw5SKVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
