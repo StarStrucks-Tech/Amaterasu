@@ -1,9 +1,9 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+// /**
+//  * Sample React Native App
+//  * https://github.com/facebook/react-native
+//  *
+//  * @format
+//  */
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
@@ -24,6 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import SignUpScreen from './Source/UI/Screens/SignUpScreen';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -73,9 +74,11 @@ function App(): React.JSX.Element {
         style={backgroundStyle}>
         <Header />
         <View
+        
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+        
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
@@ -116,3 +119,6 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+
+
+
