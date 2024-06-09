@@ -24,6 +24,8 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import TabNavigation from './src/UI/Components/TabNavigation';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -63,6 +65,8 @@ function App(): React.JSX.Element {
   };
 
   return (
+      
+    
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
