@@ -6,44 +6,34 @@
  */
 
 import React from 'react';
-import { View ,ScrollView,Image, StyleSheet, Text} from 'react-native';
-import { Header } from 'react-native/Libraries/NewAppScreen';
-import Product from './components redux/Product';
+import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
+import VisualElement from './VisualElementExample/VisualElement';
 
-
-  
-
-
-
-const Another = () => {
-  const item = {
-    name: 'Nokia Mobile',
-    Price: 20000,
-    color: 'Red',
-    image: 'https://image.shutterstock.com/image-vector/smartphone-iconvector-illustration-260nw-211546936.jpg'
-    
-   
-    
-  
-  };
- 
-
-
-
-
-  return (
-    <View style={StyleS.container}>
-      <Header/>
-      <ScrollView>
-      <Product item={item}/>
-      </ScrollView>
-    </View>
-  );
+const App: React.FC = () => {
+    return (
+        <SafeAreaView style={styles.container}>
+            <ScrollView>
+                <VisualElement
+                    title="Beautiful Scenery"
+                    description="A beautiful scenery of mountains and rivers."
+                    imageUrl='https://tse1.mm.bing.net/th?id=OIP.GPFEY6kfgxbsja6gmrW6rwHaE7&pid=Api&P=0&h=180'
+                />
+                <VisualElement
+                    title="City Lights"
+                    description="The city lights shining brightly at night."
+                    imageUrl='https://tse2.mm.bing.net/th?id=OIP.NnO-YQus2OWWyjGbcBghVgHaEo&pid=Api&P=0&h=180'
+                />
+            </ScrollView>
+        </SafeAreaView>
+    );
 };
-const StyleS=StyleSheet.create({
-  container:{
-    flex:1,
-  },
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#f0f0f0',
+        padding: 10,
+    },
 });
 
-export default Another;
+export default App;
