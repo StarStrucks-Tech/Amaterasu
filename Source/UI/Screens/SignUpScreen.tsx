@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View,Image } from 'react-native';
 import auth from '@react-native-firebase/auth';
 // TODO:Implement the toggle password visibility.
-const SignUpScreen = () => {/* The 'SignUpScreen' component renders a sign-up form for new users. It collects user information i.e its personal Email ID and password. It handles form submission to register a new user.*/
+/* The 'SignUpScreen' component renders a sign-up form for new users. It collects user information i.e its personal Email ID and password. It handles form submission to register a new user.*/
+const SignUpScreen = () => {
   const [email, setemail] = useState('');
   const [password, setpassword] = useState('');
-  const onRegister = () => { //The 'onRegister' function handles user registration using Firebase Authentication. 
+ //The 'onRegister' function handles user registration using Firebase Authentication. 
+  const onRegister = () => {
     auth().createUserWithEmailAndPassword(email, password)
     .then(() => {
     Alert.alert('User account created ');
