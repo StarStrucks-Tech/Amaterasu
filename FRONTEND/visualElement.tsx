@@ -3,19 +3,19 @@ import { View, Image, ImageSourcePropType, StyleSheet } from 'react-native';
 import Animated from 'react-native-reanimated';
 import LottieView from 'lottie-react-native';
 
-interface VisualElementProps {
-  imageSource: ImageSourcePropType;
-  lottieSource: any; 
-  width?: number;
-  height?: number;
-  cornerRadius?: number;
-  rotationAngle?: number;
-}
+type LottieSource = string | { uri: string } | object;
 
-const VisualElement: React.FC<VisualElementProps> = ({                    // we are using React.FC<visualElementProps> here as -:
-  imageSource,                                                             // 1. Using this , typescript will enforce the correct types for thr props reducing runtime errors.
-  lottieSource,                                                           //  2.VS code provides better auto completion and documentation hints when types are explicitly defined.
-  width = 100,                                                             // 3. It ensures that all required props props are passed correctly, thus improving code realibility and maintainability
+const VisualElement: React.FC<{
+  imageSource: ImageSourcePropType;      // Image source
+  lottieSource: LottieSource;            // Lottie Source
+  width?: number;                        // defining width
+  height?: number;                       // defining height
+  cornerRadius?: number;                 // definig cornerRadius
+  rotationAngle?: number;                // definibg rotationAngle
+}> = ({
+  imageSource,
+  lottieSource,
+  width = 100,
   height = 100,
   cornerRadius = 10,
   rotationAngle = 0,
@@ -40,14 +40,13 @@ const VisualElement: React.FC<VisualElementProps> = ({                    // we 
 
 const styles = StyleSheet.create({
   container: {
-    overflow: 'hidden',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   image: {
-    ...StyleSheet.absoluteFillObject,
     width: '100%',
     height: '100%',
+    borderRadius: 10,
   },
   lottie: {
     position: 'absolute',
@@ -55,9 +54,5 @@ const styles = StyleSheet.create({
     height: '100%',
   },
 });
-
-
-
-
 
 export default VisualElement;
