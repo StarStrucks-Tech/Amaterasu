@@ -30,7 +30,7 @@ export default function Phone_Verification() {
         <Text style={styles.boldText}>on this phone</Text>
       </Text>
       <Image
-        source={require('../../Assets/Imageofhanfs.png')}
+        source={require('../../Assets/Imageofhands.png')}
         style={styles.imagei}
       />
 
