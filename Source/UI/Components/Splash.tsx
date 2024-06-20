@@ -3,11 +3,7 @@ import { View, StyleSheet, Text, Image , BackHandler} from 'react-native';
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';
 import Animated, { interpolate, runOnJS, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
-<<<<<<< HEAD
 import splashstyles from './Styles/Splashstyle';
-=======
-
->>>>>>> 5336404915f47d34f5406e6153b2223c4c316c7f
 const Splash = () => {
   const translateX = useSharedValue(0);
   const navigation = useNavigation();
@@ -70,7 +66,6 @@ const Splash = () => {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-<<<<<<< HEAD
       <View style={splashstyles.container}>
         <View onLayout={getBoxLayout} style={splashstyles.box}>
           <GestureDetector gesture={pan}>
@@ -78,15 +73,6 @@ const Splash = () => {
               <Image
                 source={require('../../Assets/image/ss2.png')}
                 style={splashstyles.swipeArrowIcons}
-=======
-      <View style={styles.container}>
-        <View onLayout={getBoxLayout} style={styles.box}>
-          <GestureDetector gesture={pan}>
-            <Animated.View onLayout={getCircleLayout} style={[styles.circle, swipeAnimatedStyle]}>
-              <Image
-                source={require('../../Assets/image/ss2.png')}
-                style={styles.swipeArrowIcons}
->>>>>>> 5336404915f47d34f5406e6153b2223c4c316c7f
               />
             </Animated.View>
           </GestureDetector>
@@ -110,46 +96,4 @@ const Splash = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
-const styles = StyleSheet.create({
-  container: {
-    flex:1,
-    width:"100%",
-    height: "100%",
-    paddingBottom: 30, // Adjust as needed
-  },
-  box: {
-    flexDirection: 'row',
-    width: 330,
-    height: 55,
-    backgroundColor: '#262123',
-    borderWidth: 1,
-    alignItems: 'center',
-    elevation: 10,
-    shadowOffset: {
-      height: 10,
-      width: 10,
-    },
-    shadowColor: '#000000',
-    borderRadius: 15,
-    shadowOpacity: 0.1,
-  },
-  circle: {
-    width: '15%',
-    height: '80%',
-    borderRadius: 10,
-    backgroundColor: '#D05F33',
-    marginLeft: 7,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  swipeArrowIcons: {
-    width: 24,
-    height: 24,
-    resizeMode: 'contain',
-  },
-});
-
->>>>>>> 5336404915f47d34f5406e6153b2223c4c316c7f
 export default Splash;
