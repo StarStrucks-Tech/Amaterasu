@@ -3,9 +3,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StyleSheet, View, Text, Button } from 'react-native';
 import Adhaardetails from './Source/UI/Screens/Adhaardetails';
+<<<<<<< HEAD
 import AdhaarOTPdetail from './Source/UI/Screens/AdhaarOTPdetail';
 import AdhaarConsent from './Source/UI/Screens/AdhaarConsent';
 import LoadingScreen from './Source/UI/Components/LoadingScreen';
+=======
+import Adhaardetailss from './Source/UI/Screens/Adhaardetailss';
+import HomeScreen from './Source/UI/Screens/HomeScreen';
+>>>>>>> 5336404915f47d34f5406e6153b2223c4c316c7f
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -13,8 +18,13 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
       <Stack.Screen
+<<<<<<< HEAD
           name="AdhaarConsent"
           component={AdhaarConsent}
+=======
+          name="HomeScreen"
+          component={HomeScreen}
+>>>>>>> 5336404915f47d34f5406e6153b2223c4c316c7f
           options={{ headerShown: false }}
         />
         <Stack.Screen
@@ -23,6 +33,7 @@ function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
+<<<<<<< HEAD
           name="AdhaarOTPdetail"
           component={AdhaarOTPdetail}
           options={{ headerShown: false }}
@@ -30,6 +41,10 @@ function App() {
         <Stack.Screen
           name="LoadingScreen"
           component={LoadingScreen}
+=======
+          name="Adhaardetailss"
+          component={Adhaardetailss}
+>>>>>>> 5336404915f47d34f5406e6153b2223c4c316c7f
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

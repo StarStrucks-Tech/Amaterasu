@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import { Text, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -66,8 +67,35 @@ const TimerDisplay = ({ seconds, isActive }) => {
   return (
     <View>
       <Text style={TimerDisplaystyle.timerText}>{formattedMinutes}:{formattedSeconds}</Text>
+=======
+// TimerDisplay.tsx
+
+import React from "react";
+import { StyleSheet, Text, View } from 'react-native';
+
+const TimerDisplay = ({ seconds }) => {
+  const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+  const minutes = Math.floor(seconds / 60);
+  const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+
+  return (
+    <View>
+      <Text style={styles.timerText}>{formattedMinutes}:{formattedSeconds}</Text>
+>>>>>>> 5336404915f47d34f5406e6153b2223c4c316c7f
     </View>
   );
 };
 
+<<<<<<< HEAD
+=======
+const styles = StyleSheet.create({
+  timerText: {
+    alignContent: "center",
+    textAlign: "center",
+    color: "#7E7E7E",
+    fontFamily: 'Open Sans'
+  }
+});
+
+>>>>>>> 5336404915f47d34f5406e6153b2223c4c316c7f
 export default TimerDisplay;
