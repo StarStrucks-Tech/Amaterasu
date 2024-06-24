@@ -1,4 +1,4 @@
-package com.dummypro
+package com.kubair
 
 import android.app.Application
 import com.facebook.react.PackageList
