@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView, Image } from 'react-native';
-import styles from './Email_Verification.styles'
-
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView, Image, Platform, PixelRatio } from 'react-native';
+import styles from './Email_Verification.styles';
+import Colors from '../../Assets/color';
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import EmailVer from '../Components/EmailVerComponent';
 
 const EmailVerificationScreen = () => {
   const [emailID, setEmailID] = useState('');
@@ -19,22 +21,20 @@ const EmailVerificationScreen = () => {
         <TextInput
           style={styles.input}
           placeholder="Select your email ID"
-          placeholderTextColor={'#898A8D'}
+          placeholderTextColor={Colors.GRAY}
           value={emailID}
           onChangeText={setEmailID}
         />
         <TextInput
           style={styles.input}
           placeholder="Enter your name"
-          placeholderTextColor={'#898A8D'}
+          placeholderTextColor={Colors.GRAY}
           value={name}
           onChangeText={setName}
           maxLength={40}
         />
         <Text style={styles.charCount}>{name.length}/40</Text>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Next</Text>
-        </TouchableOpacity>
+       <EmailVer/>
       </View>
   );
 };
