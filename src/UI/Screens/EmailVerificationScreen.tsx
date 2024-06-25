@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView, Image, Platform, PixelRatio } from 'react-native';
-import styles from './Email_Verification.styles';
+import styles from './EmailVerification.styles';
 import Colors from '../../Assets/color';
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import EmailVer from '../Components/EmailVerComponent';
+import EmailVer from '../Components/NextButton';
 
 const EmailVerificationScreen = () => {
   const [emailID, setEmailID] = useState('');
