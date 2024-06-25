@@ -26,7 +26,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import TabNavigation from './src/UI/Components/TabNavigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import SkipNomineeScreen from './src/UI/Screens/SkipNomineeScreen';
+// import SkipNomineeScreen from './src/UI/Screens/SkipNomineeScreen';
 import EmailVerificationScreen from './src/UI/Screens/EmailVerificationScreen';
 
 type SectionProps = PropsWithChildren<{
