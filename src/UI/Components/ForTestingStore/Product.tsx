@@ -1,4 +1,6 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable semi */
+/* eslint-disable prettier/prettier */
 import React, { useEffect } from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
 
@@ -22,10 +24,13 @@ const handleRemoveFromCart = (item) => {
 }
 
 useEffect(() => {
-  const itemInCart = cartItems.some((cartItem) => cartItem.name === item.name);
-  setIsAdded(itemInCart);
- 
-}, [cartItems, item.name]);
+  if (cartItems && cartItems.length > 0) {
+    const itemInCart = cartItems.some((cartItem) => cartItem.name === item.name);
+    setIsAdded(itemInCart);
+  } else {
+    setIsAdded(false); // Assuming no items mean the item is not in cart
+  }
+}, [cartItems, item]);
 
 
   return (

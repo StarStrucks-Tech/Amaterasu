@@ -1,4 +1,6 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable semi */
+/* eslint-disable prettier/prettier */
 // /* eslint-disable prettier/prettier */
 // /* eslint-disable @typescript-eslint/no-unused-vars */
 // /* eslint-disable prettier/prettier */
@@ -103,27 +105,48 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {View, Text, StyleSheet, Button, ScrollView} from 'react-native';
+import Header from './Header';
+import Product from './Product';
 
-import { NavigationContainer } from '@react-navigation/native'
-import {createNativeStackNavigator} from '@react-navigation/native-stack'
-import ProductWrapper from './src/UI/Components/ForTestingStore/ProductWrapper';
-import UserList from './src/UI/Components/ForTestingStore/UserList';
-
-const Stack = createNativeStackNavigator();
-const App = () => {
-
+const ProductWrapper = ({navigation}) => {
+  const products = [
+    {
+      id : '1',
+      name : 'Samsung Mobile',
+      color: 'white',
+      price : 30000,
+    },
+    {
+      id : '2',
+      name : 'Apple I Phone',
+      color: 'black',
+      price : 130000,
+    },
+    {
+      id : '3',
+      name : 'Nokia',
+      color: 'green',
+      price : 30000,
+    },
+  ]
   return (
-    
-    <NavigationContainer>
-     <Stack.Navigator>
-      <Stack.Screen name = 'Name' component ={ProductWrapper}/>
-      <Stack.Screen name = 'User' component ={UserList}/>
-     </Stack.Navigator>
-      
-    </NavigationContainer >
+
+    <View style = {styles.container}>
+      <Button title="Go to user list" onPress={()=>navigation.navigate('User')}/>
+      <Header/>
+      <ScrollView>
+      {products.map((item) => (
+          <Product key={item.id} item={item} />
+        ))}
+      </ScrollView>
+    </View>
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 
-
-export default App;
+export default ProductWrapper;
