@@ -1,0 +1,44 @@
+export const COLOR_BACKGROUND = '#ecf0f1';
+export const COLOR_TEXT_PRIMARY = '#2c3e50';
+export const COLOR_TEXT_SECONDARY = '#95a5a6';
+export const COLOR_ERROR = '#e74c3c';
+export const COLOR_WARNING = '#f39c12';
+export const COLOR_SUCCESS = '#2ecc71';
+export const COLOR_GREY_DARK = '#7E7E7E';
+export const COLOR_GREY_LIGHT = '#E0E0E0';
+export const COLOR_BEIGE = '#F7F2E8';
+export const COLOR_ORANGE = '#D05F33';
+export const COLOR_DARK_BROWN = '#262123';
+export const COLOR_LIGHT_YELLOW = '#FFFFE4';
+export const COLOR_SEMI_TRANSPARENT_BLACK = 'rgba(0, 0, 0, 0.5)';
+
+
+
+export const AQUA_GREEN= '#1A5276';
+export const RED = '#B03A2E';
+export const PURPLE = '#8E44AD';
+export const GRAY = '#898A8D';
+export const GREEN = '#229954';
+export const BLUE = '#2471A3';
+export const YELLOW = '#F4D03F';
+export const WHITE = '#FFFFFF';
+export const BLACK = '#000000';
+export const LIGHT_GRAY = '#D3D3D3';
+export const DARK_GRAY = '#A9A9A9';
+export const TRANSPARENT = 'transparent';
+export const LIGHT_BLUE = '#ADD8E6';
+export const LIGHT_GREEN = '#90EE90';
+export const LIGHT_YELLOW = '#FFFFE0';
+export const LIGHT_RED = '#F08080';
+export const LIGHT_PURPLE = '#E6E6FA';
+export const LIGHT_ORANGE = '#FFA07A';
+export const LIGHT_PINK = '#FFB6C1';
+export const LIGHT_BROWN = '#CD853F';
+export const LIGHT_CYAN = '#E0FFFF';
+export const LIGHT_MAGENTA = '#FFC0CB';
+export const LIGHT_GOLDENROD_YELLOW = '#FAFAD2';
+export const LIGHT_CORAL = '#F08080';
+export const LIGHT_AQUA = '#00FFFF';
+export const LIGHT_LIME = '#32CD32';
+export const LIGHT_TURQUOISE = '#40E0D0';
+export const LIGHT_INDIGO = '#4B0082';
