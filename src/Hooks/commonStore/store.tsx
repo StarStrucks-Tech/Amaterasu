@@ -7,8 +7,9 @@ import SagaData from './saga';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = configureStore({
-  reducer:rootReducer,
-  middleware:()=>[sagaMiddleware]
+  reducer: rootReducer,
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware().concat(sagaMiddleware),
 });
 
 sagaMiddleware.run(SagaData);
