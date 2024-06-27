@@ -15,4 +15,5 @@ function* userList(action) {
 function* SagaData() {
   yield takeEvery(USER_LIST, userList);
 }
+
 export default SagaData;
