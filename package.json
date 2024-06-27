@@ -14,6 +14,8 @@
     "@grpc/proto-loader": "^0.7.13",
     "@react-navigation/bottom-tabs": "^6.5.20",
     "@react-navigation/native": "^6.1.17",
+    "@types/js-yaml": "^4.0.9",
+    "js-yaml": "^4.1.0",
     "protobufjs": "^7.3.2",
     "react": "18.2.0",
     "react-native": "0.74.1",
