@@ -11,6 +11,7 @@ import otpscreenStyles from './Styles/AadhaarotpScreemstyles';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import Colors from '../Components/Colors';
 import TextComponent from '../Components/Textcomponents';
+import SecureComponent from '../Aadhaardetails/Components/SecureComponent';
 
 const AadhaarOTPScreen = () => {
   const [showModal, setShowModal] = useState(false);
@@ -64,7 +65,7 @@ const AadhaarOTPScreen = () => {
         <OTPInputs isChecked={isChecked} onOtpFilled={handleOtpFilled} />
 
         <View style={{ alignItems: 'center', }}>
-          <SecureComp />
+          <SecureComponent />
         </View>
         <View style={otpscreenStyles.resendView}>
           {count !== 0 ? (
