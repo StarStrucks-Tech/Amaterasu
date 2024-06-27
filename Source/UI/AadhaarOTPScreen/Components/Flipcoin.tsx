@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Animated, SafeAreaView, StyleSheet } from 'react-native';
-import Flipcoinstyle from "./Styles/Flipcoinstyle";
+import Flipcoinstyle from "../Styles/Flipcoinstyle";
 const Flipcoin = () => {
   const animatedValue = useRef(new Animated.Value(0)).current;
 
@@ -38,7 +38,7 @@ const Flipcoin = () => {
   return (
     <SafeAreaView>
       <Animated.Image
-        source={require('../../Assets/image/logo.png')}
+        source={require('../../../Assets/image/logo.png')}
         style={[rotateYAnimatedStyle, Flipcoinstyle.imagsp]}
       />
     </SafeAreaView>

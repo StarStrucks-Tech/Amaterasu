@@ -1,9 +1,12 @@
-import React, { useState,useEffect } from 'react';
-import { View, StyleSheet, Text, Image , BackHandler} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, Text, Image, PixelRatio } from 'react-native';
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';
 import Animated, { interpolate, runOnJS, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
-import splashstyles from './Styles/Splashstyle';
+import splashstyles from '../Styles/Splashstyle';
+import Colors from '../../Components/Colors';
+import TextComponent from '../../Components/Textcomponents';
+
 const Splash = () => {
   const translateX = useSharedValue(0);
   const navigation = useNavigation();
@@ -12,8 +15,8 @@ const Splash = () => {
   const [boxDimensions, setBoxDimensions] = useState({ x: 0, y: 0, width: 0, height: 0 });
   const [circleDimensions, setCircleDimensions] = useState({ x: 0, y: 0, width: 0, height: 0 });
 
-  const onSwipe = (value: string) => {
-    navigation.navigate('Adhaardetails'); 
+  const onSwipe = () => {
+    navigation.navigate('Adhaardetails')
   };
 
   const pan = Gesture.Pan().onChange((event) => {
@@ -56,6 +59,7 @@ const Splash = () => {
     const { x, y, width, height } = event.nativeEvent.layout;
     setCircleDimensions({ x, y, width, height });
   };
+
   useEffect(() => {
     const unsubscribeFocus = navigation.addListener('focus', () => {
       translateX.value = 0; // Reset translateX to initial position
@@ -71,7 +75,7 @@ const Splash = () => {
           <GestureDetector gesture={pan}>
             <Animated.View onLayout={getCircleLayout} style={[splashstyles.circle, swipeAnimatedStyle]}>
               <Image
-                source={require('../../Assets/image/ss2.png')}
+                source={require('../../../Assets/image/ss2.png')}
                 style={splashstyles.swipeArrowIcons}
               />
             </Animated.View>
@@ -80,15 +84,14 @@ const Splash = () => {
             style={[
               {
                 fontFamily: 'Montserrat',
-                fontSize: 23,
-                color: '#F7F2E8',
-                marginLeft: 10,
+                fontSize: PixelRatio.getPixelSizeForLayoutSize(8),
+                color: Colors.splashcolor,
+                marginLeft: PixelRatio.getPixelSizeForLayoutSize(3.33),
                 textAlign: 'center',
               },
               textAnimatedStyle,
             ]}
-          >
-            I Understand
+          >{TextComponent.Splashtext}
           </Animated.Text>
         </View>
       </View>

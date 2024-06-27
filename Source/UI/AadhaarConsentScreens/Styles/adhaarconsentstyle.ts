@@ -1,13 +1,12 @@
-import { StyleSheet } from "react-native";
-
-
+import { StyleSheet,PixelRatio } from "react-native";
+import Colors from "../../Components/Colors";
 const adharconsentstyles =StyleSheet.create({
     container: {
-      backgroundColor: '#FFFFE4',
-      padding: 16,
+      backgroundColor: Colors.bgcolor,
+      padding:PixelRatio.getPixelSizeForLayoutSize(5.4),
       justifyContent: 'center',
       alignItems: 'center',
-      height:'100%'
+      height:"100%"
     },  container1: {
       flex: 1,
       justifyContent: 'center',
@@ -15,12 +14,11 @@ const adharconsentstyles =StyleSheet.create({
     },
     inbox: {
       borderBottomColor: '#E0E0E0',
-      borderBottomWidth:3,
-      paddingHorizontal: 12,
+      borderBottomWidth:PixelRatio.getPixelSizeForLayoutSize(1),
+      paddingHorizontal:PixelRatio.getPixelSizeForLayoutSize(4),
       paddingVertical:0,
       width:'90%',
-      marginTop: 20,
-      top: 20,
+      marginTop: PixelRatio.getPixelSizeForLayoutSize(6.3),
       color:'black'
       
     },
@@ -45,33 +43,41 @@ const adharconsentstyles =StyleSheet.create({
       marginBottom: 10,
       top:3.2
     },
-    signup: {
-      fontSize: 23  ,
-      fontFamily:'Helvetica Neue',
+   title: {alignContent: "center",textAlign:"center",
+    marginTop: PixelRatio.getPixelSizeForLayoutSize(10),
+      fontSize: PixelRatio.getPixelSizeForLayoutSize(7.5) ,
+      fontFamily: 'Helvetica Neu',
       color: 'black',
-      lineHeight:32,
+      lineHeight:PixelRatio.getPixelSizeForLayoutSize(11),
       justifyContent: "center",
       alignItems:"center",
       fontWeight: '400',
-      top:-23
     },
     imagsp: {
-      height: 250,
-      width: 250,
-      top: -100,
-      paddingBottom:1,
-      marginTop: 100
+      marginTop: PixelRatio.getPixelSizeForLayoutSize(10),
+      height: PixelRatio.getPixelSizeForLayoutSize(80),
+      width: PixelRatio.getPixelSizeForLayoutSize(80),
   
-    },
-    subhead: {
-      fontFamily: 'Open Sans',
-      fontWeight: '100',
-      fontSize: 13,
-      color:'#262123',
+    },subhead1: {
+      alignContent: "center",
+      textAlign:"center",
+      fontWeight: '800',
+      fontSize:PixelRatio.getPixelSizeForLayoutSize(4.3),
       justifyContent: "center",
       alignItems: 'center',
-      top:-7,
-      lineHeight:18
+      lineHeight:PixelRatio.getPixelSizeForLayoutSize(6),
+      color: Colors.subhead1,
+      fontFamily: 'OpenSans',
+    },
+    subhead: {alignContent: "center", textAlign:"center",
+      fontFamily: 'Open Sans',
+      fontWeight: '100',
+      fontSize: PixelRatio.getPixelSizeForLayoutSize(4.33),
+      color:Colors.subhead,
+      marginTop:PixelRatio.getPixelSizeForLayoutSize(5),
+      justifyContent: "center",
+      alignItems: 'center',
+      lineHeight:PixelRatio.getPixelSizeForLayoutSize(6.2 ),
     },
     extra: {
       left: 75,

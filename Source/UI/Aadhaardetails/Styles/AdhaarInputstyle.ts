@@ -1,11 +1,11 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, PixelRatio } from "react-native";
 
 const AdhaarInputstyle = StyleSheet.create({
     inbox: {
-        top:20,
+        textAlign:'center',
         borderBottomColor: '#E0E0E0',
-        borderBottomWidth: 3,
-        paddingHorizontal: 10,
+        borderBottomWidth:  PixelRatio.getPixelSizeForLayoutSize(1),
+        paddingHorizontal:  PixelRatio.getPixelSizeForLayoutSize(25),
         paddingVertical: 0,
         width: '90%',
         color: 'black',
