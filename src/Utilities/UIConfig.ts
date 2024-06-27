@@ -1,16 +1,4 @@
-import YAML from 'js-yaml';
-import fs from 'react-native-fs'; // npm install react-native-fs
-
-const loadConfig = async (filePath) => {
-    try {
-        const configString = await fs.readFileAssets(filePath);
-        const config = YAML.load(configString);
-        return config;
-    } catch (error) {
-        console.error(`Error loading config file ${filePath}`, error);
-        return null;
-    }
-};
+import { loadConfig } from './ConfigHelper';
 
 export const DefinedColors = await loadConfig('./src/UI-Constants/Colors.yaml');
 export const DefinedDesign = await loadConfig('./src/UI-Constants/Designs.yaml');
