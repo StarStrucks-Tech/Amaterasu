@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, Image, Modal, StyleSheet,TouchableOpacity } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
-import styles from './OtherConsentStyles';
+import styles from './Style/OtherConsentStyles';
 import { OtherConsentsConstants } from './Constants';
-import { LocationConsent, NotificationsConsent } from './OtherConsentComponents';
+import { LocationConsent, NotificationsConsent } from '../../Components/ConsentScreenComp/OtherConsentComponents';
 
 const constants = OtherConsentsConstants();
 /**

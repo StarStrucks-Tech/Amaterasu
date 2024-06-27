@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import styles from './BiometricConsentStyles';
+import styles from './Style/BiometricConsentStyles';
 import { BiometricConsentConstants } from './Constants';
 
 const constants = BiometricConsentConstants();

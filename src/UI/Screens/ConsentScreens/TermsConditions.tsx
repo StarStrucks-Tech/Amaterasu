@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, Image, Linking, Modal, TouchableOpacity } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
-import styles from './TermsConditionsStyles';
+import styles from './Style/TermsConditionsStyles';
 import { TermsConditionsConstants } from './Constants';
-import { Terms, Secure} from './TermsConditionsComponents';
+import { Terms, Secure } from '../../Components/ConsentScreenComp/TermsConditionsComponents';
 
 const constants = TermsConditionsConstants();
 

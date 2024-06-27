@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, Linking} from 'react-native';
-import styles from './TermsConditionsStyles';
-import { TermsConditionsConstants } from './Constants';
-import { config } from './Config';
+import styles from '../../Screens/ConsentScreens/Style/TermsConditionsStyles';
+import { TermsConditionsConstants } from '../../Screens/ConsentScreens/Constants';
+import { config } from '../../Screens/ConsentScreens/Config';
 
 const constants = TermsConditionsConstants();
 const { TERMS_URL, SECURE_URL} = config;
@@ -21,7 +21,7 @@ const Terms = () => {
     return (
         <View style={{ flex: 1 }}>
             <TouchableOpacity style={styles.termButton} onPress={handleTermsPress}>
-                <Image source={require('./assets/terms.png')} style={styles.buttonImage} />
+                <Image source={require('../../Screens/ConsentScreens/assets/terms.png')} style={styles.buttonImage} />
                 <Text style={styles.termsSecureButtonText}>{constants.TERMS_BTN}</Text>
             </TouchableOpacity>
         </View>
@@ -42,7 +42,7 @@ const Secure = () => {
     return (
         <View style={{ flex: 1 }} >
             <TouchableOpacity style={styles.secureButton} onPress={handleSecurePress}>
-                <Image source={require('./assets/secure.png')} style={styles.buttonImage} />
+                <Image source={require('../../Screens/ConsentScreens/assets/secure.png')} style={styles.buttonImage} />
                 <Text style={styles.termsSecureButtonText}>{constants.SECURE_BTN}</Text>
             </TouchableOpacity>
         </View>
