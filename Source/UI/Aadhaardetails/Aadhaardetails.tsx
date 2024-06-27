@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity, Image, StyleSheet, Pressable, Keyboard, PixelRatio } from 'react-native';
 import AadhaarInput from "./Components/AdhaarInput";
 import NextButton from "./Components/NextButton";
-import SecureComp from "./Components/SecureComp";
+import SecureComp from "./Components/SecureComponent";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view"; 
 import { adhaardetailsScreenStyles } from "./Styles/adhaardetailsScreenStyles"; 
 import { SafeAreaView } from "react-native-safe-area-context";

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, Alert, Pressable, Keyboard, BackHandler,PixelRatio, Platform } from 'react-native';
-import SecureComp from '../Aadhaardetails/Components/SecureComp';
+import SecureComp from '../Aadhaardetails/Components/SecureComponent';
 import Flipcoin from './Components/Flipcoin';
 import FallbackBottom from './FallbackBottom';
 import OTPInputs from './Components/OTPInputs';

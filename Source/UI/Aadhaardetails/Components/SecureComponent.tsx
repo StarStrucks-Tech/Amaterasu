@@ -4,7 +4,7 @@ import { View, Text, StyleSheet,Image,PixelRatio } from 'react-native';
 import TextComponent from '../../Components/Textcomponents';
 import Colors from '../../Components/Colors';
 
-const SecureComp = () => {
+const SecureComponent = () => {
   return (
     <View style={{
       marginTop: PixelRatio.getPixelSizeForLayoutSize(4),
