@@ -1,8 +1,7 @@
 import { StyleSheet } from 'react-native';
 
-
+//Style for Biometric consent screen
 const styles = StyleSheet.create({
-
     container: {
         flex: 1,
         justifyContent: 'space-between',

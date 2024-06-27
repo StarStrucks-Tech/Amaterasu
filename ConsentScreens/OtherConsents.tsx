@@ -6,8 +6,6 @@ import { OtherConsentsConstants } from './Constants';
 import { LocationConsent, NotificationsConsent } from './OtherConsentComponents';
 
 const constants = OtherConsentsConstants();
-
-
 /**
  * OtherConsents component
  */

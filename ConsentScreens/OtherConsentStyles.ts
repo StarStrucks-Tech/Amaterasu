@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-
+//style for Other Consent Screen
 const styles = StyleSheet.create({
 
     container: {

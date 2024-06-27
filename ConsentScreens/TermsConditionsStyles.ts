@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 
+//Style for Terms & Conditions Screen
 const styles = StyleSheet.create({
 
     container: {

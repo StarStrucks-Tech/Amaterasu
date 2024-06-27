@@ -4,10 +4,6 @@ import styles from './TermsConditionsStyles';
 import { TermsConditionsConstants } from './Constants';
 import { config } from './Config';
 
-/**
- * Define constants for URLs, button texts, and alert messages
- */
-
 const constants = TermsConditionsConstants();
 const { TERMS_URL, SECURE_URL} = config;
 
