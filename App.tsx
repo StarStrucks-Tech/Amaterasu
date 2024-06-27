@@ -104,8 +104,8 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button, ScrollView} from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native'
-import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import { NavigationContainer } from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ProductWrapper from './src/UI/Components/ForTestingStore/ProductWrapper';
 import UserList from './src/UI/Components/ForTestingStore/UserList';
 
@@ -113,13 +113,13 @@ const Stack = createNativeStackNavigator();
 const App = () => {
 
   return (
-    
+
     <NavigationContainer>
      <Stack.Navigator>
-      <Stack.Screen name = 'Name' component ={ProductWrapper}/>
-      <Stack.Screen name = 'User' component ={UserList}/>
+      <Stack.Screen name = "Name" component ={ProductWrapper}/>
+      <Stack.Screen name = "User" component ={UserList}/>
      </Stack.Navigator>
-      
+
     </NavigationContainer >
   );
 };

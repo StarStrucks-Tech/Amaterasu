@@ -1,35 +1,30 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable semi */
-/* eslint-disable prettier/prettier */
-/* eslint-disable react-native/no-inline-styles */
-
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { getUserList } from '../../../Hooks/commonStore/action';
+import {useDispatch, useSelector} from 'react-redux';
+import {useEffect} from 'react';
+import {getUserList} from '../../../Hooks/commonStore/action';
 
 const UserList = () => {
-   const dispatch = useDispatch();
-   const userList = useSelector((state:any)=>state.reducer)
+  const dispatch = useDispatch();
+  const userList = useSelector((state: any) => state.reducer?.[0]?.users || []);
 
-   useEffect(()=>{
+  useEffect(() => {
     dispatch(getUserList());
-   },[dispatch]);
-  console.warn('in component',userList)
+  }, []);
+  console.warn('in component', userList);
 
   return (
-    <View style = {styles.container}>
-      {
-  userList.length ? (
-    userList.map((item: any) => (
-      <View key={item.id}>
-        <Text style={{ fontSize: 18 }}>{item.firstName}</Text>
-      </View>
-    ))
-  ) : null
-}
-
+    <View style={styles.container}>
+      <Text>Users List</Text>
+      {userList.length > 0 ? (
+        userList.map(item => (
+          <View>
+            <Text style={{fontSize: 18}}>{item.email}</Text>
+          </View>
+        ))
+      ) : (
+        <Text>No users found</Text>
+      )}
     </View>
   );
 };
