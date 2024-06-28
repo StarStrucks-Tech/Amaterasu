@@ -3,9 +3,18 @@ import {takeEvery, put, call} from 'redux-saga/effects';
 import {fetchData} from './api';
 import {getUserList} from './action';
 
-function* userList(action) {
+const action = getUserList();
+export interface GetUserListAction {
+  type: typeof USER_LIST;
+}
+
+interface FetchDataResponse {
+  type: any;
+}
+
+function* userList(action:GetUserListAction) {
   try {
-    const data = yield call(fetchData);
+    const data:FetchDataResponse = yield call(fetchData);
     yield put({type: SET_USER_DATA, data});
   } catch (error) {
     console.error('Error fetching user list:', error);

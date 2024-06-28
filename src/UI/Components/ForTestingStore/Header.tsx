@@ -4,7 +4,7 @@ import {useSelector} from 'react-redux';
 import {useState, useEffect} from 'react';
 
 const Header = () => {
-  const cartData = useSelector(state => state.reducer);
+  const cartData = useSelector((state: any) => state.reducer);
   const cartItems = cartData.length;
 
   return (

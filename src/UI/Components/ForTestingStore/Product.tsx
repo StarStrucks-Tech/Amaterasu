@@ -1,28 +1,28 @@
-import React, {useEffect} from 'react';
-import {View, Text, StyleSheet, Button} from 'react-native';
+import React, { useEffect } from 'react';
+import { View, Text, StyleSheet, Button } from 'react-native';
 
-import {useDispatch, useSelector} from 'react-redux';
-import {addToCart, removeFromCart} from '../../../Hooks/commonStore/action';
-import {useState} from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart, removeFromCart } from '../../../Hooks/ReducerHub/action';
+import { useState } from 'react';
 
 const Product = (props: any) => {
   const item = props.item;
   const dispatch = useDispatch();
-  const cartItems = useSelector(state => state.reducer);
+  const cartItems = useSelector((state: any) => state.reducer);
   const [isAdded, setIsAdded] = useState(false);
 
-  const handleAddToCart = item => {
+  const handleAddToCart = (item: any) => {
     dispatch(addToCart(item));
   };
 
-  const handleRemoveFromCart = item => {
+  const handleRemoveFromCart = (item: any) => {
     dispatch(removeFromCart(item.name));
   };
 
   useEffect(() => {
     if (cartItems && cartItems.length > 0) {
       const itemInCart = cartItems.some(
-        cartItem => cartItem.name === item.name,
+        (cartItem: any) => cartItem.name === item.name,
       );
       setIsAdded(itemInCart);
     } else {
@@ -32,7 +32,7 @@ const Product = (props: any) => {
 
   return (
     <View>
-      <Text style={{fontSize: 24}}>{item.name}</Text>
+      <Text style={{ fontSize: 24 }}>{item.name}</Text>
       <Text>{item.color}</Text>
       <Text>{item.price}</Text>
       {isAdded ? (
