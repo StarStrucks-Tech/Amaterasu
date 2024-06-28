@@ -1,4 +1,3 @@
-// src/utilities/constants.tsx
 export const DIMENSIONS = {
   cameraWidth: 200,
   cameraHeight: 300,

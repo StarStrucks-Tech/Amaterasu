@@ -1,11 +1,9 @@
-// src/UI/Screens/Frontend/VisualElementScreen.tsx
 import React from 'react';
-import { View, Image, ImageSourcePropType, Text } from 'react-native';
-import LottieView, { AnimationObject } from 'lottie-react-native';
+import {View, Image, ImageSourcePropType} from 'react-native';
+import LottieView, {AnimationObject} from 'lottie-react-native';
 import styles from './styles';
 
-
-type LottieSource = string | { uri: string } | AnimationObject;
+type LottieSource = string | {uri: string} | AnimationObject;
 
 const VisualElement: React.FC<{
   imageSource: ImageSourcePropType;
@@ -18,11 +16,6 @@ const VisualElement: React.FC<{
 }> = ({
   imageSource,
   lottieSource,
-  text,
-  width = 100,
-  height = 100,
-  cornerRadius = 10,
-  rotationAngle = 0,
 }) => {
   return (
     <View style={styles.container}>
@@ -31,7 +24,7 @@ const VisualElement: React.FC<{
       </View>
       <View style={styles.lottieContainer}>
         <LottieView
-          source={lottieSource as string | AnimationObject | { uri: string }}
+          source={lottieSource as string | AnimationObject | {uri: string}}
           autoPlay
           loop
           style={styles.lottie}
