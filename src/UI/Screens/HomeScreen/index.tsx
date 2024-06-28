@@ -1,6 +1,5 @@
-// src/UI/Screens/Frontend/VisualElementScreen.tsx
 import React from 'react';
-import {View, Image, ImageSourcePropType, Text} from 'react-native';
+import {View, Image, ImageSourcePropType} from 'react-native';
 import LottieView, {AnimationObject} from 'lottie-react-native';
 import styles from './styles';
 
@@ -17,11 +16,6 @@ const VisualElement: React.FC<{
 }> = ({
   imageSource,
   lottieSource,
-  text,
-  width = 100,
-  height = 100,
-  cornerRadius = 10,
-  rotationAngle = 0,
 }) => {
   return (
     <View style={styles.container}>
