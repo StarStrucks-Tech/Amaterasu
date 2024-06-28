@@ -1,9 +1,23 @@
 import { loadConfig } from './ConfigHelper';
 
-export const DefinedColors = await loadConfig('./src/UI-Constants/Colors.yaml');
-export const DefinedDesign = await loadConfig('./src/UI-Constants/Designs.yaml');
-export const DefinedErrors = await loadConfig('./src/UI-Constants/Errors.yaml');
-export const FontSizeWeightFamily = await loadConfig('./src/UI-Constants/FontSizeWeightFamily.yaml');
-export const DateTimeFormate = await loadConfig('./src/UI-Constants/DateTimeFormate.yaml');
-export const TimeDuration = await loadConfig('./src/UI-Constants/TimeDuration.yaml');
-export const PlaceHolder = await loadConfig('./src/UI-Constants/PlaceHolder.yaml');
+const loadAllConfigs = async () => {
+    const DefinedColors = await loadConfig('../UI-Constants/Colors.yaml');
+    const DefinedDesign = await loadConfig('../UI-Constants/Designs.yaml');
+    const DefinedErrors = await loadConfig('../UI-Constants/Errors.yaml');
+    const FontSizeWeightFamily = await loadConfig('../UI-Constants/FontSizeWeightFamily.yaml');
+    const DateTimeFormate = await loadConfig('../UI-Constants/DateTimeFormate.yaml');
+    const TimeDuration = await loadConfig('../UI-Constants/TimeDuration.yaml');
+    const PlaceHolder = await loadConfig('../UI-Constants/PlaceHolder.yaml');
+
+    return {
+        DefinedColors,
+        DefinedDesign,
+        DefinedErrors,
+        FontSizeWeightFamily,
+        DateTimeFormate,
+        TimeDuration,
+        PlaceHolder
+    };
+};
+
+export const Configs = loadAllConfigs();
