@@ -2,15 +2,23 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView, Image, Platform, PixelRatio } from 'react-native';
 import styles from './EmailVerification.styles';
 import Colors from '../../Assets/color';
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import EmailVer from '../Components/NextButton';
+import { Pressable } from 'react-native';
+import { Keyboard } from 'react-native';
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view"; 
 
 const EmailVerificationScreen = () => {
   const [emailID, setEmailID] = useState('');
   const [name, setName] = useState('');
 
   return (
-    <View style={styles.container}>
+
+    <SafeAreaView style={styles.container}>
+    <KeyboardAwareScrollView style={{flex:1}}
+    contentContainerStyle={{ flexGrow: 1 }}
+    > 
+       <Pressable  onPress={Keyboard.dismiss}>
+    <View style={{justifyContent:'center',alignItems:'center',alignSelf:'center'}}>
       <Image source={require('../../Assets/images/email_img.png')} style={styles.icon} />
         <Text style={styles.title}>Select your personal</Text>
         <Text style={styles.title}>email ID</Text>
@@ -34,8 +42,10 @@ const EmailVerificationScreen = () => {
           maxLength={40}
         />
         <Text style={styles.charCount}>{name.length}/40</Text>
-       <EmailVer/>
-      </View>
+       <EmailVer/></View>
+       </Pressable>
+       </KeyboardAwareScrollView>
+       </SafeAreaView>
   );
 };
 
