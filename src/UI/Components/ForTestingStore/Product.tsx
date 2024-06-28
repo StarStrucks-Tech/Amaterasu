@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import React, {useEffect} from 'react';
+import {View, Text, StyleSheet, Button} from 'react-native';
 
-import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, removeFromCart } from '../../../Hooks/ReducerHub/action';
-import { useState } from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {addToCart, removeFromCart} from '../../../ReducerHub/action';
+import {useState} from 'react';
 
 const Product = (props: any) => {
   const item = props.item;
@@ -32,7 +32,7 @@ const Product = (props: any) => {
 
   return (
     <View>
-      <Text style={{ fontSize: 24 }}>{item.name}</Text>
+      <Text style={{fontSize: 24}}>{item.name}</Text>
       <Text>{item.color}</Text>
       <Text>{item.price}</Text>
       {isAdded ? (

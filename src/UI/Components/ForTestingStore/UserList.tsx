@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { getUserList } from '../../../Hooks/ReducerHub/action';
+import {View, Text, StyleSheet} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
+import {useEffect} from 'react';
+import {getUserList} from '../../../ReducerHub/action';
 
 const UserList = () => {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ const UserList = () => {
       {userList.length > 0 ? (
         userList.map((item: any) => (
           <View>
-            <Text style={{ fontSize: 18 }}>{item.firstName}</Text>
+            <Text style={{fontSize: 18}}>{item.firstName}</Text>
           </View>
         ))
       ) : (
