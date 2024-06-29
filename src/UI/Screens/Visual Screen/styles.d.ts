@@ -1,33 +1,36 @@
-import {StyleSheet} from 'react-native';
+// styles.ts
+
+import { StyleSheet } from 'react-native';
+import { COLORS, DIMENSIONS } from './constants';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F7F7F7',
-    marginBottom: 20,
+    backgroundColor: COLORS.background,
+    marginBottom: DIMENSIONS.containerMarginBottom,
   },
   imageContainer: {
     width: '100%',
-    height: '50%',
+    height: DIMENSIONS.imageContainerHeight,
     borderRadius: 20, 
     overflow: 'hidden',
-    marginBottom: 30,
+    marginBottom: DIMENSIONS.imageContainerMarginBottom,
   },
   image: {
-    width: 350,
-    height: 300,
+    width: DIMENSIONS.imageWidth,
+    height: DIMENSIONS.imageHeight,
   },
   lottieContainer: {
     width: '100%',
-    height: '50%',
+    height: DIMENSIONS.lottieContainerHeight,
     justifyContent: 'center',
     alignItems: 'center',
   },
   lottie: {
-    width: 350,
-    height: 300,
+    width: DIMENSIONS.lottieWidth,
+    height: DIMENSIONS.lottieHeight,
   },
 });
 
