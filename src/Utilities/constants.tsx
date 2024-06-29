@@ -1,47 +1,48 @@
+// src/utilities/constants.ts
 export const DIMENSIONS = {
-  cameraWidth: 200,
-  cameraHeight: 300,
-  cameraViewWidth: 200,
-  cameraViewHeight: 330,
-  dotSize: 15,
-  buttonWidth: 250,
-  buttonHeight: 28,
+  cameraWidth: 300,
+  cameraHeight: 400,
+  cameraViewWidth: 320,
+  cameraViewHeight: 420,
+  dotSize: 10,
+  buttonWidth: 200,
+  buttonHeight: 50,
 };
 
 export const COLORS = {
-  background: 'transparent',
-  cameraBackground: 'black',
-  overlayBackground: '#fafce0',
-  textColor: '#333',
-  buttonBackground: '#c45435',
-  buttonText: 'white',
+  background: '#FFFFFF',
+  cameraBackground: '#000000',
+  overlayBackground: 'rgba(0, 0, 0, 0.5)',
+  textColor: '#FFFFFF',
+  buttonBackground: '#007BFF',
+  buttonText: '#FFFFFF',
 };
 
 export const BORDER_RADIUS = {
-  camera: 100,
-  cameraView: Math.max(200, 330) / 2,
-  button: 5,
+  camera: 10,
+  cameraView: 15,
+  button: 25,
 };
 
 export const PADDING = {
   cameraView: 10,
   overlayVertical: 20,
-  overlayTop: 20,
+  overlayTop: 40,
 };
 
 export const MARGIN = {
-  cameraViewTop: 30,
-  cameraViewBottom: 45,
+  cameraViewTop: 50,
+  cameraViewBottom: 20,
   textBottom: 10,
-  dotBottom: 8,
-  dotRight: 5,
-  codeBottom: 15,
-  buttonBottom: 10,
-  buttonTextTop: 3,
+  dotBottom: 5,
+  dotRight: 10,
+  codeBottom: 10,
+  buttonBottom: 30,
+  buttonTextTop: 15,
 };
 
 export const FONT_SIZES = {
   text: 18,
-  code: 25,
-  buttonText: 15,
+  code: 24,
+  buttonText: 16,
 };
