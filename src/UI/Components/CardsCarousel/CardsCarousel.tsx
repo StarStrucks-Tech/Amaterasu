@@ -6,16 +6,21 @@ import style from './styles';
 const { width, height } = Dimensions.get('window');
 const styles = StyleSheet.create(style);
 
-const CardsCarousel = ({ data, renderItem }) => {
+type CardsCarouselProps = {
+  data: any[];
+  renderItem: (item: any) => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+};
+
+const CardsCarousel = ({ data, renderItem }: CardsCarouselProps) => {
   const flatListRef = useRef(null);
   const scrollX = useRef(new Animated.Value(0)).current;
   const [listData] = useState([...data, ...data, ...data]);
 
-  const handleScrollEnd = (event) => {
+  const handleScrollEnd = (event: any) => {
     const contentOffsetX = event.nativeEvent.contentOffset.x;
     const index = Math.round(contentOffsetX / width);
-    if (index >= data.length && flatListRef.current) {
-      flatListRef.current.scrollToIndex({ index: index % data.length, animated: false });
+    if (index >= data.length && flatListRef.current !== null) {
+      (flatListRef.current as any).scrollToIndex({ index: index % data.length, animated: false });
     }
   };
 

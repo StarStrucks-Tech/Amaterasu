@@ -3,7 +3,7 @@ import { View, StyleSheet, Animated, Dimensions } from 'react-native';
 
 const { width } = Dimensions.get('window');
 
-const Pagination = ({ data, scrollX }) => {
+const Pagination = ({ data, scrollX }: { data: any[], scrollX: Animated.Value}) => {
   return (
     <View style={styles.pagination}>
       {data.map((_, i) => {
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   pagination: {
     flexDirection: 'row',
     position: 'absolute',
-    bottom: -30, // Adjust this value to position the pagination 20-30px below the carousel
+    bottom: 65,
     alignSelf: 'center',
   },
   dot: {
@@ -55,6 +55,3 @@ const styles = StyleSheet.create({
 });
 
 export default Pagination;
-
-
-//  { key: '3', bankName: 'Bank hai', balance: '$2', amount: '100000', accountHolder: 'John the Don', accountNumber: '1234567890123456' },
