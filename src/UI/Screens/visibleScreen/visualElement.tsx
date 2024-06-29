@@ -13,10 +13,7 @@ const VisualElement: React.FC<{
   height?: number;
   cornerRadius?: number;
   rotationAngle?: number;
-}> = ({
-  imageSource,
-  lottieSource,
-}) => {
+}> = ({imageSource, lottieSource}) => {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
