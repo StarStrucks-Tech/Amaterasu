@@ -55,3 +55,6 @@ const styles = StyleSheet.create({
 });
 
 export default Pagination;
+
+
+//  { key: '3', bankName: 'Bank hai', balance: '$2', amount: '100000', accountHolder: 'John the Don', accountNumber: '1234567890123456' },

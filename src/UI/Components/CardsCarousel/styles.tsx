@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     carousel: {
-      flexGrow: 0.45,
+      flexGrow: 0.55,
     },
   });
   

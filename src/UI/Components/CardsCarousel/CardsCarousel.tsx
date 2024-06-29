@@ -7,7 +7,7 @@ const { width, height } = Dimensions.get('window');
 const styles = StyleSheet.create(style);
 
 const CardsCarousel = ({ data, renderItem }) => {
-  const flatListRef = useRef<FlatList>(null);
+  const flatListRef = useRef(null);
   const scrollX = useRef(new Animated.Value(0)).current;
   const [listData] = useState([...data, ...data, ...data]);
 
@@ -45,6 +45,5 @@ const CardsCarousel = ({ data, renderItem }) => {
     </View>
   );
 };
-
 
 export default CardsCarousel;
