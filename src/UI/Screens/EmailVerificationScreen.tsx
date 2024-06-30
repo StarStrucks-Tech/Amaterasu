@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView, Image, Platform, PixelRatio } from 'react-native';
-import styles from './EmailVerification.styles';
-import Colors from '../../Assets/color';
+import styles from './EmailVerification';
+import Colors from '../../Configs/color'
 import EmailVer from '../Components/NextButton';
 import { Pressable } from 'react-native';
 import { Keyboard } from 'react-native';

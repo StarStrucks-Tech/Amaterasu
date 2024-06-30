@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native';
-import styles from "../Screens/EmailVerification.styles";
+import styles from "../Screens/EmailVerification";
 
 const EmailVer = ()=>{
     return (
