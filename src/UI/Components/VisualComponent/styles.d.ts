@@ -1,5 +1,3 @@
-// styles.ts
-
 import { StyleSheet } from 'react-native';
 import { COLORS, DIMENSIONS } from './constants';
 
@@ -14,7 +12,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     width: '100%',
     height: DIMENSIONS.imageContainerHeight,
-    borderRadius: 20, 
+    borderRadius: 20,
     overflow: 'hidden',
     marginBottom: DIMENSIONS.imageContainerMarginBottom,
   },
@@ -31,6 +29,14 @@ const styles = StyleSheet.create({
   lottie: {
     width: DIMENSIONS.lottieWidth,
     height: DIMENSIONS.lottieHeight,
+  },
+  textContainer: {
+    marginTop: 20,
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 16,
+    color: '#333',
   },
 });
 
