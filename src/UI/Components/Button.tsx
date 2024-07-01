@@ -3,7 +3,11 @@ import { StyleSheet, Text, View,Alert } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import styles from "../Screens/EmailVerificationScreen/styles";
 
-const Button = (props:ButtonProps)=>{
+/**
+ * Button component
+ * @param {ButtonProps} props - The props for the Button component
+ */
+const Button = (props:ButtonProps)=>{  
     return (
         <View>
         <TouchableOpacity onPress={props.onClick} style={styles.button}>
@@ -14,7 +18,13 @@ const Button = (props:ButtonProps)=>{
     );
 }
 
-type ButtonProps={
+/**
+ * Type definition for ButtonProps
+ * @type {Object}
+ * @property {() => void} [onClick] - Optional click handler function
+ * @property {string} [text] - Optional button text
+ */
+type ButtonProps={    
   onClick?:()=>void;
   text?:string;
 }

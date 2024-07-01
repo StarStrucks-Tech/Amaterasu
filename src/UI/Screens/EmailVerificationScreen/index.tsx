@@ -1,3 +1,12 @@
+/**
+ * EmailVerificationScreen Component
+ * 
+ * This component renders a screen for email verification and user name input.
+ * It includes form fields for email and name, along with explanatory text and an image.
+ * The screen is wrapped in a KeyboardAwareScrollView to handle keyboard interactions.
+ * 
+ */
+
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView, Image, Platform, PixelRatio } from 'react-native';
 import styles from './styles';
@@ -7,9 +16,19 @@ import { Colors } from '../../../Assets/Colors';
 import { Keyboard } from 'react-native';
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view"; 
 
-const EmailVerificationScreen = () => {
+
+const EmailVerificationScreen = () => {    
+  /**
+   * State for storing the user's email ID
+   * @type {[string, function]}
+   */     
   const [emailID, setEmailID] = useState('');
   const [name, setName] = useState('');
+
+  /**
+   * State for storing the user's name
+   * @type {[string, function]}
+   */
 
   return (
 
