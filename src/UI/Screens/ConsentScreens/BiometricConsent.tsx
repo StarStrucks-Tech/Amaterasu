@@ -20,10 +20,10 @@ const BiometricConsent = () => {
         console.log(constants.PERMISSION_GRANTED);
     };
 
-     /**
-   * handleToggle
-   * Toggles the isDarkMode state variable
-   */
+    /**
+  * handleToggle
+  * Toggles the isDarkMode state variable
+  */
     const handleToggle = () => {
         setIsDarkMode(!isDarkMode);
     };
@@ -31,10 +31,9 @@ const BiometricConsent = () => {
 
     return (
         <View style={[styles.container, isDarkMode ? styles.darkMode : styles.lightMode]}>
-            {/* Top image */}
-            <Image source={require('./assets/top.png')} style={styles.image} />
-            {/* Header text */}
-            <View>
+
+            <View style={styles.alignImage}>
+                <Image source={require('./assets/top1.png')} style={styles.image} />
                 <Text style={[styles.header, isDarkMode ? styles.darkHeader : styles.lightHeader]}>{constants.SECURE_LOGIN_TEXT}</Text>
             </View>
             <View style={styles.align}>

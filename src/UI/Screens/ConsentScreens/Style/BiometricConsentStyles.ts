@@ -6,12 +6,13 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'space-between',
         alignItems: 'center',
+        marginBottom:4,
     },
     lightMode: {
-        backgroundColor: '#fafce0',
+        backgroundColor: '#ffffe4',
     },
     darkMode: {
-        backgroundColor: '#193d3b',
+        backgroundColor: '#042319',
     },
 
     align: {
@@ -20,23 +21,23 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         paddingHorizontal: 20,
-        marginLeft: 18,
+        marginLeft: 25,
 
 
     },
     lock: {
-        width: 22,
-        height: 22,
-        marginRight: 75,
+        width: 20,
+        height: 20,
+        marginRight:90,
         marginTop: 10,
     },
     header: {
-        marginHorizontal: 30,
-        fontSize: 25,
+        marginHorizontal: 60,
+        fontSize: 20,
         fontWeight: 'bold',
         color: '#333',
         textAlign: 'center',
-        marginBottom: 18,
+        margin: 20,
 
     },
     lightHeader: {
@@ -46,9 +47,9 @@ const styles = StyleSheet.create({
         color: '#fff',
     },
     topText: {
-        fontSize: 18,
+        fontSize: 16,
         fontWeight: 'light',
-        marginBottom: 15,
+        marginBottom: 8,
         color: '#6c757d',
         textAlign: 'center',
         marginLeft: 30,
@@ -61,12 +62,13 @@ const styles = StyleSheet.create({
     },
     arrow: {
         height: 25,
-        width: 40,
-        marginRight: 35,
+        width: 25,
+        marginRight: 40,
+        marginLeft:10,
     },
     para: {
         marginHorizontal: 25,
-        fontSize: 15,
+        fontSize: 14,
         marginBottom: 20,
         color: '#495057',
         textAlign: 'center',
@@ -80,21 +82,19 @@ const styles = StyleSheet.create({
 
     image: {
         alignSelf: 'center',
-        width: 200,
-        height: 190,
-        marginVertical: 40,
-        marginLeft: 50,
+        width: 360,
+        height: 300,
     },
 
     button: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#c45435',
+        backgroundColor: '#d05f33',
         borderRadius: 10,
         marginHorizontal: 30,
         paddingHorizontal: 20,
         width: 300,
-        height: 40,
+        height: 35,
         marginBottom: 10,
 
     },
@@ -103,6 +103,11 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 20,
         fontWeight: 'bold',
+    },
+    alignImage:{
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: "space-around",
     },
 });
 

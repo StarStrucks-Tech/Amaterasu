@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: '#fafce0',
+        backgroundColor: '#ffffe4',
         paddingBottom: 10,
     },
     topText: {
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
 
     },
     button: {
-        backgroundColor: '#c45435',
+        backgroundColor: '#d05f33',
         borderRadius: 10,
         paddingHorizontal: 20,
         width: 280,
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
     },
     alertContent: {
-        backgroundColor: '#193d3b',
+        backgroundColor: '#042319',
         padding: 20,
         height: 180,
         width: 300,
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
         marginVertical: 5,
     },
     okButton: {
-        backgroundColor: '#c45435',
+        backgroundColor: '#d05f33',
         borderRadius: 10,
         marginLeft: 180,
         marginTop: 30,

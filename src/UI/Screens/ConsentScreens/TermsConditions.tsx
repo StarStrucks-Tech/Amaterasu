@@ -3,10 +3,11 @@ import { View, Text, Image, Linking, Modal, TouchableOpacity } from 'react-nativ
 import CheckBox from '@react-native-community/checkbox';
 import styles from './Style/TermsConditionsStyles';
 import { TermsConditionsConstants } from './Constants';
-import { Terms, Secure } from '../../Components/ConsentScreenComp/TermsConditionsComponents';
+import { ButtonComponent } from '../../Components/ConsentScreenComp/TermsConditionsComponent';
+import { config } from './Config';
 
 const constants = TermsConditionsConstants();
-
+const { TERMS_URL, SECURE_URL } = config;
 /**
  * Terms and Conditions component
  */
@@ -28,36 +29,46 @@ const TermsConditions = () => {
         setIsChecked2(!isChecked2);
     };
 
-   /**
-   * Handle button press event
-   */
+    /**
+    * Handle button press event
+    */
     const handleButtonPress = () => {
         if (!isChecked1 || !isChecked2) {
             setAlertVisible(true);
-            
+
         } else {
             //navigate to next Screen
             console.log('Terms & Conditions Accepted!');
         }
     };
 
-     /**
-   * Handle OK press event
-   */
+    /**
+  * Handle OK press event
+  */
     const handleOKPress = () => {
         setAlertVisible(false);
     };
 
     return (
         <View style={styles.container}>
-            <Image source={require('./assets/termsConditions.png')} style={styles.topImage} />
+            <Image source={require('./assets/termsConditions1.png')} style={styles.topImage} />
             <View >
                 <Text style={styles.heading}>{constants.TITLE}</Text>
                 <Text style={styles.topText}>{constants.SUBTITLE}</Text>
             </View>
             <View style={styles.consentRow}>
-                <Terms />
-                <Secure />
+                <ButtonComponent
+                    buttonStyle={styles.termButton}
+                    imageSource={require('./assets/terms.png')}
+                    buttonText={constants.TERMS_BTN}
+                    url={TERMS_URL}
+                />
+                <ButtonComponent
+                    buttonStyle={styles.secureButton}
+                    imageSource={require('./assets/secure.png')}
+                    buttonText={constants.SECURE_BTN}
+                    url={SECURE_URL}
+                />
 
             </View>
             <View style={styles.checkbox}>

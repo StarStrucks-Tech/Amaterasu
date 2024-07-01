@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, Image, Modal, StyleSheet,TouchableOpacity } from 'react-native';
+import { View, Text, Image, Modal, TouchableOpacity } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import styles from './Style/OtherConsentStyles';
 import { OtherConsentsConstants } from './Constants';
-import { LocationConsent, NotificationsConsent } from '../../Components/ConsentScreenComp/OtherConsentComponents';
+import { ConsentComponent } from '../../Components/ConsentScreenComp/OtherConsentComponent';
 
 const constants = OtherConsentsConstants();
 /**
@@ -47,8 +47,18 @@ const OtherConsents = () => {
                 <Text style={styles.para}>{constants.PERMISSION_PARAGRAPH}</Text>
             </View>
             <View style={styles.consentRow}>
-                <NotificationsConsent />
-                <LocationConsent />
+                <ConsentComponent
+                    containerStyle={styles.notificationsConsentContainer}
+                    imageSource={require('./assets/notification_image.png')}
+                    headerText={constants.NOTIFICATION_HEADER}
+                    text={constants.NOTIFICATION_TEXT}
+                />
+                <ConsentComponent
+                    containerStyle={styles.locationConsentContainer}
+                    imageSource={require('./assets/location_image2.png')}
+                    headerText={constants.LOCATION_HEADER}
+                    text={constants.LOCATION_TEXT}
+                />
 
             </View>
             <View style={styles.checkbox}>

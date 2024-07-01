@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: '#fafce0',
+        backgroundColor: '#ffffe4',
         padding: 5,
     },
     heading: {
@@ -76,8 +76,9 @@ const styles = StyleSheet.create({
     },
     topImage: {
         alignSelf: 'center',
-        width: 250,
-        height: 240,
+        width: 150,
+        height: 150,
+        margin:50,
     },
     text: {
         flex: 1,
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     button: {
-        backgroundColor: '#c45435',
+        backgroundColor: '#d05f33',
         flexDirection: 'row',
         alignItems: 'center',
         borderRadius: 10,
@@ -113,8 +114,9 @@ const styles = StyleSheet.create({
     },
     arrow: {
         height: 25,
-        width: 30,
-        marginRight: 40,
+        width: 20,
+        marginRight: 30,
+        marginLeft:10,
     },
     alertContainer: {
         flex: 1,
@@ -123,7 +125,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
     },
     alertContent: {
-        backgroundColor: '#193d3b',
+        backgroundColor: '#042319',
         padding: 20,
         height: 180,
         width: 300,
