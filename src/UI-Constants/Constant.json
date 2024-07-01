@@ -1,0 +1,137 @@
+{
+  "Colors": {
+    "COLOR_BACKGROUND": "#ecf0f1",
+    "COLOR_TEXT_PRIMARY": "#2c3e50",
+    "COLOR_TEXT_SECONDARY": "#95a5a6",
+    "COLOR_ERROR": "#e74c3c",
+    "COLOR_WARNING": "#f39c12",
+    "COLOR_SUCCESS": "#2ecc71",
+    "COLOR_GREY_DARK": "#7E7E7E",
+    "COLOR_GREY_LIGHT": "#E0E0E0",
+    "COLOR_BEIGE": "#F7F2E8",
+    "COLOR_ORANGE": "#D05F33",
+    "COLOR_DARK_BROWN": "#262123",
+    "COLOR_LIGHT_YELLOW": "#FFFFE4",
+    "COLOR_SEMI_TRANSPARENT_BLACK": "rgba(0, 0, 0, 0.5)",
+    "AQUA_GREEN": "#1A5276",
+    "RED": "#B03A2E",
+    "PURPLE": "#8E44AD",
+    "GRAY": "#898A8D",
+    "GREEN": "#229954",
+    "BLUE": "#2471A3",
+    "YELLOW": "#F4D03F",
+    "WHITE": "#FFFFFF",
+    "BLACK": "#000000",
+    "LIGHT_GRAY": "#D3D3D3",
+    "DARK_GRAY": "#A9A9A9",
+    "TRANSPARENT": "transparent",
+    "LIGHT_BLUE": "#ADD8E6",
+    "LIGHT_GREEN": "#90EE90",
+    "LIGHT_YELLOW": "#FFFFE0",
+    "LIGHT_RED": "#F08080",
+    "LIGHT_PURPLE": "#E6E6FA",
+    "LIGHT_ORANGE": "#FFA07A",
+    "LIGHT_PINK": "#FFB6C1",
+    "LIGHT_BROWN": "#CD853F",
+    "LIGHT_CYAN": "#E0FFFF",
+    "LIGHT_MAGENTA": "#FFC0CB",
+    "LIGHT_GOLDENROD_YELLOW": "#FAFAD2",
+    "LIGHT_CORAL": "#F08080",
+    "LIGHT_AQUA": "#00FFFF",
+    "LIGHT_LIME": "#32CD32",
+    "LIGHT_TURQUOISE": "#40E0D0",
+    "LIGHT_INDIGO": "#4B0082"
+  },
+  "DateTimeFormat": {
+    "DATE_FORMAT": "DD/MM/YYYY",
+    "TIME_FORMAT": "HH:mm:ss",
+    "DATETIME_FORMAT": "DD/MM/YYYY HH:mm:ss"
+  },
+  "Opacity": {
+    "OPACITY_HIGH": 1.0,
+    "OPACITY_MEDIUM": 0.5,
+    "OPACITY_LOW": 0.25,
+    "OPACITY_DISABLED": 0.1
+  },
+  "Margin": {
+    "MARGIN_SMALL": 8,
+    "MARGIN_MEDIUM": 16,
+    "MARGIN_LARGE": 24,
+    "MARGIN_XLARGE": 32
+  },
+  "Padding": {
+    "PADDING_SMALL": 8,
+    "PADDING_MEDIUM": 16,
+    "PADDING_LARGE": 24,
+    "PADDING_XLARGE": 32
+  },
+  "Elevation": {
+    "ELEVATION_LOW": 2,
+    "ELEVATION_MEDIUM": 4,
+    "ELEVATION_HIGH": 8,
+    "ELEVATION_XHIGH": 16
+  },
+  "ScreenWidth": {
+    "SCREEN_WIDTH": "!ENV 'Dimensions.get(\"window\").width'",
+    "SCREEN_HEIGHT": "!ENV 'Dimensions.get(\"window\").height'"
+  },
+  "ICON_SIZE_SMALL": 16,
+  "ErrorText": {
+    "NETWORK_ERROR": "Unable to connect. Please check your network connection.",
+    "LOGIN_FAILED": "Login failed. Please check your credentials and try again.",
+    "SIGNUP_FAILED": "Sign up failed. Please try again later.",
+    "UNEXPECTED_ERROR": "An unexpected error occurred. Please try again.",
+    "INVALID_EMAIL": "Please enter a valid email address.",
+    "PASSWORD_TOO_SHORT": "Password must be at least 6 characters long.",
+    "USER_NOT_FOUND": "User not found. Please check the entered details.",
+    "EMAIL_ALREADY_IN_USE": "This email is already in use. Please use a different email.",
+    "FIELD_REQUIRED": "This field is required.",
+    "INVALID_PHONE_NUMBER": "Please enter a valid phone number.",
+    "INVALID_OTP": "Invalid OTP. Please try again.",
+    "OTP_EXPIRED": "OTP has expired. Please request a new one.",
+    "INVALID_PASSWORD": "Invalid password. Please try again.",
+    "INVALID_NAME": "Please enter a valid name.",
+    "INVALID_USERNAME": "Please enter a valid username.",
+    "INVALID_EMAIL_OR_PASSWORD": "Invalid email or password. Please try again.",
+    "INVALID_PHONE_NUMBER_OR_PASSWORD": "Invalid phone number or password. Please try again.",
+    "INVALID_EMAIL_OR_PHONE_NUMBER": "Invalid email or phone number. Please try again."
+  },
+  "FontFamily": {
+    "FONT_FAMILY_DEFAULT": "Open Sans",
+    "FONT_FAMILY_BOLD": "Open Sans Bold",
+    "FONT_FAMILY_ITALIC": "Open Sans Italic",
+    "FONT_FAMILY_HELVETICA": "Helvetica Neu"
+  },
+  "FontWeight": {
+    "FONT_WEIGHT_LIGHT": "300",
+    "FONT_WEIGHT_REGULAR": "400",
+    "FONT_WEIGHT_MEDIUM": "500",
+    "FONT_WEIGHT_BOLD": "700"
+  },
+  "FontSize": {
+    "FONT_SIZE_SMALL": 12,
+    "FONT_SIZE_MEDIUM": 16,
+    "FONT_SIZE_LARGE": 20,
+    "FONT_SIZE_XLARGE": 24
+  },
+  "TextConstants": {
+    "EMAIL_VERIFICATION_TITLE": "Select your personal email ID",
+    "EMAIL_VERIFICATION_SUBTITLE": "This email ID will be linked to your account",
+    "EMAIL_ID_PLACEHOLDER": "Select your email ID",
+    "EMAIL_PLACEHOLDER": "Enter your email ID",
+    "NAME_PLACEHOLDER": "Enter your name",
+    "OTP_SENT": "OTP sent to your email ID"
+  },
+  "DurationInMs": {
+    "DURATION_SHORT": 200,
+    "DURATION_MEDIUM": 500,
+    "DURATION_LONG": 1000,
+    "DURATION_XLONG": 2000
+  },
+  "Timeout": {
+    "TIMEOUT_SHORT": 5000,
+    "TIMEOUT_MEDIUM": 10000,
+    "TIMEOUT_LONG": 30000,
+    "TIMEOUT_XLONG": 60000
+  }
+}

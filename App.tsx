@@ -27,6 +27,7 @@ import {
 import TabNavigation from './src/UI/Components/TabNavigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import EmailVerificationScreen from './src/UI/Screens/EmailVerificationScreen';
+import { OnboardingRpcCaller } from './src/Rpc/OnboardingRpcCaller';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -60,14 +61,23 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-
+  // Enabling Text Encoder for safe RPC Calls
+  global.TextEncoder = require('text-encoding').TextEncoder;
+  
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-
+  
+  OnboardingRpcCaller.getCurrentOnboardingStage().then(
+    (resp)=> {
+    console.log(resp.currentStage)
+  }
+  ).catch(
+    (err)=> {
+    console.log(err)
+  }
+  )
   return (
-      
-    
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
