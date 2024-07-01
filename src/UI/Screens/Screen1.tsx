@@ -1,15 +1,14 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable eol-last */
-/* eslint-disable prettier/prettier */
-/* eslint-disable semi */
-/* eslint-disable prettier/prettier */
+
 import { View, Text } from 'react-native'
 import React from 'react'
-
+import Splash from '../Components/Splash'
+import { SplashTextComponent } from '../Styles/Textcomponents'
 const Screen1 = () => {
   return (
-    <View>
-      <Text>Screen1</Text>
+    <View style={{alignItems:'center'}}>
+      <Splash
+      imageSource={require('../Styles/assests/ss2.png')}
+      text={SplashTextComponent.SPLASH_TEXT}/>
     </View>
   )
 }
