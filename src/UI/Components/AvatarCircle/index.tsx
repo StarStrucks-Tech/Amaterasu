@@ -1,11 +1,17 @@
 import { Image, ImageSourcePropType, View } from 'react-native';
 import Svg, { Circle as SvgCircle } from 'react-native-svg';
 import { styles } from './styles';
-interface CircleProps {
-    radius: number; // The radius of the circle
-    imageSource: ImageSourcePropType; // The image source, which can be a local image or a URL
-  }
-const AvatarCircle: React.FC<CircleProps> = ({ radius, imageSource }) => {
+import React from 'react';
+/**
+ * AvatarCircleProps defines the properties required for the Header component.
+ * @property {ImageSourcePropType} profileImage - The source of the image.
+ * @property {number} Radius - The radius of the avatar circle.
+ */
+type AvatarCircleProps = {
+    radius : number;
+    imageSource: ImageSourcePropType;
+  };
+const AvatarCircle = ({radius,imageSource}:AvatarCircleProps) => {
   const diameter = radius * 2;
   return (
     <View style={[styles.container, { width: diameter, height: diameter }]}>
