@@ -2,19 +2,20 @@ import React from "react";
 import { StyleSheet, Text, View,Alert } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import styles from "../Screens/EmailVerificationScreen/styles";
-import { Button } from "react-native";
 
-const Buttons = ()=>{
+const Button = (props:ButtonProps)=>{
     return (
         <View>
-             <Button
-        title="Press me"
-        onPress={() => Alert.alert('Simple Button pressed')}
-      />
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={props.onClick} style={styles.button}>
+
         <Text style={styles.buttonText}>Next</Text>
         </TouchableOpacity> 
         </View>       
     );
 }
-export default  Buttons;
+
+type ButtonProps={
+  onClick?:()=>void;
+  text?:string;
+}
+export default  Button;

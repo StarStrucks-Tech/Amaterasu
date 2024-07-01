@@ -1,11 +1,10 @@
 import { StyleSheet } from "react-native";
-import Colors from "../../../Configs/color";
+import { Colors } from "../../../Assets/Colors";
 
 const styles = StyleSheet.create({
 
     container: {
-        backgroundColor: 'OffWhite',
-        // padding: 16,
+        backgroundColor: Colors.OFF_WHITE,
         justifyContent: 'center',
         alignItems: 'center',
         height: '100%',
@@ -14,7 +13,7 @@ const styles = StyleSheet.create({
     title: {
       textAlign: 'center',
       fontFamily: 'Helvetica Neue',
-      color: '#000000',
+      color: Colors.BLACK,
       fontSize: 27,
       lineHeight: 30,
       alignItems:'center',
@@ -22,11 +21,10 @@ const styles = StyleSheet.create({
       marginBottom: 10,
       bottom:-65,
       top: 60,
-  
     },
     subtitle: {
       fontFamily: 'Open Sans',
-      color: '#000000',
+      color: Colors.BLACK,
       fontWeight: '400',
       lineHeight: 25,
       fontSize: 17,
@@ -38,15 +36,12 @@ const styles = StyleSheet.create({
     iconContainer: {
       marginBottom: 20,
       alignItems: 'center',
-      backgroundColor:'#FFFFE4',
+      backgroundColor:Colors.OFF_WHITE,
       
     },
     icon: {
       width: 250,
       height:200,
-    //   paddingHorizontal:180,
-    //   paddingVertical:0,
-    //   resizeMode: 'contain',
       top: 35,
       left:10,
     },
@@ -55,12 +50,12 @@ const styles = StyleSheet.create({
       height: 40,
       flex: 2,
       fontFamily:'Open Sans',
-      color: '#421C25',
+      color: Colors.OFF_BLACK,
       fontWeight:'500',
       justifyContent: 'center',
       alignItems: 'center',
       padding:2,
-      borderBottomColor:'#E0E0E0',
+      borderBottomColor:Colors.CLOUDY_GRAY,
       borderBottomWidth:2,
       borderBottomLeftRadius:1,
       borderBottomRightRadius:5,
@@ -71,22 +66,21 @@ const styles = StyleSheet.create({
     },
     charCount: {
       alignSelf: 'flex-end',
-      color: '#7E7E7E',
+      color: Colors.FOG_GRAY,
       marginLeft: 15,
       marginRight: 10,
       marginBottom: 50,
       top:-35,
     },
    button: {
-      backgroundColor:'#D05F33',
+      backgroundColor:Colors.STRONG_ORANGE,
       width: 150,
       height:31,
       alignItems: 'center',
       borderRadius: 5,
       marginVertical:10,
-      marginTop: 20,
-      marginBottom: 17,
-      top:3,
+      marginTop: 18,
+      marginBottom: 20,
       
     },
     buttonText: {

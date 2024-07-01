@@ -1,0 +1,13 @@
+export const Colors = {
+  AQUA_GREEN: '#1A5276',
+  RED: '#B03A2E',
+  ORANGE: '#DC7633',
+  PURPLE: '#8E44AD',
+  GRAY: '#898A8D',
+  OFF_WHITE:'#FFFFE4',
+  BLACK:'#000000',
+  OFF_BLACK:'#421C25',
+  CLOUDY_GRAY:'#E0E0E0',
+  FOG_GRAY:'#7E7E7E',
+  STRONG_ORANGE:'#D05F33',
+};
