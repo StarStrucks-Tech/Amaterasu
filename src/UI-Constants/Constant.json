@@ -120,7 +120,8 @@
     "EMAIL_ID_PLACEHOLDER": "Select your email ID",
     "EMAIL_PLACEHOLDER": "Enter your email ID",
     "NAME_PLACEHOLDER": "Enter your name",
-    "OTP_SENT": "OTP sent to your email ID"
+    "OTP_SENT": "OTP sent to your email ID",
+    "WELCOME_BACK": "Welcome Back"
   },
   "DurationInMs": {
     "DURATION_SHORT": 200,

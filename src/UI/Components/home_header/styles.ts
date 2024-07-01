@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
       color: '#CCCCCC',
       fontSize: 16,
     },
+
     username: {
       color: '#FFFFFF',
       fontSize: 24,

@@ -1,28 +1,37 @@
-
-import { View, Text, Image, StyleSheet, ImageSourcePropType } from 'react-native';
+import { View, Text, ImageSourcePropType } from 'react-native';
 import AvatarCircle from '../AvatarCircle';
 import { styles } from './styles';
+import Constants from '../../../UI-Constants/Constant.json';
+import React from 'react';
 
-interface HeaderProps {
+/**
+ * HeaderProps defines the properties required for the Header component.
+ * @property {string} username - The name of the user to be displayed.
+ * @property {ImageSourcePropType} profileImage - The source of the user's profile image.
+ * @property {number} avatarRadius - The radius of the avatar circle.
+ */
+type HeaderProps = {
   username: string;
   profileImage: ImageSourcePropType;
-}
+  avatarRadius: number;
+};
 
-const Header: React.FC<HeaderProps> = ({ username, profileImage }) => {
+
+/**
+ * Header component displays a welcome message, username, and user avatar.
+ */
+const Header = ({ username, profileImage, avatarRadius }: HeaderProps) => {
   return (
     <View style={styles.header}>
-        <View style={styles.subHeader}>
-        <Text style={styles.welcomeText}>Welcome Back</Text>
+      <View style={styles.subHeader}>
+        <Text style={styles.welcomeText}>{Constants.TextConstants.WELCOME_BACK}</Text>
         <Text style={styles.username}>{username}</Text>
-        </View>
-   
+      </View>
       <View>  
-      <AvatarCircle radius={20} imageSource={profileImage}
-      />
+        <AvatarCircle radius={avatarRadius} imageSource={profileImage} />
       </View>
     </View>
   );
 };
-
 
 export default Header;
