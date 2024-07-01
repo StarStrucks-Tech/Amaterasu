@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, Image, Linking, Modal, TouchableOpacity } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
-import styles from './Style/TermsConditionsStyles';
-import { TermsConditionsConstants } from './Constants';
-import { ButtonComponent } from '../../Components/ConsentScreenComp/TermsConditionsComponent';
-import { config } from './Config';
+import styles from './styles';
+import { TermsConditionsConstants } from '../Constants';
+import { IconTextClickableComponent } from '../../../Components/IconTextClickableComponent';
+import { config } from '../Config';
 
-const constants = TermsConditionsConstants();
 const { TERMS_URL, SECURE_URL } = config;
 /**
  * Terms and Conditions component
@@ -51,45 +50,45 @@ const TermsConditions = () => {
 
     return (
         <View style={styles.container}>
-            <Image source={require('./assets/termsConditions1.png')} style={styles.topImage} />
+            <Image source={require('../assets/termsConditions1.png')} style={styles.topImage} />
             <View >
-                <Text style={styles.heading}>{constants.TITLE}</Text>
-                <Text style={styles.topText}>{constants.SUBTITLE}</Text>
+                <Text style={styles.heading}>{TermsConditionsConstants.TITLE}</Text>
+                <Text style={styles.topText}>{TermsConditionsConstants.SUBTITLE}</Text>
             </View>
             <View style={styles.consentRow}>
-                <ButtonComponent
+                <IconTextClickableComponent
                     buttonStyle={styles.termButton}
-                    imageSource={require('./assets/terms.png')}
-                    buttonText={constants.TERMS_BTN}
+                    imageSource={require('../assets/terms.png')}
+                    buttonText={TermsConditionsConstants.TERMS_BTN}
                     url={TERMS_URL}
                 />
-                <ButtonComponent
+                <IconTextClickableComponent
                     buttonStyle={styles.secureButton}
-                    imageSource={require('./assets/secure.png')}
-                    buttonText={constants.SECURE_BTN}
+                    imageSource={require('../assets/secure.png')}
+                    buttonText={TermsConditionsConstants.SECURE_BTN}
                     url={SECURE_URL}
                 />
 
             </View>
             <View style={styles.checkbox}>
-                <CheckBox value={isChecked1} onValueChange={handleCheckboxChange1} />
-                <Text style={styles.text}>{constants.AGREEMENT}</Text>
+                <CheckBox value={isChecked1} onValueChange={handleCheckboxChange1} tintColors={{true:'#d05f33'}} />
+                <Text style={styles.text}>{TermsConditionsConstants.AGREEMENT}</Text>
             </View>
             <View style={styles.checkbox}>
-                <CheckBox value={isChecked2} onValueChange={handleCheckboxChange2} />
-                <Text style={styles.text}>{constants.DATA_SHARE}</Text>
+                <CheckBox value={isChecked2} onValueChange={handleCheckboxChange2} tintColors={{true:'#d05f33'}} />
+                <Text style={styles.text}>{TermsConditionsConstants.DATA_SHARE}</Text>
             </View>
             <TouchableOpacity style={styles.button} onPress={handleButtonPress}>
-                <Image source={require('./assets/arrow.png')} style={styles.arrow} />
-                <Text style={styles.buttontext}>{constants.NEXT_BTN}</Text>
+                <Image source={require('../assets/arrow.png')} style={styles.arrow} />
+                <Text style={styles.buttontext}>{TermsConditionsConstants.NEXT_BTN}</Text>
             </TouchableOpacity>
             <Modal visible={alertVisible} transparent={true}>
                 <View style={styles.alertContainer}>
                     <View style={styles.alertContent}>
-                        <Text style={styles.alertTitle}>{constants.ALERT_TITLE}</Text>
-                        <Text style={styles.alertMessage}>{constants.ALERT_MSG}</Text>
+                        <Text style={styles.alertTitle}>{TermsConditionsConstants.ALERT_TITLE}</Text>
+                        <Text style={styles.alertMessage}>{TermsConditionsConstants.ALERT_MSG}</Text>
                         <TouchableOpacity style={styles.okButton} onPress={handleOKPress}>
-                            <Text style={styles.okButtonText}>{constants.OK_BTN}</Text>
+                            <Text style={styles.okButtonText}>{TermsConditionsConstants.OK_BTN}</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
