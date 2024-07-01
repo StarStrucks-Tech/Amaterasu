@@ -27,7 +27,6 @@ import {
 import TabNavigation from './src/UI/Components/TabNavigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { OnboardingRpcCaller } from './src/Rpc/OnboardingRpcCaller';
-import EmailVerificationScreen from './src/UI/Screens/EmailVerificationScreen'
 
 type SectionProps = PropsWithChildren<{
   title: string;
