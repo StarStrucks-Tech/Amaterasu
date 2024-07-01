@@ -5,8 +5,8 @@
  * @format
  */
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
+ import React from 'react';
+/*import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -26,8 +26,8 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import TabNavigation from './src/UI/Components/TabNavigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import EmailVerificationScreen from './src/UI/Screens/EmailVerificationScreen';
 import { OnboardingRpcCaller } from './src/Rpc/OnboardingRpcCaller';
-import EmailVerificationScreen from './src/UI/Screens/EmailVerificationScreen'
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -59,15 +59,24 @@ function Section({children, title}: SectionProps): React.JSX.Element {
   );
 }
 
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  // Enabling Text Encoder for safe RPC Calls
-  global.TextEncoder = require('text-encoding').TextEncoder;
+// function App(): React.JSX.Element {
+//   const isDarkMode = useColorScheme() === 'dark';
+//   // Enabling Text Encoder for safe RPC Calls
+//   global.TextEncoder = require('text-encoding').TextEncoder;
   
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
+//   const backgroundStyle = {
+//     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+//   };
+  
+  // OnboardingRpcCaller.getCurrentOnboardingStage().then(
+  //   (resp)=> {
+  //   console.log(resp.currentStage)
+  // }
+  // ).catch(
+  //   (err)=> {
+  //   console.log(err)
+  // }
+  // )
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -122,4 +131,14 @@ const styles = StyleSheet.create({
   },
 });
 
+<<<<<<< Updated upstream
+=======
+export default App;
+*/
+import EmailVerificationScreen from './src/UI/Screens/EmailVerificationScreen';
+const App = () =>{
+  return <EmailVerificationScreen />;
+  
+};
+>>>>>>> Stashed changes
 export default App;

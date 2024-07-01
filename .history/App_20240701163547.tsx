@@ -27,7 +27,6 @@ import {
 import TabNavigation from './src/UI/Components/TabNavigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { OnboardingRpcCaller } from './src/Rpc/OnboardingRpcCaller';
-import EmailVerificationScreen from './src/UI/Screens/EmailVerificationScreen'
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -74,7 +73,7 @@ function App(): React.JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      {/* <ScrollView
+      <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
@@ -97,8 +96,7 @@ function App(): React.JSX.Element {
           </Section>
           <LearnMoreLinks />
         </View>
-      </ScrollView> */}
-      <EmailVerificationScreen/>
+      </ScrollView>
     </SafeAreaView>
   );
 }

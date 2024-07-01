@@ -1,10 +1,11 @@
 import { StyleSheet } from "react-native";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const styles = StyleSheet.create({
     container: {
       justifyContent:'flex-end',
       padding: 10,
-      backgroundColor:'#FFFFE4',
+      backgroundColor:Colors.OffWhite,
       borderRadius: 10,
     },
     title: {

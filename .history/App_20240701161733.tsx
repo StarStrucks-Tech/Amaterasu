@@ -5,8 +5,8 @@
  * @format
  */
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
+ import React from 'react';
+/*import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -26,8 +26,8 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import TabNavigation from './src/UI/Components/TabNavigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import EmailVerificationScreen from './src/UI/Screens/EmailVerificationScreen';
 import { OnboardingRpcCaller } from './src/Rpc/OnboardingRpcCaller';
-import EmailVerificationScreen from './src/UI/Screens/EmailVerificationScreen'
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -67,14 +67,23 @@ function App(): React.JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-
+  
+  // OnboardingRpcCaller.getCurrentOnboardingStage().then(
+  //   (resp)=> {
+  //   console.log(resp.currentStage)
+  // }
+  // ).catch(
+  //   (err)=> {
+  //   console.log(err)
+  // }
+  // )
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      {/* <ScrollView
+      { <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
@@ -122,4 +131,14 @@ const styles = StyleSheet.create({
   },
 });
 
+<<<<<<< Updated upstream
+=======
+export default App;
+*/
+import EmailVerificationScreen from './src/UI/Screens/EmailVerificationScreen';
+const App = () =>{
+  return <EmailVerificationScreen />;
+  
+};
+>>>>>>> Stashed changes
 export default App;

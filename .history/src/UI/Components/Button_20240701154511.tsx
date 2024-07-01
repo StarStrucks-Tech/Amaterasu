@@ -1,9 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native';
-import styles from "../Screens/EmailVerification";
+import styles from "../Screens/EmailVerificationScreen/styles";
+import { Button as RNButton } from "react-native";
 
-const EmailVer = ()=>{
+const Button = ()=>{
     return (
         <View>
         <TouchableOpacity style={styles.button}>
@@ -12,4 +13,4 @@ const EmailVer = ()=>{
         </View>       
     );
 }
-export default  EmailVer;
+export default  Button;
