@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import { Animated, View, StyleSheet, ImageBackground } from 'react-native';
+import { Animated, View, StyleSheet, ImageBackground, Dimensions } from 'react-native';
+const { width, height } = Dimensions.get('window');
 
 const Animations = () => {
   const opacity = useRef(new Animated.Value(0)).current;
@@ -10,35 +11,30 @@ const Animations = () => {
   useEffect(() => {
     const animate = () => {
       Animated.sequence([
-        // Initial delay
         Animated.delay(500),
-        // Fade in the logo
         Animated.timing(opacity, {
           toValue: 1,
           duration: 500,
           useNativeDriver: true,
         }),
-        // Animate to the top with flipping and scaling down
         Animated.parallel([
           Animated.timing(translateY, {
-            toValue: -110, // Increase the upward movement
+            toValue: -110, 
             duration: 2000,
             useNativeDriver: true,
           }),
           Animated.timing(flip, {
-            toValue: 2, // Two complete flips (720 degrees)
+            toValue: 2, 
             duration: 2000,
             useNativeDriver: true,
           }),
           Animated.timing(scale, {
-            toValue: 0.72, // Adjust the scale
+            toValue: 0.72, 
             duration: 2000,
             useNativeDriver: true,
           }),
         ]),
-        // Stay at the top for a while
         Animated.delay(1000),
-        // Fade out the logo
         Animated.timing(opacity, {
           toValue: 0,
           duration: 500,
@@ -47,7 +43,7 @@ const Animations = () => {
       ]).start();
     };
 
-    setTimeout(animate, 200); // Initial delay before starting the animation
+    setTimeout(animate, 200); 
   }, []);
 
   const flipInterpolate = flip.interpolate({
@@ -57,7 +53,7 @@ const Animations = () => {
 
   return (
     <View style={styles.container}>
-      <ImageBackground source={require('./assets/bg.png')} style={styles.background}>
+      <View style={styles.background}>
         <Animated.Image
           source={require('./assets/screenlight.png')}
           style={[
@@ -72,7 +68,7 @@ const Animations = () => {
             },
           ]}
         />
-      </ImageBackground>
+      </View>
     </View>
   );
 };
@@ -87,9 +83,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    marginTop: 800,
-    width: 500,
-    height: 500,
+    marginTop: height*-0.1,
+    width: width*1,
+    height: height*0.6,
   },
 });
 

@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, StyleSheet, Text, Image, Button, TouchableOpacity, ImageBackground } from 'react-native';
+import { View, StyleSheet, Text, Image, Button, TouchableOpacity, ImageBackground, Dimensions } from 'react-native';
+const { width, height } = Dimensions.get('window');
+
 
 const StaticScreen = () => {
   return (
@@ -27,14 +29,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    marginLeft:-1,
-    bottom:-102,
-    width: 380,
-    height: 380,
+    marginTop: height*-0.25,
+    width: width*0.44,
+    height: height*0.44,
     alignSelf:'center',
   },
   title: {
-    bottom:-24,
+    marginTop:height*-0.1,
     fontSize: 42,
     alignSelf: 'center', 
     fontFamily: 'serif',
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
   },
   button: {
     borderRadius:20,
-    top:74,
+    top:height*0.05,
     borderRadius:120,
     backgroundColor: '#000', 
     paddingVertical: 10,
@@ -52,18 +53,21 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#e9e9d4', 
-    fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center', 
+    alignSelf: 'center',
+    width:width*0.23,
+    height:height*0.029,
+    fontSize:18,
   },
   footerText: {
-    marginTop: 50,
-    bottom: -250,
+    bottom: height*-0.294,
     fontSize: 18,
     textAlign: 'center',
     fontWeight:'bold', 
     color: '#7a897f', 
   },
 });
+
 
 export default StaticScreen;
