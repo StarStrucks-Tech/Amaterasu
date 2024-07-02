@@ -1,8 +1,12 @@
 import React, {useState} from 'react';
 import {View, Text, TextInput, Image, TouchableOpacity} from 'react-native';
-import styles from './PhoneVerific.styles';
+import styles from './styles';
 
-export default function Phone_Verification() {
+/**
+ * Phone_Verification Component
+ * This component renders a screen for mobile number verification.
+ */
+export default function PhoneVerificationScreen() {
   const [mobileNumber, setMobileNumber] = useState('');
   return (
     <View style={styles.container}>
