@@ -9,11 +9,19 @@ import TimerDisplay from '../../Components/TimerDisplay/index';
 import styles from './styles';
 import {OTPScreenConstants} from './Constants';
 
-export default function OTP_Screen() {
+/**
+ * OTP_Screen Component
+ * This component renders a screen for OTP (One-Time Password) verification.
+ * It includes a countdown timer, OTP input fields, and options to resend the OTP.
+ */
+export default function OTPScreen() {
   const [otp, setOtp] = useState(OTPScreenConstants.INITIAL_OTP);
   const [seconds, setSeconds] = useState(OTPScreenConstants.INITIAL_COUNTDOWN);
   const [isChecked, setIsChecked] = useState(false);
 
+  /**
+   * Effect to manage the countdown timer
+   */
   useEffect(() => {
     const intervalId = setInterval(() => {
       if (seconds > 0) {
@@ -22,10 +30,12 @@ export default function OTP_Screen() {
         clearInterval(intervalId);
       }
     }, 1000);
-
     return () => clearInterval(intervalId);
   }, [seconds]);
 
+  /**
+   * Handles changes in the OTP input fields
+   */
   const handleOtpChange = (index, value) => {
     if (value.length <= 1) {
       const newOtp = [...otp];
