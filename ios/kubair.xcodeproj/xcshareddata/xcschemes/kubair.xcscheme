@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "Dummypro.app"
-               BlueprintName = "Dummypro"
-               ReferencedContainer = "container:Dummypro.xcodeproj">
+               BuildableName = "kubair.app"
+               BlueprintName = "kubair"
+               ReferencedContainer = "container:kubair.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "DummyproTests.xctest"
+               BuildableName = "kubairTests.xctest"
                BlueprintName = "DummyproTests"
-               ReferencedContainer = "container:Dummypro.xcodeproj">
+               ReferencedContainer = "container:kubair.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Dummypro.app"
-            BlueprintName = "Dummypro"
-            ReferencedContainer = "container:Dummypro.xcodeproj">
+            BuildableName = "kubair.app"
+            BlueprintName = "kubair"
+            ReferencedContainer = "container:kubair.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Dummypro.app"
-            BlueprintName = "Dummypro"
-            ReferencedContainer = "container:Dummypro.xcodeproj">
+            BuildableName = "kubair.app"
+            BlueprintName = "kubair"
+            ReferencedContainer = "container:kubair.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
