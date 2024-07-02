@@ -12,6 +12,7 @@
 "dependencies": {
     "@grpc/grpc-js": "^1.8.22",
     "@grpc/proto-loader": "^0.7.13",
+    "@react-native-community/checkbox": "^0.5.17",
     "@react-native/gradle-plugin": "^0.74.84",
     "@mitch528/react-native-grpc": "^0.1.10",
     "@protobuf-ts/runtime-rpc": "^2.9.4",
