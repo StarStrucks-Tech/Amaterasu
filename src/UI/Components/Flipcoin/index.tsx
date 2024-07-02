@@ -52,7 +52,7 @@ const Flipcoin = () => {
   return (
     <View>
       <Animated.Image
-        source={require('../../../Assets/logo.png')}
+        source={require('../../../Assets/logo.svg')}
         style={[rotateYAnimatedStyle, styles.logosize]}
       />
     </View>
