@@ -7,15 +7,12 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "generate:grpc:windows": "bash gencode-script.sh",
+    "generate:grpc:mac": "chmod +x gencode-script.sh"
+
   },
-"dependencies": {
-    "@grpc/grpc-js": "^1.8.22",
-    "@grpc/proto-loader": "^0.7.13",
-    "@react-native-community/checkbox": "^0.5.17",
-    "@react-native/gradle-plugin": "^0.74.84",
-    "@mitch528/react-native-grpc": "^0.1.10",
-    "@protobuf-ts/runtime-rpc": "^2.9.4",
+  "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.20",
     "@react-navigation/native": "^6.1.17",
     "@types/js-yaml": "^4.0.9",
@@ -43,6 +40,7 @@
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
+    "cross-env": "^7.0.3",
     "eslint": "^8.19.0",
     "jest": "^29.6.3",
     "prettier": "2.8.8",
