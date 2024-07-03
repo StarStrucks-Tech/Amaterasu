@@ -2,8 +2,8 @@ import React from 'react';
 import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 import Nextbuttonstyle from '../Styles/Nextbuttonstyle';
 import TextComponent from '../../Components/Textcomponents';
-const NextButton = ({ isValidAadhaar, isChecked, onPress }) => {
-  if (isValidAadhaar && isChecked) {
+const NextButton = ({ isValidAadhaar, onPress }) => {
+  if (isValidAadhaar) {
     return (
       <TouchableOpacity onPress={onPress} style={Nextbuttonstyle.nextButton}>
         <Text style={Nextbuttonstyle.nextButtonText}>{TextComponent.Next}</Text>

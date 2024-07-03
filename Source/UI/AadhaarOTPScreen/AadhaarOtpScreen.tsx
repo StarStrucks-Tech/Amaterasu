@@ -12,6 +12,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import Colors from '../Components/Colors';
 import TextComponent from '../Components/Textcomponents';
 import SecureComponent from '../Aadhaardetails/Components/SecureComponent';
+import NextButton from '../Aadhaardetails/Components/NextButton';
 
 const AadhaarOTPScreen = () => {
   const [showModal, setShowModal] = useState(false);
@@ -95,9 +96,9 @@ const AadhaarOTPScreen = () => {
           >
             Edit
           </Text>
+        </View><View style={{alignItems:'center'}}>
+        <NextButton onPress={()=>navigation.navigate("LoadingScreen")} isValidAadhaar={isOtpFilled} />
         </View>
-        <NextButtonotp onPress={handleNext} disabled={!isOtpFilled} />
-        
         {showModal && <FallbackBottom showModal={showModal} setShowModal={setShowModal} />}
       </Pressable>
     </SafeAreaView>

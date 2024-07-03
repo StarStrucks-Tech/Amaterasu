@@ -7,6 +7,7 @@ import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view
 import { adhaardetailsScreenStyles } from "./Styles/adhaardetailsScreenStyles"; 
 import { SafeAreaView } from "react-native-safe-area-context";
 import TextComponent from "../Components/Textcomponents";
+import NextButtonotp from "../AadhaarOTPScreen/Components/NextButtonotp";
 const Adhaardetails = ({ navigation }) => {
   const [aadhaarNumber, setAadhaarNumber] = useState('');
   const [isChecked, setIsChecked] = useState(false);
@@ -51,12 +52,13 @@ const Adhaardetails = ({ navigation }) => {
           </Text>
         </View>
       </TouchableOpacity>
-
+{isChecked?
+<View>
       <NextButton
-        isValidAadhaar={isValidAadhaar(aadhaarNumber)}
-        isChecked={isChecked}
         onPress={() => navigation.navigate("AadhaarOTPScreen")}
-      /></View>
+        isValidAadhaar={isValidAadhaar(aadhaarNumber)}
+      /></View>:null
+    }</View>
 </Pressable>
     </SafeAreaView>
     </KeyboardAwareScrollView>

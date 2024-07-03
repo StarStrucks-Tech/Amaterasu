@@ -38,7 +38,7 @@ const Flipcoin = () => {
   return (
     <SafeAreaView>
       <Animated.Image
-        source={require('../../../Assets/image/logo.png')}
+        source={require('../../../Assets/image/KubairLogo.png')}
         style={[rotateYAnimatedStyle, Flipcoinstyle.imagsp]}
       />
     </SafeAreaView>

@@ -1,9 +1,11 @@
-import { StyleSheet } from "react-native";
+import { PixelRatio, StyleSheet } from "react-native";
 
 const Flipcoinstyle = StyleSheet.create({
   imagsp: {
-    height: 190,
-    width: 200,
+    marginTop:PixelRatio.getPixelSizeForLayoutSize(10),
+    height:PixelRatio.getPixelSizeForLayoutSize(25),
+    width: PixelRatio.getPixelSizeForLayoutSize(33),
+    marginBottom:PixelRatio.getPixelSizeForLayoutSize(10)
   }
   });
   
