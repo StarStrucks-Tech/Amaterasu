@@ -14,12 +14,15 @@ const QuickAction: React.FC = () => {
 
   return (
     <View style={styles.quickActionBar}>
-      {actions.map((action, index) => (
-        <TouchableOpacity key={index} style={styles.actionButton}>
-          <AvatarCircle radius={30} imageSource={action.icon} />
-          <Text style={styles.actionText}>{action.name}</Text>
-        </TouchableOpacity>
-      ))}
+      <Text style={styles.quickActionText}>Quick Actions</Text>
+      <View style={styles.quickActionIcon}>
+        {actions.map((action, index) => (
+          <TouchableOpacity key={index} style={styles.actionButton}>
+            <AvatarCircle radius={30} imageSource={action.icon} />
+            <Text style={styles.actionText}>{action.name}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
     </View>
   );
 };
