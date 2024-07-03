@@ -1,6 +1,7 @@
 import { Image, ImageSourcePropType, View } from 'react-native';
 import Svg, { Circle as SvgCircle } from 'react-native-svg';
 import { styles } from './styles';
+import React from 'react';
 interface CircleProps {
     radius: number; // The radius of the circle
     imageSource: ImageSourcePropType; // The image source, which can be a local image or a URL
@@ -27,3 +28,4 @@ const AvatarCircle: React.FC<CircleProps> = ({ radius, imageSource }) => {
   );
 };
 export default AvatarCircle;
+export type { CircleProps };
