@@ -2,8 +2,13 @@
 import React from 'react';
 import { TextInput, StyleSheet, PixelRatio } from 'react-native';
 import AdhaarInputstyle from './style';
-import Constant from '../../../UI-Constants/Constant.json'
-const AadhaarInput = ({ aadhaarNumber, setAadhaarNumber }) => {
+import Constant from '../../../UI-Constants/Constant.json';
+
+type AadhaarInputProps = {
+    aadhaarNumber;
+    setAadhaarNumber;
+  }
+const AadhaarInput = (props : AadhaarInputProps) => {
   
   return (
     <TextInput
@@ -12,8 +17,8 @@ const AadhaarInput = ({ aadhaarNumber, setAadhaarNumber }) => {
       style={[AdhaarInputstyle.inbox, { fontSize:  PixelRatio.getPixelSizeForLayoutSize(6), 
         marginTop:PixelRatio.getPixelSizeForLayoutSize(5),
         marginBottom:  PixelRatio.getPixelSizeForLayoutSize(15),  color:Constant.Colors.GRAY}]}
-      value={aadhaarNumber}
-      onChangeText={(value) => setAadhaarNumber(value)}
+      value={props.aadhaarNumber}
+      onChangeText={(value) => props.setAadhaarNumber(value)}
       keyboardType="numeric"
       maxLength={12} 
     />

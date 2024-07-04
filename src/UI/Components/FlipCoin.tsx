@@ -39,7 +39,7 @@ const Flipcoin = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Animated.Image
-        source={require('../../Assets/image/logo.png')} // Update the path to your image
+        source={require('../Screens/AadhaarDetailScreen/assests/KubairLogo.png')} // Update the path to your image
         style={[rotateYAnimatedStyle, styles.image]}
       />
     </SafeAreaView>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   },
   image: {
     height: 190,
-    width: 200,
+    width: 250,
   },
 });
 
