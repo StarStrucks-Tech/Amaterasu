@@ -8,7 +8,7 @@ const LivelinessScreen = () => {
   const [hasPermission, setHasPermission] = useState<boolean | null>(null);
   const [isRecording, setIsRecording] = useState(false);
   const [cameraReady, setCameraReady] = useState(false);
-  const cameraRef = useRef<Camera>(null);
+  const cameraRef = Camera(null);
 
   useEffect(() => {
     (async () => {

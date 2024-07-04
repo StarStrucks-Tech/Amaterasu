@@ -10,9 +10,9 @@ import { UnknownFieldHandler } from "@protobuf-ts/runtime";
 import type { PartialMessage } from "@protobuf-ts/runtime";
 import { reflectionMergePartial } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
-import { ResponseCode } from "./core-enums";
+import { ResponseCode } from "./core_enums";
 import { Timestamp } from "../google/protobuf/timestamp";
-import { Platform } from "./core-enums";
+import { Platform } from "./core_enums";
 /**
  * Request header message
  *
