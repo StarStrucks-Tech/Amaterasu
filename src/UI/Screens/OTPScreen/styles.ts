@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     height: '100%',
     justifyContent: 'flex-start',
     alignItems: 'center',
+    paddingTop:PixelRatio.getPixelSizeForLayoutSize(24.3),
     backgroundColor: '#FFFFE4',
   },
   header: {
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
     fontSize: PixelRatio.getPixelSizeForLayoutSize(9),
     textAlign: 'center',
     color: '#000000',
-     marginTop: PixelRatio.getPixelSizeForLayoutSize(0),
+    paddingTop:PixelRatio.getPixelSizeForLayoutSize(16),
     marginBottom: PixelRatio.getPixelSizeForLayoutSize(10),
   },
   subhead: {
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: PixelRatio.getPixelSizeForLayoutSize(1),
+    marginBottom: PixelRatio.getPixelSizeForLayoutSize(0.1),
   },
   resendText: {
     fontFamily: 'Open Sans',
@@ -64,26 +65,25 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   button: {
-    height: PixelRatio.getPixelSizeForLayoutSize(12),
-    width: PixelRatio.getPixelSizeForLayoutSize(45),
+    height: PixelRatio.getPixelSizeForLayoutSize(12.3),
+    width: PixelRatio.getPixelSizeForLayoutSize(47),
     borderRadius: PixelRatio.getPixelSizeForLayoutSize(2),
     borderColor: '#FFFFE4',
     borderWidth: PixelRatio.getPixelSizeForLayoutSize(0.3),
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: "#D05F33",
-    marginTop: PixelRatio.getPixelSizeForLayoutSize(0),
     position: 'relative',
   },
   buttontext: {
-    fontSize: PixelRatio.getPixelSizeForLayoutSize(5),
+    fontSize: PixelRatio.getPixelSizeForLayoutSize(5.5),
     fontWeight: '600',
     color: 'white',
-    marginBottom: PixelRatio.getPixelSizeForLayoutSize(0),
+    marginBottom: PixelRatio.getPixelSizeForLayoutSize(1),
   },
   timerSection: {
     alignItems: 'center',
-    marginBottom: PixelRatio.getPixelSizeForLayoutSize(80),
+    marginBottom: PixelRatio.getPixelSizeForLayoutSize(87),
   },
 });
 export default styles;
