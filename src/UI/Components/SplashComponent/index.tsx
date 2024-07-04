@@ -2,21 +2,25 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, Image, PixelRatio } from 'react-native';
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';
 import Animated, { interpolate, runOnJS, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
-import { useNavigation, useIsFocused } from '@react-navigation/native';
-import splashstyles from '../Styles/Splashstyle';
-import Colors from '../../Components/Colors';
-import TextComponent from '../../Components/Textcomponents';
+// import { useNavigation, useIsFocused } from '@react-navigation/native';
+import splashstyles from './style';
+import { ColorConstant } from '../../Screens/AadhaarConsentScreens/Constant';
+import { TextComponentConstant } from '../../Screens/AadhaarConsentScreens/Constant';
 
-const Splash = () => {
+type SplashProps = {
+  imageSource: number;
+  text: string;
+}
+const Splash = (props: SplashProps) => {
   const translateX = useSharedValue(0);
-  const navigation = useNavigation();
-  const isFocused = useIsFocused();
+//  const navigation = useNavigation();
+//  const isFocused = useIsFocused();
 
   const [boxDimensions, setBoxDimensions] = useState({ x: 0, y: 0, width: 0, height: 0 });
   const [circleDimensions, setCircleDimensions] = useState({ x: 0, y: 0, width: 0, height: 0 });
 
   const onSwipe = () => {
-    navigation.navigate('Adhaardetails')
+    //navigation.navigate()
   };
 
   const pan = Gesture.Pan().onChange((event) => {
@@ -61,12 +65,12 @@ const Splash = () => {
   };
 
   useEffect(() => {
-    const unsubscribeFocus = navigation.addListener('focus', () => {
-      translateX.value = 0; // Reset translateX to initial position
+//    const unsubscribeFocus = navigation.addListener('focus', () => {
+ //     translateX.value = 0; // Reset translateX to initial position
     });
 
-    return unsubscribeFocus;
-  }, [navigation]);
+ //   return unsubscribeFocus;
+  // }, [navigation]);
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
@@ -75,7 +79,7 @@ const Splash = () => {
           <GestureDetector gesture={pan}>
             <Animated.View onLayout={getCircleLayout} style={[splashstyles.circle, swipeAnimatedStyle]}>
               <Image
-                source={require('../../../Assets/image/ss2.png')}
+                source={require('../../Screens/AadhaarConsentScreens/assests/arrows.png')}
                 style={splashstyles.swipeArrowIcons}
               />
             </Animated.View>
@@ -85,13 +89,13 @@ const Splash = () => {
               {
                 fontFamily: 'Montserrat',
                 fontSize: PixelRatio.getPixelSizeForLayoutSize(8),
-                color: Colors.splashcolor,
+                color: ColorConstant.COLOR_BEIGE,
                 marginLeft: PixelRatio.getPixelSizeForLayoutSize(3.33),
                 textAlign: 'center',
               },
               textAnimatedStyle,
             ]}
-          >{TextComponent.Splashtext}
+          >{TextComponentConstant.Splashtext}
           </Animated.Text>
         </View>
       </View>

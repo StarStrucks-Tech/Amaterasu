@@ -1,7 +1,7 @@
 // SplashStyles.js
 
 import { StyleSheet, PixelRatio } from 'react-native';
-import Colors from '../../Components/Colors';
+import { ColorConstant } from '../../Screens/AadhaarConsentScreens/Constant';
 
 const splashstyles = StyleSheet.create({
   container: {
@@ -20,7 +20,7 @@ const splashstyles = StyleSheet.create({
     flexDirection: 'row',
     width: PixelRatio.getPixelSizeForLayoutSize(110),
     height:PixelRatio.getPixelSizeForLayoutSize(19),
-    backgroundColor: Colors.boxcolor,
+    backgroundColor: ColorConstant.boxcolor,
     borderWidth: PixelRatio.getPixelSizeForLayoutSize(0.3),
     alignItems: 'center',
     elevation: PixelRatio.getPixelSizeForLayoutSize(3.33),
@@ -28,7 +28,7 @@ const splashstyles = StyleSheet.create({
       height: PixelRatio.getPixelSizeForLayoutSize(3.33),
       width: PixelRatio.getPixelSizeForLayoutSize(3.33),
     },
-    shadowColor: Colors.primary,
+    shadowColor: ColorConstant.primary,
     borderRadius: PixelRatio.getPixelSizeForLayoutSize(5),
     shadowOpacity: PixelRatio.getPixelSizeForLayoutSize(0.03),
   },
@@ -36,7 +36,7 @@ const splashstyles = StyleSheet.create({
     width: '15%',
     height: '80%',
     borderRadius:PixelRatio.getPixelSizeForLayoutSize(3.33),
-    backgroundColor: Colors.buttoncolor,
+    backgroundColor: ColorConstant.buttoncolor,
     marginLeft: PixelRatio.getPixelSizeForLayoutSize(2.33),
     alignItems: 'center',
     justifyContent: 'center',
