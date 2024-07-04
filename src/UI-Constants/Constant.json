@@ -1,6 +1,7 @@
 {
   "Colors": {
     "COLOR_BACKGROUND": "#ecf0f1",
+    "COLOR_BORDER":"#B2B2B2",
     "COLOR_TEXT_PRIMARY": "#2c3e50",
     "COLOR_TEXT_SECONDARY": "#95a5a6",
     "COLOR_ERROR": "#e74c3c",
@@ -120,7 +121,13 @@
     "EMAIL_ID_PLACEHOLDER": "Select your email ID",
     "EMAIL_PLACEHOLDER": "Enter your email ID",
     "NAME_PLACEHOLDER": "Enter your name",
-    "OTP_SENT": "OTP sent to your email ID"
+    "OTP_SENT": "OTP sent to your email ID",
+    "AADHAA_PLACEHOLDER":"Enter your Aadhaar Number"
+  },
+  "SCREEN_CHANGE_TEXT":{
+    "NEXT":"NEXT",
+    "SKIP":"SKIP",
+    "CLOSE":"CLOSE"
   },
   "DurationInMs": {
     "DURATION_SHORT": 200,

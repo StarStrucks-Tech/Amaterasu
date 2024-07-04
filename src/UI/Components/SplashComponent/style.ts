@@ -1,5 +1,5 @@
 // SplashStyles.js
-
+import Constant from '../../../UI-Constants/Constant.json'
 import { StyleSheet, PixelRatio } from 'react-native';
 import { ColorConstant } from '../../Screens/AadhaarConsentScreens/Constant';
 
@@ -36,7 +36,7 @@ const splashstyles = StyleSheet.create({
     width: '15%',
     height: '80%',
     borderRadius:PixelRatio.getPixelSizeForLayoutSize(3.33),
-    backgroundColor: ColorConstant.buttoncolor,
+    backgroundColor: Constant.Colors.COLOR_ORANGE,
     marginLeft: PixelRatio.getPixelSizeForLayoutSize(2.33),
     alignItems: 'center',
     justifyContent: 'center',

@@ -3,11 +3,7 @@ import React from 'react';
 import { View, Text, StyleSheet,Image,PixelRatio } from 'react-native';
 import { ColorConstant, TextComponentConstant } from '../../Screens/AadhaarConsentScreens/Constant';
 
-type SecureComponentProps = {
-  imageSource: number;
-  text: string;
-}
-const SecureComponent = (props: SecureComponentProps) => {
+const SecureComponent = () => {
   return (
     <View style={{
       marginTop: PixelRatio.getPixelSizeForLayoutSize(4),

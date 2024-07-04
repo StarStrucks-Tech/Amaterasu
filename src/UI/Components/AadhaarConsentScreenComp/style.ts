@@ -1,8 +1,9 @@
 import { StyleSheet,PixelRatio } from "react-native";
 import { ColorConstant } from "../../Screens/AadhaarConsentScreens/Constant";
+import Constant from '../../../UI-Constants/Constant.json'
 const adharconsentstyles =StyleSheet.create({
     container: {
-      backgroundColor: ColorConstant.COLOR_LIGHT_YELLOW,
+      backgroundColor: Constant.Colors.COLOR_LIGHT_YELLOW,
       padding:PixelRatio.getPixelSizeForLayoutSize(5.4),
       justifyContent: 'center',
       alignItems: 'center',
