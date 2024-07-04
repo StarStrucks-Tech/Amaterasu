@@ -102,7 +102,7 @@ const AadhaarOtpInputs = ({ isChecked, onOtpFilled }) => {
       <TouchableOpacity onPress={togglePasswordVisibility}>
         <View style={AadhaarotpInputsStyles.eyeContainer}>
           <Image
-            source={sisChecked ? require('../../../Assets/image/eye.png') : require('../../../Assets/image/eye-outline.png')}
+            source={sisChecked ? require('../../Screens/AadhaarOTPScreen/assests/eye.png') : require('../../Screens/AadhaarOTPScreen/assests/eye-outline.png')}
             style={AadhaarotpInputsStyles.eyeIcon}
           />
           <Text style={AadhaarotpInputsStyles.eyeText}>{sisChecked ? "DON'T SHOW" : 'SHOW'}</Text>

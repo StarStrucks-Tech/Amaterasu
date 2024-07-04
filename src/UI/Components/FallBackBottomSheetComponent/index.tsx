@@ -24,7 +24,7 @@ const FallbackBottom = ({ showModal, setShowModal }) => {
         <View style={Fallbackstyle.modalBackground}>
           <View style={Fallbackstyle.centerview}>
             <View style={Fallbackstyle.modalview}>
-              <Image source={require('../../Assets/image/alert.png')} style={Fallbackstyle.imagsp} />
+              <Image source={require('../../Screens/AadhaarOTPScreen/assests/alert.png')} style={Fallbackstyle.imagsp} />
               <Text style={Fallbackstyle.font}>{TextComponentConstant.FallbackTexttitle}</Text>
               <Text style={{ fontFamily: 'Open Sans', color: "#7E7E7E",marginTop:PixelRatio.getPixelSizeForLayoutSize(7) }}>{TextComponent.Fallbacksubhead}</Text>
               
