@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, Alert, Pressable, Keyboard, BackHandler,PixelRatio, Platform } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, Alert, Pressable, Keyboard, BackHandler, PixelRatio, Platform } from 'react-native';
 import Flipcoin from '../../Components/FlipCoin';
 import FallbackBottom from '../../Components/FallBackBottomSheetComponent';
 import AadhaarOtpInputs from '../../Components/AadhaarOtpInput';
@@ -17,9 +17,9 @@ const AadhaarOTPScreen = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [count, setCount] = useState(60);
   const [isOtpFilled, setIsOtpFilled] = useState(false);
-  const navigation = useNavigation(); // Initialize navigation hook
+  const navigation = useNavigation();
 
-  useEffect(() => {
+  useEffect(() => { 
     const backAction = () => {
       setShowModal(true);
       return true;
@@ -52,54 +52,62 @@ const AadhaarOTPScreen = () => {
   };
 
   return (
-    <KeyboardAwareScrollView style={{flex:1}}
-    contentContainerStyle={{ flexGrow: 1 }}
-    >
-    <SafeAreaView style={AadhaarotpscreenStyles.container}>
-      <Pressable onPress={Keyboard.dismiss}>
-        <View style={{ alignItems: 'center',  }}>
-          <Flipcoin />
-        </View>
-        <AadhaarOtpTextComponent/>
-        <AadhaarOtpInputs isChecked={isChecked} onOtpFilled={handleOtpFilled} />
-
-        <View style={{ alignItems: 'center', }}>
-          <SecureComponent />
-        </View>
-        <View style={AadhaarotpscreenStyles.resendView}>
-          {count !== 0 ? (
-            <View>
-              <Text style={{ 
-                 fontWeight: '400',
-                  fontSize:  PixelRatio.getPixelSizeForLayoutSize(4), color: Constant.Colors.GRAY,
-                   textAlign: 'center' }}>Waiting for OTP...</Text>
-              <Text style={{ 
-                 fontSize: PixelRatio.getPixelSizeForLayoutSize(5), color: Constant.Colors.GRAY,
-                  textAlign: 'center' }}>{count + ' seconds'}</Text>
-            </View>
-          ) : (
-            <Text style={{ fontSize: PixelRatio.getPixelSizeForLayoutSize(5), fontWeight: '600',
-             color: Constant.Colors.AQUA_GREEN }} onPress={() => setCount(60)}>
-              {TextComponentConstant.Resend}
+    <KeyboardAwareScrollView style={{ flex: 1 }} contentContainerStyle={{ flexGrow: 1 }}>
+      <SafeAreaView style={AadhaarotpscreenStyles.container}>
+        <Pressable onPress={Keyboard.dismiss}>
+          <View style={{ alignItems: 'center' }}>
+            <Flipcoin />
+          </View>
+          <AadhaarOtpTextComponent />
+          <AadhaarOtpInputs isChecked={isChecked} onOtpFilled={handleOtpFilled} />
+          <View style={{ alignItems: 'center' }}>
+            <SecureComponent />
+          </View>
+          <View style={AadhaarotpscreenStyles.resendView}>
+            {count !== 0 ? (
+              <View>
+                <Text
+                  style={{
+                    fontWeight: '400',
+                    fontSize: PixelRatio.getPixelSizeForLayoutSize(4),
+                    color: Constant.Colors.GRAY,
+                    textAlign: 'center',
+                  }}>
+                  Waiting for OTP...
+                </Text>
+                <Text
+                  style={{
+                    fontSize: PixelRatio.getPixelSizeForLayoutSize(5),
+                    color: Constant.Colors.GRAY,
+                    textAlign: 'center',
+                  }}>
+                  {count + ' seconds'}
+                </Text>
+              </View>
+            ) : (
+              <Text
+                style={{
+                  fontSize: PixelRatio.getPixelSizeForLayoutSize(5),
+                  fontWeight: '600',
+                  color: Constant.Colors.AQUA_GREEN,
+                }}
+                onPress={() => setCount(60)}>
+                {TextComponentConstant.Resend}
+              </Text>
+            )}
+          </View>
+          <View style={AadhaarotpscreenStyles.editAadhaarLink}>
+            <Text style={AadhaarotpscreenStyles.editLinkText}>{TextComponentConstant.EditText}</Text>
+            <Text style={AadhaarotpscreenStyles.editLink} onPress={() => navigation.navigate('Aadhaardetails')}>
+              Edit
             </Text>
-          )}
-        </View>
-        <View style={AadhaarotpscreenStyles.editAadhaarLink}>
-          <Text style={AadhaarotpscreenStyles.editLinkText}>
-            {TextComponentConstant.EditText}
-          </Text>
-          <Text
-            style={AadhaarotpscreenStyles.editLink}
-            onPress={() => navigation.navigate("Adhaardetails")}
-          >
-            Edit
-          </Text>
-        </View><View style={{alignItems:'center'}}>
-        <NextButton onPressNavigate isValidAadhaar={isOtpFilled} />
-        </View>
-        {showModal && <FallbackBottom showModal={showModal} setShowModal={setShowModal} />}
-      </Pressable>
-    </SafeAreaView>
+          </View>
+          <View style={{ alignItems: 'center' }}>
+            <NextButton onPressNavigate={() => navigation.navigate('LoadingScreen')} isValidAadhaar={isOtpFilled} />
+          </View>
+          {showModal && <FallbackBottom showModal={showModal} setShowModal={setShowModal} />}
+        </Pressable>
+      </SafeAreaView>
     </KeyboardAwareScrollView>
   );
 };

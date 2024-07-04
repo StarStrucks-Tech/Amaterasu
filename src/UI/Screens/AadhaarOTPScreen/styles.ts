@@ -3,7 +3,7 @@
 import { StyleSheet, PixelRatio } from 'react-native';
 import Constant from '../../../UI-Constants/Constant.json';
 
-const otpscreenStyles = StyleSheet.create({
+const AadhaarotpscreenStyles = StyleSheet.create({
   container: {
     height:"100%",
     backgroundColor: Constant.Colors.COLOR_LIGHT_YELLOW,
@@ -39,4 +39,4 @@ const otpscreenStyles = StyleSheet.create({
   },
 });
 
-export default otpscreenStyles;
+export default AadhaarotpscreenStyles;

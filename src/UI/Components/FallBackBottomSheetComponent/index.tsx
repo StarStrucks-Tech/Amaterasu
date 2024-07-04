@@ -10,7 +10,7 @@ const FallbackBottom = ({ showModal, setShowModal }) => {
 
   const handleYesPress = () => {
     // Navigate to AdhaarConsent screen
-    navigation.navigate('AdhaarConsent');
+    navigation.navigate('AadhaarConsentScreens');
   };
 
   // Check if screen is focused (to prevent modal on LoadingScreen)
@@ -26,7 +26,7 @@ const FallbackBottom = ({ showModal, setShowModal }) => {
             <View style={Fallbackstyle.modalview}>
               <Image source={require('../../Screens/AadhaarOTPScreen/assests/alert.png')} style={Fallbackstyle.imagsp} />
               <Text style={Fallbackstyle.font}>{TextComponentConstant.FallbackTexttitle}</Text>
-              <Text style={{ fontFamily: 'Open Sans', color: "#7E7E7E",marginTop:PixelRatio.getPixelSizeForLayoutSize(7) }}>{TextComponent.Fallbacksubhead}</Text>
+              <Text style={{ fontFamily: 'Open Sans', color: "#7E7E7E",marginTop:PixelRatio.getPixelSizeForLayoutSize(7) }}>{TextComponentConstant.Fallbacksubhead}</Text>
               
               <View style={{ flexDirection: 'row', gap: PixelRatio.getPixelSizeForLayoutSize(10),
                 marginTop:PixelRatio.getPixelSizeForLayoutSize(6) ,}}>

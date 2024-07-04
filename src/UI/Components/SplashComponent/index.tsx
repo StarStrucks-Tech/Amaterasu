@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, Image, PixelRatio } from 'react-native';
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';
 import Animated, { interpolate, runOnJS, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
-// import { useNavigation, useIsFocused } from '@react-navigation/native';
+import { useNavigation, useIsFocused } from '@react-navigation/native';
 import splashstyles from './style';
 import { ColorConstant } from '../../Screens/AadhaarConsentScreens/Constant';
 import { TextComponentConstant } from '../../Screens/AadhaarConsentScreens/Constant';
@@ -13,14 +13,14 @@ type SplashProps = {
 }
 const Splash = (props: SplashProps) => {
   const translateX = useSharedValue(0);
-//  const navigation = useNavigation();
-//  const isFocused = useIsFocused();
+  const navigation = useNavigation();
+ const isFocused = useIsFocused();
 
   const [boxDimensions, setBoxDimensions] = useState({ x: 0, y: 0, width: 0, height: 0 });
   const [circleDimensions, setCircleDimensions] = useState({ x: 0, y: 0, width: 0, height: 0 });
 
   const onSwipe = () => {
-    //navigation.navigate()
+    navigation.navigate("Aadhaardetails")
   };
 
   const pan = Gesture.Pan().onChange((event) => {
