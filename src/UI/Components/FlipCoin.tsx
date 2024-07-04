@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, {useEffect, useRef, useCallback} from 'react';
-import {Animated, SafeAreaView, StyleSheet} from 'react-native';
+import {Animated, SafeAreaView, StyleSheet, PixelRatio} from 'react-native';
 
 const Flipcoin = () => {
   const animatedValue = useRef(new Animated.Value(0)).current;
@@ -53,8 +53,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    height: 190,
-    width: 250,
+    marginTop:PixelRatio.getPixelSizeForLayoutSize(10),
+    height:PixelRatio.getPixelSizeForLayoutSize(25),
+    width: PixelRatio.getPixelSizeForLayoutSize(33),
+    marginBottom:PixelRatio.getPixelSizeForLayoutSize(10)
   },
 });
 
