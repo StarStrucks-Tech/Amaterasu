@@ -16,11 +16,11 @@ const DebitCard = ({ item }: DebitCardProps) => {
 
   return (
     <ImageBackground
-      source={require('../../../assets/card-background.png')}
+      source={require('../../../Assets/images/card-background.png')}
       style={styles.debitCard}
       imageStyle={styles.debitCardBackground}
     >
-      <Image source={require('../../../assets/card_chip.png')} style={styles.chipImage} />
+      <Image source={require('../../../Assets/images/card_chip.png')} style={styles.chipImage} />
       <Text style={styles.bankName}>{item.bankName}</Text>
       <Text style={styles.cardBalace}>Card Balance</Text>
       <View style={styles.balanceContainer}>
@@ -33,7 +33,7 @@ const DebitCard = ({ item }: DebitCardProps) => {
           style={styles.hideBalanceButton}
         >
           <Image
-            source={balanceHidden ? require('../../../assets/show.png') : require('../../../assets/hide.png')}
+            source={balanceHidden ? require('../../../Assets/images/show.png') : require('../../../Assets/images/hide.png')}
             style={styles.balanceButtonImage}
           />
         </TouchableOpacity>
