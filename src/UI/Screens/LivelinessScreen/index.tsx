@@ -1,18 +1,24 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {View, Text, TouchableOpacity, Image} from 'react-native';
-import {Camera} from 'expo-camera';
+import React, { useState, useEffect, useRef } from 'react';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 import styles from './Styles';
-import {CameraType} from 'expo-camera/build/legacy/Camera.types';
+import { Camera, type Camera as ExpoCamera } from 'expo-camera';
+import { CameraType } from 'expo-camera/build/legacy/Camera.types';
+
+type ExtendedCamera =typeof ExpoCamera & {
+  stopRecording: () => void;
+  recordAsync: () => Promise<{ uri: string }>;
+};
 
 const LivelinessScreen = () => {
   const [hasPermission, setHasPermission] = useState<boolean | null>(null);
   const [isRecording, setIsRecording] = useState(false);
   const [cameraReady, setCameraReady] = useState(false);
-  const cameraRef = useRef<Camera>(null);
+
+  const cameraRef = useRef<ExtendedCamera>(null);
 
   useEffect(() => {
     (async () => {
-      const {status} = await Camera.requestCameraPermissionsAsync();
+      const { status } = await Camera.requestCameraPermissionsAsync();
       setHasPermission(status === 'granted');
     })();
   }, []);
