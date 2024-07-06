@@ -8,7 +8,7 @@ const StaticScreen: React.FC = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require("./assets/screenlight.png")}
+        source={require("../assets/screenlight.png")}
         style={styles.image}
       />
       <Text style={styles.title}>{constants.TextConstants.TITLE}</Text>

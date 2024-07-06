@@ -57,7 +57,7 @@ const Animations: React.FC = () => {
     <View style={styles.container}>
       <View style={styles.background}>
         <Animated.Image
-          source={require('./assets/screenlight.png')}
+          source={require('../assets/screenlight.png')}
           style={[
             styles.image,
             {
