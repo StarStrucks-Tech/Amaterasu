@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { Animated, View, StyleSheet, Dimensions, ImageStyle, ViewStyle } from 'react-native';
 import constants from  '../../../../UI-Constants/Constant.json'// Adjusted import path
+import styles from './styles';
 
 const { width, height } = Dimensions.get('window');
 
@@ -74,21 +75,5 @@ const Animations: React.FC = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: constants.Styles.CONTAINER_FLEX,
-  } as ViewStyle,
-  background: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  } as ViewStyle,
-  image: {
-    marginTop: height * constants.Styles.IMAGE_MARGIN_TOP,
-    width: width * constants.Styles.IMAGE_WIDTH,
-    height: height * constants.Styles.IMAGE_HEIGHT,
-  } as ImageStyle,
-});
 
 export default Animations;
