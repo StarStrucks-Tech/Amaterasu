@@ -164,15 +164,13 @@
     "FOOTER_TEXT_FONT_WEIGHT": "bold",
     "FOOTER_TEXT_COLOR": "#7a897f"
   },
-  "AnimationDurations": {
+  "AnimationValues": {
     "DELAY_BEFORE_START": 500,
     "FADE_IN_DURATION": 500,
     "TRANSLATE_DURATION": 2000,
     "SCALE_DURATION": 2000,
     "FADE_OUT_DELAY": 1000,
-    "FADE_OUT_DURATION": 500
-  },
-  "AnimationValues": {
+    "FADE_OUT_DURATION": 500,
     "INITIAL_OPACITY": 0,
     "INITIAL_TRANSLATE_Y": -102,
     "INITIAL_SCALE": 1.18,

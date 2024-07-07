@@ -14,39 +14,39 @@ const Animations: React.FC = () => {
   useEffect(() => {
     const animate = () => {
       Animated.sequence([
-        Animated.delay(constants.AnimationDurations.DELAY_BEFORE_START),
+        Animated.delay(constants.AnimationValues.DELAY_BEFORE_START),
         Animated.timing(opacity, {
           toValue: 1,
-          duration: constants.AnimationDurations.FADE_IN_DURATION,
+          duration: constants.AnimationValues.FADE_IN_DURATION,
           useNativeDriver: true,
         }),
         Animated.parallel([
           Animated.timing(translateY, {
             toValue: constants.AnimationValues.TRANSLATE_Y_TO_VALUE,
-            duration: constants.AnimationDurations.TRANSLATE_DURATION,
+            duration: constants.AnimationValues.TRANSLATE_DURATION,
             useNativeDriver: true,
           }),
           Animated.timing(flip, {
             toValue: constants.AnimationValues.FLIP_TO_VALUE,
-            duration: constants.AnimationDurations.SCALE_DURATION,
+            duration: constants.AnimationValues.SCALE_DURATION,
             useNativeDriver: true,
           }),
           Animated.timing(scale, {
             toValue: constants.AnimationValues.SCALE_TO_VALUE,
-            duration: constants.AnimationDurations.SCALE_DURATION,
+            duration: constants.AnimationValues.SCALE_DURATION,
             useNativeDriver: true,
           }),
         ]),
-        Animated.delay(constants.AnimationDurations.FADE_OUT_DELAY),
+        Animated.delay(constants.AnimationValues.FADE_OUT_DELAY),
         Animated.timing(opacity, {
           toValue: 0,
-          duration: constants.AnimationDurations.FADE_OUT_DURATION,
+          duration: constants.AnimationValues.FADE_OUT_DURATION,
           useNativeDriver: true,
         }),
       ]).start();
     };
 
-    setTimeout(animate, constants.AnimationDurations.DELAY_BEFORE_START);
+    setTimeout(animate, constants.AnimationValues.DELAY_BEFORE_START);
   }, []);
 
   const flipInterpolate = flip.interpolate({
