@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { Animated, View, StyleSheet, Dimensions, ImageStyle, ViewStyle } from 'react-native';
-import constants from '../../../../UI-Constants/Constant.json';
+import constants from '../../../UI-Constants/Constant.json';
 import styles from './styles';
 
 // Destructure width and height from the window dimensions

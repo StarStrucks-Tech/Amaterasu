@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image, TouchableOpacity, Dimensions, ImageStyle, TextStyle, ViewStyle } from 'react-native';
-import constants from '../../../../UI-Constants/Constant.json';
+import constants from '../../../UI-Constants/Constant.json';
 import styles from './styles';
 
 // Destructure width and height from the window dimensions

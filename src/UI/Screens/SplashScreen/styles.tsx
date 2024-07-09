@@ -1,4 +1,4 @@
-import constants from '../../../../UI-Constants/Constant.json';
+import constants from '../../../UI-Constants/Constant.json';
 import {StyleSheet, Dimensions, TextStyle} from 'react-native';
 const { width, height } = Dimensions.get('window');
 

@@ -1,5 +1,4 @@
 import { StyleSheet, Dimensions } from "react-native";
-import constants from "../../../../UI-Constants/Constant.json";
 const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
