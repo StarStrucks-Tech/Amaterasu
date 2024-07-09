@@ -1,10 +1,8 @@
 import React, { useRef, useEffect } from 'react';
-import { Animated, View, StyleSheet, Dimensions, ImageStyle, ViewStyle } from 'react-native';
+import { Animated, View, Dimensions } from 'react-native';
 import constants from '../../../UI-Constants/Constant.json';
 import styles from './styles';
 
-// Destructure width and height from the window dimensions
-const { width, height } = Dimensions.get('window');
 
 /**
  * Animations Component
@@ -19,7 +17,7 @@ const { width, height } = Dimensions.get('window');
  * - The logo also flips continuously during the animation.
  */
 
-const Animations = () => {
+const SplashAnimation = () => {
   // Create animated values for opacity, translation, scale, and flip (rotation)
   const opacity = useRef(new Animated.Value(constants.AnimationValues.INITIAL_OPACITY)).current;
   const translateY = useRef(new Animated.Value(constants.AnimationValues.INITIAL_TRANSLATE_Y)).current;
@@ -83,7 +81,7 @@ const Animations = () => {
       <View style={styles.background}>
         {/* Animated Image with opacity, translation, scale, and rotation */}
         <Animated.Image
-          source={require('../assets/applogo.png')}
+          source={require('../../../Assets/images/applogo.png')}
           style={[
             styles.image,
             {
@@ -101,4 +99,4 @@ const Animations = () => {
   );
 };
 
-export default Animations;
+export default SplashAnimation;
