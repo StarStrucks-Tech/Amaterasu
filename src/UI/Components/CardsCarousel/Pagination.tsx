@@ -1,5 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Animated, Dimensions } from 'react-native';
+import styles from './PaginationStyle';
+
 
 const { width } = Dimensions.get('window');
 
@@ -38,20 +40,5 @@ const Pagination = ({ data, scrollX }: { data: any[], scrollX: Animated.Value}) 
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  pagination: {
-    flexDirection: 'row',
-    position: 'absolute',
-    bottom: 65,
-    alignSelf: 'center',
-  },
-  dot: {
-    height: 10,
-    borderRadius: 5,
-    backgroundColor: '#595959',
-    marginHorizontal: 8,
-  },
-});
 
 export default Pagination;
