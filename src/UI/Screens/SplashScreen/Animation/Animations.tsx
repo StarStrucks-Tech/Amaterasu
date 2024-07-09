@@ -1,25 +1,45 @@
 import React, { useRef, useEffect } from 'react';
 import { Animated, View, StyleSheet, Dimensions, ImageStyle, ViewStyle } from 'react-native';
-import constants from  '../../../../UI-Constants/Constant.json'// Adjusted import path
+import constants from '../../../../UI-Constants/Constant.json';
 import styles from './styles';
 
+// Destructure width and height from the window dimensions
 const { width, height } = Dimensions.get('window');
 
-const Animations: React.FC = () => {
+/**
+ * Animations Component
+ * 
+ * This component displays an animated logo using React Native's Animated API.
+ * The animation includes fading, translation, scaling, and rotation effects.
+ * 
+ * Animation Description:
+ * - The logo starts appearing at the center of the screen.
+ * - It then translates along the positive Y-axis.
+ * - During the translation, the logo scales down.
+ * - The logo also flips continuously during the animation.
+ */
+
+const Animations = () => {
+  // Create animated values for opacity, translation, scale, and flip (rotation)
   const opacity = useRef(new Animated.Value(constants.AnimationValues.INITIAL_OPACITY)).current;
   const translateY = useRef(new Animated.Value(constants.AnimationValues.INITIAL_TRANSLATE_Y)).current;
   const scale = useRef(new Animated.Value(constants.AnimationValues.INITIAL_SCALE)).current;
   const flip = useRef(new Animated.Value(constants.AnimationValues.INITIAL_FLIP)).current;
 
+  // useEffect hook to start the animation when the component mounts
   useEffect(() => {
+    // Define the animation sequence
     const animate = () => {
       Animated.sequence([
+        // Delay before starting the animation
         Animated.delay(constants.AnimationValues.DELAY_BEFORE_START),
+        // Fade in the logo
         Animated.timing(opacity, {
           toValue: 1,
           duration: constants.AnimationValues.FADE_IN_DURATION,
           useNativeDriver: true,
         }),
+        // Perform translation, scaling, and flipping simultaneously
         Animated.parallel([
           Animated.timing(translateY, {
             toValue: constants.AnimationValues.TRANSLATE_Y_TO_VALUE,
@@ -37,18 +57,22 @@ const Animations: React.FC = () => {
             useNativeDriver: true,
           }),
         ]),
+        // Delay before starting the fade-out animation
         Animated.delay(constants.AnimationValues.FADE_OUT_DELAY),
+        // Fade out the logo
         Animated.timing(opacity, {
           toValue: 0,
           duration: constants.AnimationValues.FADE_OUT_DURATION,
           useNativeDriver: true,
         }),
-      ]).start();
+      ]).start(); // Start the animation sequence
     };
 
+    // Start the animation after an initial delay
     setTimeout(animate, constants.AnimationValues.DELAY_BEFORE_START);
   }, []);
 
+  // Interpolate the flip value to rotate the logo from 0 to 720 degrees
   const flipInterpolate = flip.interpolate({
     inputRange: [0, 1, 2],
     outputRange: ['0deg', '360deg', '720deg'],
@@ -57,8 +81,9 @@ const Animations: React.FC = () => {
   return (
     <View style={styles.container}>
       <View style={styles.background}>
+        {/* Animated Image with opacity, translation, scale, and rotation */}
         <Animated.Image
-          source={require('../assets/screenlight.png')}
+          source={require('../assets/applogo.png')}
           style={[
             styles.image,
             {
