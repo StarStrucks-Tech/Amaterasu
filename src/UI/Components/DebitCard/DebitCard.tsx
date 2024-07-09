@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image, ImageBackground } from 'react-native';
-import styles from './styles';
+import styles from './Style';
 
 type DebitCardProps = {
   item: {
@@ -11,8 +11,9 @@ type DebitCardProps = {
   };
 };
 
-const DebitCard = ({ item }: DebitCardProps) => {
+const DebitCard = (props: DebitCardProps) => {
   const [balanceHidden, setBalanceHidden] = useState(true);
+  const { item } = props;
 
   return (
     <ImageBackground
@@ -38,12 +39,9 @@ const DebitCard = ({ item }: DebitCardProps) => {
           />
         </TouchableOpacity>
       </View>
-      <View 
-
-        style={styles.cardOwner}
-        >
-          <Text style={styles.cardHolder}>{item.cardHolder}</Text>
-          <Text style={styles.cardNumber}>{item.cardNumber}</Text>
+      <View style={styles.cardOwner}>
+        <Text style={styles.cardHolder}>{item.cardHolder}</Text>
+        <Text style={styles.cardNumber}>{item.cardNumber}</Text>
       </View>
     </ImageBackground>
   );
