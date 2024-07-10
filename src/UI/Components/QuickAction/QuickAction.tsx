@@ -1,10 +1,16 @@
-// QuickActionBar.tsx
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import AvatarCircle from '../AvatarCircle/index';
 import { styles } from './Style';
 
-const QuickAction: React.FC = () => {
+
+/**
+ * QuickAction Component
+ * @description This functional component renders a list of quick action buttons.
+ * Each button consists of an icon and a label.
+ * The actions array defines the available actions with their respective icons and labels.
+ */
+const QuickAction = () => {
   const actions = [
     { name: 'Send', icon: require('../../../Assets/images/Send.png') },
     { name: 'Receive', icon: require('../../../Assets/images/Receive.png') },
