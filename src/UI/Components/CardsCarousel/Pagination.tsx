@@ -2,10 +2,23 @@ import React from 'react';
 import { View, StyleSheet, Animated, Dimensions } from 'react-native';
 import styles from './PaginationStyle';
 
-
 const { width } = Dimensions.get('window');
 
-const Pagination = ({ data, scrollX }: { data: any[], scrollX: Animated.Value}) => {
+// Define the type for the props
+interface PaginationProps {
+  data: any[];
+  scrollX: Animated.Value;
+}
+
+/**
+ * Pagination component to display a series of dots indicating the current page in a scroll view.
+ * 
+ * @param {PaginationProps} props - The props for the Pagination component.
+ * @param {any[]} props.data - The data array representing the number of pages.
+ * @param {Animated.Value} props.scrollX - The animated value representing the horizontal scroll position.
+ * @returns {JSX.Element} The rendered Pagination component.
+ */
+const Pagination: React.FC<PaginationProps> = ({ data, scrollX }) => {
   return (
     <View style={styles.pagination}>
       {data.map((_, i) => {
