@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { View, FlatList, Dimensions, Animated, NativeSyntheticEvent, NativeScrollEvent } from 'react-native';
-import Pagination from './Pagination';
+import Pagination from '../Pagination/index';
 import styles from './styles';
-import DebitCard from '../DebitCard/DebitCard';
+import DebitCard from '../DebitCard';
 
 const { width, height } = Dimensions.get('window');
 

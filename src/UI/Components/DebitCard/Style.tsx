@@ -2,7 +2,7 @@ import { StyleSheet, Dimensions } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
-const Style = StyleSheet.create({
+const style = StyleSheet.create({
     debitCard: {
         height: height * 0.28,
         borderRadius: 10,
@@ -79,4 +79,4 @@ const Style = StyleSheet.create({
   
 });
 
-export default Style;
+export default style;

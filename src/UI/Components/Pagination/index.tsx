@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Animated, Dimensions } from 'react-native';
-import styles from './PaginationStyle';
+import styles from './style';
 
 const { width } = Dimensions.get('window');
 

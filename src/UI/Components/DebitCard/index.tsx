@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image, ImageBackground } from 'react-native';
-import styles from './Style';
+import styles from './style';
 
 type DebitCardProps = {
   item: {
