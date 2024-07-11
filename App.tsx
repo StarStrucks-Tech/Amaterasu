@@ -6,7 +6,8 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
+// import OTP_Screen from './src/UI/Screens/OTPScreens/OTPScreen';
+/*import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -96,4 +97,10 @@ const styles = StyleSheet.create({
   },
 });
 
+export default App;
+*/
+import OTPScreen from './src/UI/Screens/OTPScreen/index';
+const App = () => {
+  return <OTPScreen />;
+};
 export default App;
