@@ -9,41 +9,41 @@
  * @generated from protobuf enum enums.PermissionType
  */
 export enum PermissionType {
-    /**
-     * *
-     * Notifications permission type
-     * This value represents permission for notifications
-     *
-     * @generated from protobuf enum value: NOTIFICATIONS = 0;
-     */
-    NOTIFICATIONS = 0,
-    /**
-     * *
-     * Location permission type
-     * This value represents permission for location access
-     *
-     * @generated from protobuf enum value: LOCATION = 1;
-     */
-    LOCATION = 1,
-    /**
-     * *
-     * Terms and conditions permission
-     *
-     * @generated from protobuf enum value: TERMS_AND_CONDITIONS = 2;
-     */
-    TERMS_AND_CONDITIONS = 2,
-    /**
-     * *
-     * Data sharing permission
-     *
-     * @generated from protobuf enum value: DATA_SHARING = 3;
-     */
-    DATA_SHARING = 3,
-    /**
-     * *
-     * Other types of permissions
-     *
-     * @generated from protobuf enum value: OTHER_PERMISSIONS = 4;
-     */
-    OTHER_PERMISSIONS = 4
+  /**
+   * *
+   * Notifications permission type
+   * This value represents permission for notifications
+   *
+   * @generated from protobuf enum value: NOTIFICATIONS = 0;
+   */
+  NOTIFICATIONS = 0,
+  /**
+   * *
+   * Location permission type
+   * This value represents permission for location access
+   *
+   * @generated from protobuf enum value: LOCATION = 1;
+   */
+  LOCATION = 1,
+  /**
+   * *
+   * Terms and conditions permission
+   *
+   * @generated from protobuf enum value: TERMS_AND_CONDITIONS = 2;
+   */
+  TERMS_AND_CONDITIONS = 2,
+  /**
+   * *
+   * Data sharing permission
+   *
+   * @generated from protobuf enum value: DATA_SHARING = 3;
+   */
+  DATA_SHARING = 3,
+  /**
+   * *
+   * Other types of permissions
+   *
+   * @generated from protobuf enum value: OTHER_PERMISSIONS = 4;
+   */
+  OTHER_PERMISSIONS = 4,
 }

@@ -1,15 +1,14 @@
-import React, { useRef, useEffect } from 'react';
-import { Animated, View, Dimensions } from 'react-native';
+import React, {useRef, useEffect} from 'react';
+import {Animated, View, Dimensions} from 'react-native';
 import constants from '../../../UI-Constants/Constant.json';
 import styles from './styles';
 
-
 /**
  * Animations Component
- * 
+ *
  * This component displays an animated logo using React Native's Animated API.
  * The animation includes fading, translation, scaling, and rotation effects.
- * 
+ *
  * Animation Description:
  * - The logo starts appearing at the center of the screen.
  * - It then translates along the positive Y-axis.
@@ -19,10 +18,18 @@ import styles from './styles';
 
 const SplashAnimation = () => {
   // Create animated values for opacity, translation, scale, and flip (rotation)
-  const opacity = useRef(new Animated.Value(constants.AnimationValues.INITIAL_OPACITY)).current;
-  const translateY = useRef(new Animated.Value(constants.AnimationValues.INITIAL_TRANSLATE_Y)).current;
-  const scale = useRef(new Animated.Value(constants.AnimationValues.INITIAL_SCALE)).current;
-  const flip = useRef(new Animated.Value(constants.AnimationValues.INITIAL_FLIP)).current;
+  const opacity = useRef(
+    new Animated.Value(constants.AnimationValues.INITIAL_OPACITY),
+  ).current;
+  const translateY = useRef(
+    new Animated.Value(constants.AnimationValues.INITIAL_TRANSLATE_Y),
+  ).current;
+  const scale = useRef(
+    new Animated.Value(constants.AnimationValues.INITIAL_SCALE),
+  ).current;
+  const flip = useRef(
+    new Animated.Value(constants.AnimationValues.INITIAL_FLIP),
+  ).current;
 
   // useEffect hook to start the animation when the component mounts
   useEffect(() => {
@@ -86,11 +93,7 @@ const SplashAnimation = () => {
             styles.image,
             {
               opacity,
-              transform: [
-                { translateY },
-                { scale },
-                { rotateY: flipInterpolate },
-              ],
+              transform: [{translateY}, {scale}, {rotateY: flipInterpolate}],
             },
           ]}
         />

@@ -1,6 +1,6 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 
-const { width, height } = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     width: width * 0.8,
-    marginHorizontal: width * 0.2 / 2,
+    marginHorizontal: (width * 0.2) / 2,
   },
 });
 

@@ -1,5 +1,11 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Image, ImageBackground } from 'react-native';
+import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Image,
+  ImageBackground,
+} from 'react-native';
 import styles from './style';
 
 type DebitCardProps = {
@@ -13,15 +19,17 @@ type DebitCardProps = {
 
 const DebitCard = (props: DebitCardProps) => {
   const [balanceHidden, setBalanceHidden] = useState(true);
-  const { item } = props;
+  const {item} = props;
 
   return (
     <ImageBackground
       source={require('../../../Assets/images/card-background.png')}
       style={styles.debitCard}
-      imageStyle={styles.debitCardBackground}
-    >
-      <Image source={require('../../../Assets/images/card_chip.png')} style={styles.chipImage} />
+      imageStyle={styles.debitCardBackground}>
+      <Image
+        source={require('../../../Assets/images/card_chip.png')}
+        style={styles.chipImage}
+      />
       <Text style={styles.bankName}>{item.bankName}</Text>
       <Text style={styles.cardBalace}>Card Balance</Text>
       <View style={styles.balanceContainer}>
@@ -31,10 +39,13 @@ const DebitCard = (props: DebitCardProps) => {
         <Text style={styles.separator}>|</Text>
         <TouchableOpacity
           onPress={() => setBalanceHidden(!balanceHidden)}
-          style={styles.hideBalanceButton}
-        >
+          style={styles.hideBalanceButton}>
           <Image
-            source={balanceHidden ? require('../../../Assets/images/show.png') : require('../../../Assets/images/hide.png')}
+            source={
+              balanceHidden
+                ? require('../../../Assets/images/show.png')
+                : require('../../../Assets/images/hide.png')
+            }
             style={styles.balanceButtonImage}
           />
         </TouchableOpacity>
