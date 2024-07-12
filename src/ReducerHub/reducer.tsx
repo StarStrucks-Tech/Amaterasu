@@ -21,7 +21,10 @@ export interface SetUserDataAction {
   data: any; // update based on the actual type of user data
 }
 
-export type ActionTypes = AddToCartAction | RemoveFromCartAction | SetUserDataAction;
+export type ActionTypes =
+  | AddToCartAction
+  | RemoveFromCartAction
+  | SetUserDataAction;
 
 const initialState: Item[] = [];
 export const reducer = (state = initialState, action: ActionTypes): Item[] => {

@@ -12,9 +12,9 @@ interface FetchDataResponse {
   type: any;
 }
 
-function* userList(action:GetUserListAction) {
+function* userList(action: GetUserListAction) {
   try {
-    const data:FetchDataResponse = yield call(fetchData);
+    const data: FetchDataResponse = yield call(fetchData);
     yield put({type: SET_USER_DATA, data});
   } catch (error) {
     console.error('Error fetching user list:', error);
