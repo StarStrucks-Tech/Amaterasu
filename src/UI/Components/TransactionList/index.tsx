@@ -3,7 +3,12 @@ import React from 'react';
 import {View, Text, FlatList, Image} from 'react-native';
 import styles from './styles';
 import {TRANSACTION_TYPES, STATUS_COLORS} from './constants';
-
+/**
+ * TransactionItem Component
+ * Renders details of a single transaction.
+ *
+ * @param {TransactionItemProps} props - Transaction details.
+ */
 const TransactionItem = ({
   type,
   recipient,
@@ -68,6 +73,12 @@ const TransactionItem = ({
   );
 };
 
+/**
+ * TransactionList Component
+ * Displays a list of transactions.
+ *
+ * @param {TransactionListProps} props - Contains transactions.
+ */
 const TransactionList = ({transactions}: TransactionListProps) => {
   return (
     <View style={styles.container}>
@@ -82,6 +93,9 @@ const TransactionList = ({transactions}: TransactionListProps) => {
 
 export default TransactionList;
 
+/**
+ * Types for transaction item and list props.
+ */
 type TransactionItemProps = {
   type: string;
   recipient: string;
