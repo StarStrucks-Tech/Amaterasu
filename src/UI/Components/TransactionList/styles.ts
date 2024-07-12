@@ -3,39 +3,61 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    flexDirection: 'row',
     padding: 16,
-    backgroundColor: '#F5F5DC',
-    borderRadius: 8,
-    marginBottom: 8,
+    backgroundColor: '#FFFDF6',
   },
-  iconContainer: {
-    marginRight: 16,
-    justifyContent: 'center',
+  headerText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 16,
+  },
+  itemContainer: {
+    padding: 10,
+    backgroundColor: '#f0f0d7',
+    marginVertical: 5,
+    borderRadius: 10,
   },
   detailsContainer: {
     flex: 1,
   },
-  amountContainer: {
-    alignItems: 'flex-end',
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  iconContainer: {
+    marginRight: 10,
+  },
+  arrowIcon: {
+    width: 36,
+    height: 36,
   },
   typeText: {
     fontSize: 16,
     fontWeight: 'bold',
+    color: '#26273a',
   },
   recipientText: {
     fontSize: 14,
+    color: '#26273a',
   },
-  dateTimeText: {
-    fontSize: 12,
-    color: '#666',
-  },
+
   amountText: {
     fontSize: 16,
     fontWeight: 'bold',
+    color: '#000',
+  },
+  dateTimeText: {
+    fontSize: 12,
+    color: 'gray',
+  },
+  statusIndicator: {
+    paddingVertical: 2,
+    paddingHorizontal: 5,
+    borderRadius: 5,
   },
   statusText: {
+    color: '#FFF',
     fontSize: 12,
-    textTransform: 'capitalize',
   },
 });
