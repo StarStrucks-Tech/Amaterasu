@@ -121,6 +121,8 @@
     "EMAIL_PLACEHOLDER": "Enter your email ID",
     "NAME_PLACEHOLDER": "Enter your name",
     "OTP_SENT": "OTP sent to your email ID",
+    "WELCOME_BACK": "Welcome Back",
+    "OTP_SENT": "OTP sent to your email ID",
     "TITLE": "KUBAIR",
     "BUTTON_TEXT": "Get Started",
     "FOOTER_TEXT": "Your money is safe with us"
