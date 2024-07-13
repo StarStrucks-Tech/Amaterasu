@@ -32,4 +32,9 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#000',
   },
+  iconContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 5,
+  },
 });
