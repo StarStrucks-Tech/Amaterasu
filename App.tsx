@@ -1,106 +1,40 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Aadhaardetails from './src/UI/Screens/AadhaarDetailScreen';
+import AadhaarConsentScreens from './src/UI/Screens/AadhaarConsentScreens';
+import LoadingScreen from './src/UI/Screens/LoadingScreen';
+import AadhaarOTPScreen from './src/UI/Screens/AadhaarOTPScreen';
 
-import React from 'react';
-// import OTP_Screen from './src/UI/Screens/OTPScreens/OTPScreen';
-/*import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+const Stack = createNativeStackNavigator();
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import TabNavigation from './src/UI/Components/TabNavigation';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {OnboardingRpcCaller} from './src/Rpc/OnboardingRpcCaller';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+function App() {
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="AadhaarConsentScreens">
+          <Stack.Screen
+              name="AadhaarConsentScreens"
+              component={AadhaarConsentScreens}
+              options={{ headerShown: false }}
+          />
+          <Stack.Screen
+              name="Aadhaardetails"
+              component={Aadhaardetails}
+              options={{ headerShown: false }}
+          />
+          <Stack.Screen
+              name="AadhaarOTPScreen"
+              component={AadhaarOTPScreen}
+              options={{ headerShown: false }}
+          />
+          <Stack.Screen
+              name="LoadingScreen"
+              component={LoadingScreen}
+              options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
   );
 }
 
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  // Enabling Text Encoder for safe RPC Calls
-  global.TextEncoder = require('text-encoding').TextEncoder;
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-    </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
-
-export default App;
-*/
-import OTPScreen from './src/UI/Screens/OTPScreen/index';
-const App = () => {
-  return <OTPScreen />;
-};
 export default App;
