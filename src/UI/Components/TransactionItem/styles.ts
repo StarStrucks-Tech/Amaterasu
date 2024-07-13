@@ -24,6 +24,7 @@ export default StyleSheet.create({
     width: 36,
     height: 36,
     color: '#fff',
+    textAlign: 'center',
   },
   typeText: {
     fontSize: 16,
