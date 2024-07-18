@@ -47,6 +47,11 @@
     "TIME_FORMAT": "HH:mm:ss",
     "DATETIME_FORMAT": "DD/MM/YYYY HH:mm:ss"
   },
+  "SCREEN_CHANGE_TEXT":{
+    "NEXT":"NEXT",
+    "SKIP":"SKIP",
+    "CLOSE":"CLOSE"
+  },
   "Opacity": {
     "OPACITY_HIGH": 1.0,
     "OPACITY_MEDIUM": 0.5,

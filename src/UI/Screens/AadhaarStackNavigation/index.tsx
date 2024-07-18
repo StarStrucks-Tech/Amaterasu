@@ -31,7 +31,7 @@ function AadhaarStackNavigation() {
               name="LoadingScreen"
               component={LoadingScreen}
               options={{ headerShown: false }}
-          /> */}
+          /> 
         </Stack.Navigator>
       </NavigationContainer>
   );
