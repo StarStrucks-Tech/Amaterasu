@@ -15,7 +15,7 @@ const SecureComponent = () => {
       alignItems: "center"
     }
     }>
-      <Image source={require('../../Screens/AadhaarDetailScreen/assests/Lock.png')}
+      <Image source={require('../../../Assets/images/Lock.png')}
        style={ 
         {
           marginRight: PixelRatio.getPixelSizeForLayoutSize(4) ,

@@ -22,7 +22,7 @@ const Aadhaardetails = ({navigation }) => {
       <Pressable  onPress={Keyboard.dismiss}>
         <View style={{justifyContent:'center',alignItems:'center',alignSelf:'center'}}>
       <Image
-        source={require('../AadhaarDetailScreen/assests/AAVerification.png')}
+        source={require('../../../Assets/images/AAVerification.png')}
         style={adhaardetailsScreenStyles.imageStyle}
         resizeMode="contain"
       />
@@ -41,7 +41,7 @@ const Aadhaardetails = ({navigation }) => {
         <View style={[adhaardetailsScreenStyles.radioCircle, isChecked && adhaardetailsScreenStyles.checkedRadioCircle]}>
           {isChecked && (
             <Image
-              source={require('../AadhaarDetailScreen/assests/right.png')}
+              source={require('../../../Assets/images/right.png')}
               style={adhaardetailsScreenStyles.checkIcon}
             />
           )}
