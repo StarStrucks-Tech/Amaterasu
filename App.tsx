@@ -99,8 +99,9 @@ const styles = StyleSheet.create({
 
 export default App;
 */
+import AadhaarStackNavigation from './src/UI/Screens/AadhaarStackNavigation/index';
 import OTPScreen from './src/UI/Screens/OTPScreen/index';
 const App = () => {
-  return <OTPScreen />;
+  return <AadhaarStackNavigation/>;
 };
 export default App;
