@@ -53,6 +53,11 @@
     "OPACITY_LOW": 0.25,
     "OPACITY_DISABLED": 0.1
   },
+  "SCREEN_CHANGE_TEXT":{
+    "NEXT":"NEXT",
+    "SKIP":"SKIP",
+    "CLOSE":"CLOSE"
+  },
   "Margin": {
     "MARGIN_SMALL": 8,
     "MARGIN_MEDIUM": 16,

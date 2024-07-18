@@ -22,6 +22,7 @@ function AadhaarStackNavigation() {
               component={Aadhaardetails}
               options={{ headerShown: false }}
           />
+          {/*
           <Stack.Screen
               name="AadhaarOTPScreen"
               component={AadhaarOTPScreen}
