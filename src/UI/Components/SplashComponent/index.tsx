@@ -20,7 +20,7 @@ const Splash = (props: SplashProps) => {
   const [circleDimensions, setCircleDimensions] = useState({ x: 0, y: 0, width: 0, height: 0 });
 
   const onSwipe = () => {
-    navigation.navigate("AadhaarConsentScreens")
+    navigation.navigate("Aadhaardetails")
   };
 
   const pan = Gesture.Pan().onChange((event) => {
