@@ -1,6 +1,7 @@
 {
   "Colors": {
     "COLOR_BACKGROUND": "#ecf0f1",
+    "COLOR_BORDER":"#B2B2B2",
     "COLOR_TEXT_PRIMARY": "#2c3e50",
     "COLOR_TEXT_SECONDARY": "#95a5a6",
     "COLOR_ERROR": "#e74c3c",
@@ -121,11 +122,12 @@
     "EMAIL_PLACEHOLDER": "Enter your email ID",
     "NAME_PLACEHOLDER": "Enter your name",
     "OTP_SENT": "OTP sent to your email ID",
-    "WELCOME_BACK": "Welcome Back",
-    "OTP_SENT": "OTP sent to your email ID",
-    "TITLE": "KUBAIR",
-    "BUTTON_TEXT": "Get Started",
-    "FOOTER_TEXT": "Your money is safe with us"
+    "AADHAA_PLACEHOLDER":"Enter your Aadhaar Number"
+  },
+  "SCREEN_CHANGE_TEXT":{
+    "NEXT":"NEXT",
+    "SKIP":"SKIP",
+    "CLOSE":"CLOSE"
   },
   "DurationInMs": {
     "DURATION_SHORT": 200,
@@ -138,20 +140,5 @@
     "TIMEOUT_MEDIUM": 10000,
     "TIMEOUT_LONG": 30000,
     "TIMEOUT_XLONG": 60000
-  },
-  "AnimationValues": {
-    "DELAY_BEFORE_START": 500,
-    "FADE_IN_DURATION": 500,
-    "TRANSLATE_DURATION": 2000,
-    "SCALE_DURATION": 2000,
-    "FADE_OUT_DELAY": 1000,
-    "FADE_OUT_DURATION": 500,
-    "INITIAL_OPACITY": 0,
-    "INITIAL_TRANSLATE_Y": -102,
-    "INITIAL_SCALE": 1.18,
-    "INITIAL_FLIP": 0,
-    "TRANSLATE_Y_TO_VALUE": -198,
-    "FLIP_TO_VALUE": 2,
-    "SCALE_TO_VALUE": 0.92
   }
 }
