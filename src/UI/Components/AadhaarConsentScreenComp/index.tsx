@@ -1,7 +1,7 @@
 import React from "react";
 import {View, Text, Image, PixelRatio} from 'react-native';
 import adharconsentstyles from "./style";
-import { TextComponentConstant } from "../../../../../../DummyFinal/Amaterasu/src/UI/Screens/AadhaarConsentScreens/Constant.ts";
+import { TextComponentConstant }from '../../Screens/AadhaarConsentScreens/Constant'
 
 type AadhaarConsentProps = {
   imageSource: number;
@@ -9,7 +9,7 @@ type AadhaarConsentProps = {
   textsubhead: string;
   textsubhead1: string;
 }
-const Aadhaarcomponent=(props: AadhaarConsentProps)=>{
+const Aadhaarcomponent=( props: AadhaarConsentProps )=>{
     return(
     <View>
         <View>
