@@ -100,7 +100,10 @@ const styles = StyleSheet.create({
 export default App;
 */
 import OTPScreen from './src/UI/Screens/OTPScreen/index';
+import Main from './src/UI/Components/CommonComponents/Main';
 const App = () => {
-  return <OTPScreen />;
+  return(
+      <Main />
+  );
 };
 export default App;
