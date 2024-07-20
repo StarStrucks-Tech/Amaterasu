@@ -3,9 +3,9 @@ import {View, Text, TouchableOpacity, Pressable} from 'react-native';
 import {Keyboard} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import Flipcoin from '../../Components/Flipcoin/index';
-import OTPInputs from '../../Components/OTPInput/index';
-import TimerDisplay from '../../Components/TimerDisplay/index';
+import Flipcoin from '../../components/Flipcoin/index';
+import OTPInputs from '../../components/OTPInput/index';
+import TimerDisplay from '../../components/TimerDisplay/index';
 import styles from './styles';
 import {OTPScreenConstants} from './Constants';
 

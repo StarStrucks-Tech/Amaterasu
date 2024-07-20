@@ -1,7 +1,7 @@
 import { View, Text, ImageSourcePropType } from 'react-native';
-import AvatarCircle from '../AvatarCircle';
+import AvatarCircle from '../AvatarCircle/index';
 import { styles } from './styles';
-import Constants from '../../../UI-Constants/Constant.json';
+import Constants from '../../../ui-constants/Constant.json';
 import React from 'react';
 
 /**

@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
-import styles from '../../../Screens/ConsentScreens/OtherConsent/styles';
+import styles from '../../../screens/ConsentScreens/OtherConsent/styles';
 
 type ConsentComponentProps = {
   containerStyle: object;

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import {TouchableOpacity} from 'react-native';
-import styles from '../Screens/EmailVerificationScreen/styles';
+import styles from '../screens/EmailVerificationScreen/styles';
 
 /**
  * Button component

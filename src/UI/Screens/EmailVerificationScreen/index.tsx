@@ -10,9 +10,9 @@
 import React, {useState} from 'react';
 import {View, Text, TextInput, Image} from 'react-native';
 import styles from './styles';
-import Button from '../../Components/Button';
+import Button from '../../components/Button';
 import {Pressable} from 'react-native';
-import {Colors} from '../../../Assets/Colors';
+import {Colors} from '../../../assets/Colors';
 import {Keyboard} from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
