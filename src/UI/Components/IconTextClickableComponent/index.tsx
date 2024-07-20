@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity, Linking} from 'react-native';
-import styles from '../../Screens/ConsentScreens/TermsConditions/styles';
+import styles from '../../screens/ConsentScreens/TermsConditions/styles';
 
 type IconTextClickableComponentProps = {
   buttonStyle: object;

@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
 
 import {useDispatch, useSelector} from 'react-redux';
-import {addToCart, removeFromCart} from '../../../ReducerHub/action';
+import {addToCart, removeFromCart} from '../../../reducer-hub/action';
 import {useState} from 'react';
 
 const Product = (props: any) => {

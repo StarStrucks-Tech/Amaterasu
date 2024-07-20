@@ -1,4 +1,4 @@
-import {EmptyRequest} from '../gencode/protos-frontend/generic/GenericMessages';
+import {EmptyRequest} from '../gencode/protos-frontend/generic/generic_messages.ts';
 import {NativeClient, ServiceClient} from './NativeClient';
 
 /**
@@ -10,6 +10,7 @@ class OnboardingRpcHelper {
    * @returns promise of the GetCurrentOnboardingStage DTO
    */
   public async getCurrentOnboardingStage() {
+    await new Promise(resolve => setTimeout(resolve, 5000))
     console.log('port number :', await NativeClient.getHost());
     return await ServiceClient.getCurrentOnboardingStage(
       EmptyRequest.create(),
