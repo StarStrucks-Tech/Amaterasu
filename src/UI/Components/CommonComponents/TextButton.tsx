@@ -10,13 +10,14 @@ type TextButtonProps={
     color: string,
     onPressNavigation: any,
     background:any,
+    borderRadius: any,
 };
 const TextButton = (props: TextButtonProps) => {
 // render
     return (
         <View>
             <Button mode={props.mode}
-            style={{height: props.height,width:props.width, backgroundColor:props.background}} 
+            style={{height: props.height,width:props.width, backgroundColor:props.background, borderRadius:props.borderRadius}} 
             theme={{colors:{primary:props.color}}} 
             onPress={()=>alert(props.onPressNavigation)}>
                 {props.textTitle}
