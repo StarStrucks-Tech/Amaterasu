@@ -1,15 +1,14 @@
 /**
  * A component that renders either an image or a Lottie animation based on the provided source.
  * It also displays a text below the visual element.
- */ 
+ */
 
 import React from 'react';
 import {View, Image, ImageSourcePropType, Text} from 'react-native';
 import LottieView, {AnimationObject} from 'lottie-react-native';
 import styles from './styles';
 
-
-/** 
+/**
  * In this we have a general description of what the component does , including details about the props it accepts.
  * @param {VisualElementProps} props - The properties for the component.
  * @param {ImageSourcePropType | LottieSource} props.source - The source for the visual element, can be an image or a Lottie animation.
@@ -18,16 +17,13 @@ import styles from './styles';
  * @param {number} [props.height] - The height of the visual element.
  * @param {number} [props.cornerRadius] - The corner radius for the image.
  * @param {number} [props.rotationAngle] - The rotation angle for the image.
-*/
-
-
+ */
 
 const VisualElement = (props: VisualElementProps) => {
   const {source, text, width, height, cornerRadius, rotationAngle} = props;
 
+  /* Renders an Image component if the source is identified as an image */
 
-   /* Renders an Image component if the source is identified as an image */
-   
   const isImageSource = (source: any): source is ImageSourcePropType => {
     return (
       typeof source === 'number' ||
@@ -58,7 +54,6 @@ const VisualElement = (props: VisualElementProps) => {
           />
         </View>
       ) : (
-
         /*Otherwise, render a LottieView component for animation*/
 
         <View style={styles.lottieContainer}>

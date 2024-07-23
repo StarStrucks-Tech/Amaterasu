@@ -10,14 +10,14 @@ import { UnknownFieldHandler } from "@protobuf-ts/runtime";
 import type { PartialMessage } from "@protobuf-ts/runtime";
 import { reflectionMergePartial } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
-import { TermsConditionsScreen } from "../onboarding/screen_options";
-import { EmailVerificationScreen } from "../onboarding/screen_options";
-import { PhoneOTPScreen } from "../onboarding/screen_options";
-import { PhoneVerificationScreen } from "../onboarding/screen_options";
-import { PanVerificationScreen } from "../onboarding/screen_options";
-import { LivenessCheckScreen } from "../onboarding/screen_options";
-import { BiometricConsentScreen } from "../onboarding/screen_options";
-import { OtherConsentsScreen } from "../onboarding/screen_options";
+import { TermsConditionsScreen } from "../screens/onboarding_screen_options";
+import { EmailVerificationScreen } from "../screens/onboarding_screen_options";
+import { PhoneOTPScreen } from "../screens/onboarding_screen_options";
+import { PhoneVerificationScreen } from "../screens/onboarding_screen_options";
+import { PanVerificationScreen } from "../screens/onboarding_screen_options";
+import { LivenessCheckScreen } from "../screens/onboarding_screen_options";
+import { BiometricConsentScreen } from "../screens/onboarding_screen_options";
+import { OtherConsentsScreen } from "../screens/onboarding_screen_options";
 /**
  * @generated from protobuf message deeplink.OnboardingPodDeeplink
  */
@@ -28,49 +28,49 @@ export interface OnboardingPodDeeplink {
     screen: {
         oneofKind: "otherConsentScreen";
         /**
-         * @generated from protobuf field: onboarding.OtherConsentsScreen other_consent_screen = 1;
+         * @generated from protobuf field: screens.OtherConsentsScreen other_consent_screen = 1;
          */
         otherConsentScreen: OtherConsentsScreen;
     } | {
         oneofKind: "biometricConsentScreen";
         /**
-         * @generated from protobuf field: onboarding.BiometricConsentScreen biometric_consent_screen = 2;
+         * @generated from protobuf field: screens.BiometricConsentScreen biometric_consent_screen = 2;
          */
         biometricConsentScreen: BiometricConsentScreen;
     } | {
         oneofKind: "livenessCheckScreen";
         /**
-         * @generated from protobuf field: onboarding.LivenessCheckScreen liveness_check_screen = 3;
+         * @generated from protobuf field: screens.LivenessCheckScreen liveness_check_screen = 3;
          */
         livenessCheckScreen: LivenessCheckScreen;
     } | {
         oneofKind: "panVerificationScreen";
         /**
-         * @generated from protobuf field: onboarding.PanVerificationScreen pan_verification_screen = 4;
+         * @generated from protobuf field: screens.PanVerificationScreen pan_verification_screen = 4;
          */
         panVerificationScreen: PanVerificationScreen;
     } | {
         oneofKind: "phoneVerificationScreen";
         /**
-         * @generated from protobuf field: onboarding.PhoneVerificationScreen phone_verification_screen = 5;
+         * @generated from protobuf field: screens.PhoneVerificationScreen phone_verification_screen = 5;
          */
         phoneVerificationScreen: PhoneVerificationScreen;
     } | {
         oneofKind: "phoneOtpScreen";
         /**
-         * @generated from protobuf field: onboarding.PhoneOTPScreen phone_otp_screen = 6;
+         * @generated from protobuf field: screens.PhoneOTPScreen phone_otp_screen = 6;
          */
         phoneOtpScreen: PhoneOTPScreen;
     } | {
         oneofKind: "emailVerificationScreen";
         /**
-         * @generated from protobuf field: onboarding.EmailVerificationScreen email_verification_screen = 7;
+         * @generated from protobuf field: screens.EmailVerificationScreen email_verification_screen = 7;
          */
         emailVerificationScreen: EmailVerificationScreen;
     } | {
         oneofKind: "termsConditionsScreen";
         /**
-         * @generated from protobuf field: onboarding.TermsConditionsScreen terms_conditions_screen = 8;
+         * @generated from protobuf field: screens.TermsConditionsScreen terms_conditions_screen = 8;
          */
         termsConditionsScreen: TermsConditionsScreen;
     } | {
@@ -103,49 +103,49 @@ class OnboardingPodDeeplink$Type extends MessageType<OnboardingPodDeeplink> {
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* onboarding.OtherConsentsScreen other_consent_screen */ 1:
+                case /* screens.OtherConsentsScreen other_consent_screen */ 1:
                     message.screen = {
                         oneofKind: "otherConsentScreen",
                         otherConsentScreen: OtherConsentsScreen.internalBinaryRead(reader, reader.uint32(), options, (message.screen as any).otherConsentScreen)
                     };
                     break;
-                case /* onboarding.BiometricConsentScreen biometric_consent_screen */ 2:
+                case /* screens.BiometricConsentScreen biometric_consent_screen */ 2:
                     message.screen = {
                         oneofKind: "biometricConsentScreen",
                         biometricConsentScreen: BiometricConsentScreen.internalBinaryRead(reader, reader.uint32(), options, (message.screen as any).biometricConsentScreen)
                     };
                     break;
-                case /* onboarding.LivenessCheckScreen liveness_check_screen */ 3:
+                case /* screens.LivenessCheckScreen liveness_check_screen */ 3:
                     message.screen = {
                         oneofKind: "livenessCheckScreen",
                         livenessCheckScreen: LivenessCheckScreen.internalBinaryRead(reader, reader.uint32(), options, (message.screen as any).livenessCheckScreen)
                     };
                     break;
-                case /* onboarding.PanVerificationScreen pan_verification_screen */ 4:
+                case /* screens.PanVerificationScreen pan_verification_screen */ 4:
                     message.screen = {
                         oneofKind: "panVerificationScreen",
                         panVerificationScreen: PanVerificationScreen.internalBinaryRead(reader, reader.uint32(), options, (message.screen as any).panVerificationScreen)
                     };
                     break;
-                case /* onboarding.PhoneVerificationScreen phone_verification_screen */ 5:
+                case /* screens.PhoneVerificationScreen phone_verification_screen */ 5:
                     message.screen = {
                         oneofKind: "phoneVerificationScreen",
                         phoneVerificationScreen: PhoneVerificationScreen.internalBinaryRead(reader, reader.uint32(), options, (message.screen as any).phoneVerificationScreen)
                     };
                     break;
-                case /* onboarding.PhoneOTPScreen phone_otp_screen */ 6:
+                case /* screens.PhoneOTPScreen phone_otp_screen */ 6:
                     message.screen = {
                         oneofKind: "phoneOtpScreen",
                         phoneOtpScreen: PhoneOTPScreen.internalBinaryRead(reader, reader.uint32(), options, (message.screen as any).phoneOtpScreen)
                     };
                     break;
-                case /* onboarding.EmailVerificationScreen email_verification_screen */ 7:
+                case /* screens.EmailVerificationScreen email_verification_screen */ 7:
                     message.screen = {
                         oneofKind: "emailVerificationScreen",
                         emailVerificationScreen: EmailVerificationScreen.internalBinaryRead(reader, reader.uint32(), options, (message.screen as any).emailVerificationScreen)
                     };
                     break;
-                case /* onboarding.TermsConditionsScreen terms_conditions_screen */ 8:
+                case /* screens.TermsConditionsScreen terms_conditions_screen */ 8:
                     message.screen = {
                         oneofKind: "termsConditionsScreen",
                         termsConditionsScreen: TermsConditionsScreen.internalBinaryRead(reader, reader.uint32(), options, (message.screen as any).termsConditionsScreen)
@@ -163,28 +163,28 @@ class OnboardingPodDeeplink$Type extends MessageType<OnboardingPodDeeplink> {
         return message;
     }
     internalBinaryWrite(message: OnboardingPodDeeplink, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* onboarding.OtherConsentsScreen other_consent_screen = 1; */
+        /* screens.OtherConsentsScreen other_consent_screen = 1; */
         if (message.screen.oneofKind === "otherConsentScreen")
             OtherConsentsScreen.internalBinaryWrite(message.screen.otherConsentScreen, writer.tag(1, WireType.LengthDelimited).fork(), options).join();
-        /* onboarding.BiometricConsentScreen biometric_consent_screen = 2; */
+        /* screens.BiometricConsentScreen biometric_consent_screen = 2; */
         if (message.screen.oneofKind === "biometricConsentScreen")
             BiometricConsentScreen.internalBinaryWrite(message.screen.biometricConsentScreen, writer.tag(2, WireType.LengthDelimited).fork(), options).join();
-        /* onboarding.LivenessCheckScreen liveness_check_screen = 3; */
+        /* screens.LivenessCheckScreen liveness_check_screen = 3; */
         if (message.screen.oneofKind === "livenessCheckScreen")
             LivenessCheckScreen.internalBinaryWrite(message.screen.livenessCheckScreen, writer.tag(3, WireType.LengthDelimited).fork(), options).join();
-        /* onboarding.PanVerificationScreen pan_verification_screen = 4; */
+        /* screens.PanVerificationScreen pan_verification_screen = 4; */
         if (message.screen.oneofKind === "panVerificationScreen")
             PanVerificationScreen.internalBinaryWrite(message.screen.panVerificationScreen, writer.tag(4, WireType.LengthDelimited).fork(), options).join();
-        /* onboarding.PhoneVerificationScreen phone_verification_screen = 5; */
+        /* screens.PhoneVerificationScreen phone_verification_screen = 5; */
         if (message.screen.oneofKind === "phoneVerificationScreen")
             PhoneVerificationScreen.internalBinaryWrite(message.screen.phoneVerificationScreen, writer.tag(5, WireType.LengthDelimited).fork(), options).join();
-        /* onboarding.PhoneOTPScreen phone_otp_screen = 6; */
+        /* screens.PhoneOTPScreen phone_otp_screen = 6; */
         if (message.screen.oneofKind === "phoneOtpScreen")
             PhoneOTPScreen.internalBinaryWrite(message.screen.phoneOtpScreen, writer.tag(6, WireType.LengthDelimited).fork(), options).join();
-        /* onboarding.EmailVerificationScreen email_verification_screen = 7; */
+        /* screens.EmailVerificationScreen email_verification_screen = 7; */
         if (message.screen.oneofKind === "emailVerificationScreen")
             EmailVerificationScreen.internalBinaryWrite(message.screen.emailVerificationScreen, writer.tag(7, WireType.LengthDelimited).fork(), options).join();
-        /* onboarding.TermsConditionsScreen terms_conditions_screen = 8; */
+        /* screens.TermsConditionsScreen terms_conditions_screen = 8; */
         if (message.screen.oneofKind === "termsConditionsScreen")
             TermsConditionsScreen.internalBinaryWrite(message.screen.termsConditionsScreen, writer.tag(8, WireType.LengthDelimited).fork(), options).join();
         let u = options.writeUnknownFields;

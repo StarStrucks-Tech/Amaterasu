@@ -10,7 +10,7 @@ import { UnknownFieldHandler } from "@protobuf-ts/runtime";
 import type { PartialMessage } from "@protobuf-ts/runtime";
 import { reflectionMergePartial } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
-import { DummyScreen } from "../home/screen_options";
+import { DummyHomeScreen } from "../screens/home_screen_options";
 /**
  * @generated from protobuf message deeplink.HomePodDeeplink
  */
@@ -23,9 +23,9 @@ export interface HomePodDeeplink {
         /**
          * TODO :need to be removed once we have some screens in home
          *
-         * @generated from protobuf field: home.DummyScreen dummy_screen = 1;
+         * @generated from protobuf field: screens.DummyHomeScreen dummy_screen = 1;
          */
-        dummyScreen: DummyScreen;
+        dummyScreen: DummyHomeScreen;
     } | {
         oneofKind: undefined;
     };
@@ -34,7 +34,7 @@ export interface HomePodDeeplink {
 class HomePodDeeplink$Type extends MessageType<HomePodDeeplink> {
     constructor() {
         super("deeplink.HomePodDeeplink", [
-            { no: 1, name: "dummy_screen", kind: "message", oneof: "screen", T: () => DummyScreen }
+            { no: 1, name: "dummy_screen", kind: "message", oneof: "screen", T: () => DummyHomeScreen }
         ]);
     }
     create(value?: PartialMessage<HomePodDeeplink>): HomePodDeeplink {
@@ -49,10 +49,10 @@ class HomePodDeeplink$Type extends MessageType<HomePodDeeplink> {
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* home.DummyScreen dummy_screen */ 1:
+                case /* screens.DummyHomeScreen dummy_screen */ 1:
                     message.screen = {
                         oneofKind: "dummyScreen",
-                        dummyScreen: DummyScreen.internalBinaryRead(reader, reader.uint32(), options, (message.screen as any).dummyScreen)
+                        dummyScreen: DummyHomeScreen.internalBinaryRead(reader, reader.uint32(), options, (message.screen as any).dummyScreen)
                     };
                     break;
                 default:
@@ -67,9 +67,9 @@ class HomePodDeeplink$Type extends MessageType<HomePodDeeplink> {
         return message;
     }
     internalBinaryWrite(message: HomePodDeeplink, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* home.DummyScreen dummy_screen = 1; */
+        /* screens.DummyHomeScreen dummy_screen = 1; */
         if (message.screen.oneofKind === "dummyScreen")
-            DummyScreen.internalBinaryWrite(message.screen.dummyScreen, writer.tag(1, WireType.LengthDelimited).fork(), options).join();
+            DummyHomeScreen.internalBinaryWrite(message.screen.dummyScreen, writer.tag(1, WireType.LengthDelimited).fork(), options).join();
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

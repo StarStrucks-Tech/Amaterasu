@@ -1,21 +1,21 @@
-import {EmptyRequest} from '../gencode/protos-frontend/generic/GenericMessages';
-import { NativeClient, ServiceClient } from './NativeClient';
+import {EmptyRequest} from '../gencode/protos-frontend/generic/generic_messages.ts';
+import {NativeClient, ServiceClient} from './NativeClient';
 
 /**
  * Class that can support the calling of RPCs if you define functions for RPC calls here
  */
 class OnboardingRpcHelper {
-    /**
-     * function to call the getCurrentOnboardingStage RPC from the Backend Server
-     * @returns promise of the GetCurrentOnboardingStage DTO 
-     */
+  /**
+   * function to call the getCurrentOnboardingStage RPC from the Backend Server
+   * @returns promise of the GetCurrentOnboardingStage DTO
+   */
   public async getCurrentOnboardingStage() {
-    console.log('port number :',await NativeClient.getHost())
+    await new Promise(resolve => setTimeout(resolve, 5000))
+    console.log('port number :', await NativeClient.getHost());
     return await ServiceClient.getCurrentOnboardingStage(
       EmptyRequest.create(),
       {},
-    ).response
-    
+    ).response;
   }
 }
 

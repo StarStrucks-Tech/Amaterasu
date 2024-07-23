@@ -1,15 +1,15 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
-import styles from '../../../Screens/ConsentScreens/OtherConsent/styles';
+import {View, Text, Image} from 'react-native';
+import styles from '../../../screens/ConsentScreens/OtherConsent/styles';
 
 type ConsentComponentProps = {
   containerStyle: object;
   imageSource: number;
   headerText: string;
   text: string;
-}
+};
 
-export const ConsentComponent = (props:ConsentComponentProps) => {
+export const ConsentComponent = (props: ConsentComponentProps) => {
   return (
     <View style={props.containerStyle}>
       <Image source={props.imageSource} style={styles.image} />
