@@ -10,7 +10,7 @@ import {
 import CheckBox from '@react-native-community/checkbox';
 import styles from './styles';
 import {TermsConditionsConstants} from '../Constants';
-import {IconTextClickableComponent} from '../../../Components/IconTextClickableComponent';
+import {IconTextClickableComponent} from '../../../components/IconTextClickableComponent';
 import {config} from '../Config';
 
 const {TERMS_URL, SECURE_URL} = config;

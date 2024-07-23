@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {useEffect} from 'react';
-import {getUserList} from '../../../ReducerHub/action';
+import {getUserList} from '../../../reducer-hub/action';
 
 const UserList = () => {
   const dispatch = useDispatch();

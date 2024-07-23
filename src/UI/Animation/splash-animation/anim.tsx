@@ -1,8 +1,8 @@
 import React, {useRef, useEffect} from 'react';
-import {Animated, View, Dimensions} from 'react-native';
-import constants from '../../../UI-Constants/Constant.json';
-import styles from './styles';
 
+import { View, Animated, Image, StyleSheet, Button } from 'react-native';
+import appLogo from '../../../assets/images/applogo.png';
+import styles from './styles';
 /**
  * Animations Component
  *
@@ -16,90 +16,46 @@ import styles from './styles';
  * - The logo also flips continuously during the animation.
  */
 
+// RotatingImage.js
+
+
 const SplashAnimation = () => {
-  // Create animated values for opacity, translation, scale, and flip (rotation)
-  const opacity = useRef(
-    new Animated.Value(constants.AnimationValues.INITIAL_OPACITY),
-  ).current;
-  const translateY = useRef(
-    new Animated.Value(constants.AnimationValues.INITIAL_TRANSLATE_Y),
-  ).current;
-  const scale = useRef(
-    new Animated.Value(constants.AnimationValues.INITIAL_SCALE),
-  ).current;
-  const flip = useRef(
-    new Animated.Value(constants.AnimationValues.INITIAL_FLIP),
-  ).current;
+  const rotateValue = useRef(new Animated.Value(0)).current;
 
-  // useEffect hook to start the animation when the component mounts
+  const startRotation = () => {
+    rotateValue.setValue(0);
+    Animated.loop(
+      Animated.timing(rotateValue, {
+        toValue: 1,
+        duration: 3000, // 2 seconds
+        useNativeDriver: true,
+      })
+    ).start();
+  };
+
   useEffect(() => {
-    // Define the animation sequence
-    const animate = () => {
-      Animated.sequence([
-        // Delay before starting the animation
-        Animated.delay(constants.AnimationValues.DELAY_BEFORE_START),
-        // Fade in the logo
-        Animated.timing(opacity, {
-          toValue: 1,
-          duration: constants.AnimationValues.FADE_IN_DURATION,
-          useNativeDriver: true,
-        }),
-        // Perform translation, scaling, and flipping simultaneously
-        Animated.parallel([
-          Animated.timing(translateY, {
-            toValue: constants.AnimationValues.TRANSLATE_Y_TO_VALUE,
-            duration: constants.AnimationValues.TRANSLATE_DURATION,
-            useNativeDriver: true,
-          }),
-          Animated.timing(flip, {
-            toValue: constants.AnimationValues.FLIP_TO_VALUE,
-            duration: constants.AnimationValues.SCALE_DURATION,
-            useNativeDriver: true,
-          }),
-          Animated.timing(scale, {
-            toValue: constants.AnimationValues.SCALE_TO_VALUE,
-            duration: constants.AnimationValues.SCALE_DURATION,
-            useNativeDriver: true,
-          }),
-        ]),
-        // Delay before starting the fade-out animation
-        Animated.delay(constants.AnimationValues.FADE_OUT_DELAY),
-        // Fade out the logo
-        Animated.timing(opacity, {
-          toValue: 0,
-          duration: constants.AnimationValues.FADE_OUT_DURATION,
-          useNativeDriver: true,
-        }),
-      ]).start(); // Start the animation sequence
-    };
-
-    // Start the animation after an initial delay
-    setTimeout(animate, constants.AnimationValues.DELAY_BEFORE_START);
+    startRotation();
   }, []);
 
-  // Interpolate the flip value to rotate the logo from 0 to 720 degrees
-  const flipInterpolate = flip.interpolate({
-    inputRange: [0, 1, 2],
-    outputRange: ['0deg', '360deg', '720deg'],
+  const rotateInterpolation = rotateValue.interpolate({
+    inputRange: [0, 1],
+    outputRange: ['0deg', '360deg'],
   });
+
+  const animatedStyle = {
+    transform: [{ rotateY: rotateInterpolation }],
+  };
 
   return (
     <View style={styles.container}>
-      <View style={styles.background}>
-        {/* Animated Image with opacity, translation, scale, and rotation */}
-        <Animated.Image
-          source={require('../../../Assets/images/applogo.png')}
-          style={[
-            styles.image,
-            {
-              opacity,
-              transform: [{translateY}, {scale}, {rotateY: flipInterpolate}],
-            },
-          ]}
-        />
-      </View>
+      <Animated.Image 
+      source={appLogo} 
+      style={[styles.image, animatedStyle]} />
+
     </View>
   );
 };
+
+
 
 export default SplashAnimation;

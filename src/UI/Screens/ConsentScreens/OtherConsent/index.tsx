@@ -3,7 +3,7 @@ import {View, Text, Image, Modal, TouchableOpacity} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import styles from './styles';
 import {OtherConsentsConstants} from '../Constants';
-import {ConsentComponent} from '../../../Components/ConsentScreenComp/OtherConsentComponent';
+import {ConsentComponent} from '../../../components/ConsentScreenComp/OtherConsentComponent';
 
 /**
  * OtherConsents component

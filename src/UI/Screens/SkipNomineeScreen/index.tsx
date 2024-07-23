@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import styles from './styles';
-import Color from '../../../Configs/color';
+import Color from '../../../configs/color';
 import CheckBox from 'react-native-check-box';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
