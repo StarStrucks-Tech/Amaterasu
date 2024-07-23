@@ -15,6 +15,7 @@
     "@mitch528/react-native-grpc": "^0.1.10",
     "@protobuf-ts/runtime-rpc": "^2.9.4",
     "@react-native-community/checkbox": "^0.5.17",
+    "@react-native-community/datetimepicker": "^8.2.0",
     "@react-native/gradle-plugin": "^0.74.84",
     "@react-navigation/bottom-tabs": "^6.5.20",
     "@react-navigation/native": "^6.1.17",
@@ -36,6 +37,7 @@
     "react-native-screens": "^3.31.1",
     "react-native-snap-carousel": "^3.9.1",
     "react-native-svg": "^15.3.0",
+    "react-native-vector-icons": "^10.1.0",
     "text-encoding": "^0.7.0"
   },
   "devDependencies": {
