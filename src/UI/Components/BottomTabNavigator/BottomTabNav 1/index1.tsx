@@ -1,10 +1,10 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Screen1 from '../Screens/Screen1';
-import Screen2 from '../Screens/Screen2';
-import Screen3 from '../Screens/Screen3';
-import Screen4 from '../Screens/Screen4';
-import Screen5 from '../Screens/Screen5';
+import Screen1 from '../Screens/Screen1/index';
+import Screen2 from '../Screens/Screen2/index';
+import Screen3 from '../Screens/Screen3/index';
+import Screen4 from '../Screens/Screen4/index';
+import Screen5 from '../Screens/Screen5/index';
 import { COLORS } from '../Constants';
 import { Image, View } from 'react-native';
 import AvatarCircle from '../../AvatarCircle';

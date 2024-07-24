@@ -1,8 +1,7 @@
 // SCREEN 4 FOR TESTING
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { COLORS, SIZES,  } from '../Constants';
-import { styles } from '../ScreenStyles/Screen4Styles';
+import { styles } from '../Screen4/styles'
 
 const Screen4 = () => {
   return (

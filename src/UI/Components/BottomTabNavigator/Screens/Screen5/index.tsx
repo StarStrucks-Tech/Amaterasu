@@ -1,8 +1,7 @@
 // SCREEN 5 FOR TESTING
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { COLORS, SIZES} from '../Constants';
-import { styles } from '../ScreenStyles/Screen5Styles';
+import { styles } from '../Screen5/styles';
 
 const Screen5 = () => {
   return (

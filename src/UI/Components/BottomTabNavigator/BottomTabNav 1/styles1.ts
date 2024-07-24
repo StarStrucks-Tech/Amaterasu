@@ -1,4 +1,3 @@
-import React from "react";
 import { StyleSheet } from "react-native";
 import { COLORS} from "../Constants";
 export const styles = StyleSheet.create({

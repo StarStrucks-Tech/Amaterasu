@@ -1,8 +1,8 @@
 // SCREEN 2 FOR TESTING
 
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { styles } from '../ScreenStyles/Screen2Styles';
+import { View, Text} from 'react-native';
+import { styles } from '../Screen2/styles';
 
 const Screen2 = () => {
   return (

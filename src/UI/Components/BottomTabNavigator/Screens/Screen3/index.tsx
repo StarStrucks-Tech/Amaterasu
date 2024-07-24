@@ -1,8 +1,7 @@
 // SCREEN 3 FOR TESTING
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { COLORS,SIZES} from '../Constants';
-import { styles } from '../ScreenStyles/Screen3Styles';
+import {styles} from '../Screen3/styles'
 
 const Screen3 = () => {
   return (

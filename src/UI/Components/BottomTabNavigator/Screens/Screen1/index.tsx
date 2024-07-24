@@ -2,7 +2,7 @@
 
 import React from 'react';                                   
 import { View, Text, StyleSheet } from 'react-native';
-import { styles } from '../ScreenStyles/Screen1Styles';
+import { styles } from '../Screen1/styles';
 const Screen1 = () => {
   return (
     <View style={styles.container}>
