@@ -1,131 +1,41 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React, { useEffect } from 'react';
+import { SafeAreaView, Platform, StatusBar, StyleSheet } from 'react-native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import {COLORS} from './src/UI/Components/BottomTabNavigator/Constants'
+import BottomTabNavigator from './src/UI/Components/BottomTabNavigator/BottomTabNav 1/index1';
+// If you are using the splash screen, keep this import, otherwise remove it.
+// import SplashScreen from 'react-native-splash-screen';
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+const MyTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: COLORS.BG,
+  },
+};
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import TabNavigation from './src/UI/Components/TabNavigation';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { OnboardingRpcCaller } from './src/Rpc/OnboardingRpcCaller';
+const App: React.FC = () => {
+  useEffect(() => {
+    if (Platform.OS === 'android') {
+      // If you are using the splash screen, keep this line, otherwise remove it.
+      // SplashScreen.hide();
+    }
+  }, []);
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
-
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  // Enabling Text Encoder for safe RPC Calls
-  global.TextEncoder = require('text-encoding').TextEncoder;
-  
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-  
-  OnboardingRpcCaller.getCurrentOnboardingStage().then(
-    (resp)=> {
-    console.log(resp.currentStage)
-  }
-  ).catch(
-    (err)=> {
-    console.log(err)
-  }
-  )
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
+    <SafeAreaView style={styles.container}>
+      <NavigationContainer theme={MyTheme}>
+        <StatusBar barStyle="dark-content" />
+        <BottomTabNavigator />
+      </NavigationContainer>
     </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.BG,
   },
 });
 

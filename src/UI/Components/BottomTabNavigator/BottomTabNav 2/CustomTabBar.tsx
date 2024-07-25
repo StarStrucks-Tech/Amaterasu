@@ -1,15 +1,15 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
-import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
-import AvatarCircle from '../../AvatarCircle';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/MaterialIcons'; // Import Material Icons
 import { styles } from './styles2';
 
-const CustomTabBar = ({state, descriptors, navigation}: BottomTabBarProps) => {
+const CustomTabBar = ({ state, descriptors, navigation }: BottomTabBarProps) => {
   return (
     <View style={styles.tabBarOuterContainer}>
       <View style={styles.tabBarOvalContainer}>
         {state.routes.map((route, index) => {
-          const {options} = descriptors[route.key];
+          const { options } = descriptors[route.key];
           const label =
             typeof options.tabBarLabel === 'string'
               ? options.tabBarLabel
@@ -38,35 +38,25 @@ const CustomTabBar = ({state, descriptors, navigation}: BottomTabBarProps) => {
             });
           };
 
-          let imageSource: any = null;
+          let iconName: string = '';
           switch (route.name) {
             case 'Screen1':
-              imageSource = isFocused
-                ? require('../../../../Assets/home-active.png')
-                : require('../../../../Assets/home.png');
+              iconName = isFocused ? 'home' : 'home';
               break;
             case 'Screen2':
-              imageSource = isFocused
-                ? require('../../../../Assets/qrcode-active.png')
-                : require('../../../../Assets/scan.png');
+              iconName = isFocused ? 'qr-code' : 'qr-code';
               break;
             case 'Screen3':
-              imageSource = isFocused
-                ? require('../../../../Assets/transfer-active.png')
-                : require('../../../../Assets/transfer.png');
+              iconName = isFocused ? 'swap-horiz' : 'swap-horiz';
               break;
             case 'Screen4':
-              imageSource = isFocused
-                ? require('../../../../Assets/request-active.png')
-                : require('../../../../Assets/request.png');
+              iconName = isFocused ? 'request-quote' : 'request-quote';
               break;
             case 'Screen5':
-              imageSource = isFocused
-                ? require('../../../../Assets/profile-active.png')
-                : require('../../../../Assets/profile.png');
+              iconName = isFocused ? 'person' : 'person-outline';
               break;
             default:
-              imageSource = null;
+              iconName = '';
               break;
           }
 
@@ -74,7 +64,7 @@ const CustomTabBar = ({state, descriptors, navigation}: BottomTabBarProps) => {
             <TouchableOpacity
               key={route.key}
               accessibilityRole="button"
-              accessibilityState={isFocused ? {selected: true} : {}}
+              accessibilityState={isFocused ? { selected: true } : {}}
               accessibilityLabel={options.tabBarAccessibilityLabel}
               testID={options.tabBarTestID}
               onPress={onPress}
@@ -85,7 +75,11 @@ const CustomTabBar = ({state, descriptors, navigation}: BottomTabBarProps) => {
                   styles.innerContainer,
                   isFocused && styles.activeInnerContainer,
                 ]}>
-                <AvatarCircle radius={10} imageSource={imageSource} />
+                <Icon
+                  name={iconName}
+                  size={30}
+                  color={isFocused ? 'black' : 'gray'}
+                />
                 {isFocused && <Text style={styles.tabLabel}>{label}</Text>}
               </View>
             </TouchableOpacity>
@@ -95,6 +89,5 @@ const CustomTabBar = ({state, descriptors, navigation}: BottomTabBarProps) => {
     </View>
   );
 };
-
 
 export default CustomTabBar;

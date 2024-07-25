@@ -6,41 +6,46 @@ import Screen3 from '../Screens/Screen3/index';
 import Screen4 from '../Screens/Screen4/index';
 import Screen5 from '../Screens/Screen5/index';
 import { COLORS } from '../Constants';
-import { Image, View } from 'react-native';
+import { View } from 'react-native';
 import AvatarCircle from '../../AvatarCircle';
 import { styles } from './styles1';
-
+import Icon from 'react-native-vector-icons/MaterialIcons'; 
+     // Import the icon set you want to use
+//import Icons from 'react-native-vector-icons/AntDesign'; 
 
 const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => (
   <Tab.Navigator
     screenOptions={({ route }) => ({
-      tabBarIcon: ({ focused, size }) => {
-        let imageSource: any = null;
+      tabBarIcon: ({ focused, size, color }) => {
+        let iconName: string = '';
 
         switch (route.name) {
           case 'Screen1':
-            imageSource = focused ? require('./../../../../Assets/home-active.png') : require('./../../../../Assets/home.png');
+            iconName = focused ? 'home' : 'home';
             break;
           case 'Screen2':
-            imageSource = focused ? require('./../../../../Assets/qrcode-active.png') : require('./../../../../Assets/scan.png');
+            iconName = focused ? 'qr-code' : 'qr-code';
             break;
           case 'Screen3':
-            imageSource = focused ? require('../../../../Assets/logokubair-active.png') : require('./../../../../Assets/logokubair.png');
+            iconName = ''; // Screen3 will use image source
             break;
           case 'Screen4':
-            imageSource = focused ? require('./../../../../Assets/Transaction-active.png') : require('./../../../../Assets/Transaction.png');
+            iconName = focused ? 'account-balance-wallet' : 'account-balance-wallet';
             break;
           case 'Screen5':
-            imageSource = focused ? require('./../../../../Assets/profile-active.png') : require('./../../../../Assets/profile.png');
+            iconName = focused ? 'person' : 'person';
             break;
           default:
-            imageSource = null;
+            iconName = '';
             break;
         }
 
         if (route.name === 'Screen3') {
+          const imageSource = focused
+            ? require('../../../../Assets/logokubair-active.png')
+            : require('./../../../../Assets/logokubair.png');
           return (
             <View style={styles.centerIconContainer}>
               <View style={styles.centerIconWrapper}>
@@ -52,16 +57,17 @@ const BottomTabNavigator = () => (
 
         return (
           <View style={styles.tabIconContainer}>
-            {imageSource && (
-              <Image
-                source={imageSource}
-                style={{ width: size, height: size }}
+            {iconName && (
+              <Icon
+                name={iconName}
+                size={size}
+                color={color}
               />
             )}
           </View>
         );
       },
-      tabBarActiveTintColor: COLORS.TEXT,
+      tabBarActiveTintColor: COLORS.Incolor,
       tabBarInactiveTintColor: COLORS.TEXT,
       tabBarLabel: () => null, // To hide the labels
       tabBarStyle: {
@@ -78,7 +84,5 @@ const BottomTabNavigator = () => (
     <Tab.Screen name="Screen5" component={Screen5} />
   </Tab.Navigator>
 );
-
-
 
 export default BottomTabNavigator;

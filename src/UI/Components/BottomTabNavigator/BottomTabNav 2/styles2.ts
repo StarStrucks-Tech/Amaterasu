@@ -33,7 +33,7 @@ import { COLORS } from "../Constants";
       flexDirection: 'row',
       alignItems: 'center',
       paddingVertical: 6,
-      paddingHorizontal: 9,
+      paddingHorizontal: 7,
       borderRadius: 25,
       backgroundColor: COLORS.BGcolor,
     },
@@ -43,7 +43,7 @@ import { COLORS } from "../Constants";
     tabLabel: {
       color: COLORS.TEXT,
       fontSize: 9,
-      marginLeft: 5, // Space between icon and text
+      marginLeft: 2, // Space between icon and text
     },
   });
   
