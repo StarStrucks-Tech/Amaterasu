@@ -33,3 +33,4 @@ const AvatarCircle = ({radius,imageSource}:AvatarCircleProps) => {
   );
 };
 export default AvatarCircle;
+export type { AvatarCircleProps };
