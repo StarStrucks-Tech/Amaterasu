@@ -44,8 +44,8 @@ const BottomTabNavigator = () => (
 
         if (route.name === 'Screen3') {
           const imageSource = focused
-            ? require('../../../../Assets/logokubair-active.png')
-            : require('./../../../../Assets/logokubair.png');
+            ? require('../../../../Assets/images/applogo.png')
+            : require('./../../../../Assets/images/applogo.png');
           return (
             <View style={styles.centerIconContainer}>
               <View style={styles.centerIconWrapper}>
