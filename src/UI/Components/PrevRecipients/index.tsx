@@ -8,7 +8,6 @@ const PrevRecipient = () => {
     <View style={styles.container}>
        <Text style={styles.headingText}>Previous Recipients</Text>
       <View style={styles.content}>
-       
         <BoxData />
       </View>
       
