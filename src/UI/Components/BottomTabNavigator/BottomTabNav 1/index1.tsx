@@ -9,9 +9,7 @@ import { COLORS } from '../Constants';
 import { View } from 'react-native';
 import AvatarCircle from '../../AvatarCircle';
 import { styles } from './styles1';
-import Icon from 'react-native-vector-icons/MaterialIcons'; 
-     // Import the icon set you want to use
-//import Icons from 'react-native-vector-icons/AntDesign'; 
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,22 +18,23 @@ const BottomTabNavigator = () => (
     screenOptions={({ route }) => ({
       tabBarIcon: ({ focused, size, color }) => {
         let iconName: string = '';
+        let iconSize = focused ? size * 1.3 : size; // Enlarge the size for the focused icon
 
         switch (route.name) {
           case 'Screen1':
-            iconName = focused ? 'home' : 'home';
+            iconName = 'home';
             break;
           case 'Screen2':
-            iconName = focused ? 'qr-code' : 'qr-code';
+            iconName = 'qr-code';
             break;
           case 'Screen3':
             iconName = ''; // Screen3 will use image source
             break;
           case 'Screen4':
-            iconName = focused ? 'account-balance-wallet' : 'account-balance-wallet';
+            iconName = 'account-balance-wallet';
             break;
           case 'Screen5':
-            iconName = focused ? 'person' : 'person';
+            iconName = 'person';
             break;
           default:
             iconName = '';
@@ -43,13 +42,15 @@ const BottomTabNavigator = () => (
         }
 
         if (route.name === 'Screen3') {
-          const imageSource = focused
-            ? require('../../../../Assets/images/applogo.png')
-            : require('./../../../../Assets/images/applogo.png');
+          const imageSource = require('../../../../Assets/images/applogo.png');
           return (
-            <View style={styles.centerIconContainer}>
+            <View style={[styles.centerIconContainer]}>
               <View style={styles.centerIconWrapper}>
-                <AvatarCircle radius={size * 1.3} imageSource={imageSource} />
+                <AvatarCircle
+                  radius={focused ? size * 1.6 : size * 1.3} // Enlarge the radius when focused
+                  imageSource={imageSource}
+       
+                />
               </View>
             </View>
           );
@@ -60,7 +61,7 @@ const BottomTabNavigator = () => (
             {iconName && (
               <Icon
                 name={iconName}
-                size={size}
+                size={iconSize}
                 color={color}
               />
             )}
