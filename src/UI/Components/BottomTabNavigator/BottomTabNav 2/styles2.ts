@@ -42,7 +42,7 @@ import { COLORS } from "../Constants";
     },
     tabLabel: {
       color: COLORS.TEXT,
-      fontSize: 8,
+      fontSize: 7,
       marginLeft: 2, // Space between icon and text
     },
   });
